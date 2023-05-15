@@ -1,0 +1,22 @@
+#footer {
+  display: block;
+  background-color: var(--cor-de-fundo);
+  font-family: var(--fonte-principal);
+  font-size: 16px;
+  color: var(--cinza);
+  padding: 10px 0;
+}
+
+.marca {
+  display: block;
+  text-align: center;
+}
+  
+.copyright {
+  display: block;
+  text-align: center;
+}
+  
+.copyright a {
+  color: var(--cinza);
+} 

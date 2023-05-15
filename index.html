@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expo Tendas</title>
+  <link rel="website icon" type="svg" href="assets/logo-white.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+  <script src="https://kit.fontawesome.com/3e2a2075af.js" crossorigin="anonymous"></script>
+
+<body>
+  <header id="header">
+    <a href="#"><img class="logo" src="assets/logo.svg" alt="logo-expotendas"></a>
+
+    <nav id="nav">
+      <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+        aria-expanded="false">Menu<span id="hamburger"></span>
+      </button>
+
+      <ul id="menu" role="menu">
+        <li><a href="#quem-somos">Quem somos</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#contatos">Contatos</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section id="carrossel">
+      <h1 class="carrossel__slogan">A solução prática para o seu evento!</h1>
+      <div class="wrapper">
+        <div class="slide-wrapper" data-slide="wrapper">
+          <button class="slide-nav-button slide-nav-previous fa-solid fa-chevron-left"
+            data-slide="nav-previous-button"></button>
+          <button class="slide-nav-button slide-nav-next fa-solid fa-chevron-right"
+            data-slide="nav-next-button"></button>
+          <div class="slide-list" data-slide="list">
+            <div class="slide-item" data-slide="item" data-index="0">
+              <div class="slide-content">
+                <img class="slide-image" src="assets/imagem1.JPG" alt="" />
+              </div>
+            </div>
+            <div class="slide-item" data-slide="item" data-index="1">
+              <div class="slide-content">
+                <img class="slide-image" src="assets/imagem2.jpg" alt="" />
+              </div>
+            </div>
+            <div class="slide-item" data-slide="item" data-index="2">
+              <div class="slide-content">
+                <img class="slide-image" src="assets/imagem3.jpg" alt="" />
+              </div>
+            </div>
+            <div class="slide-item" data-slide="item" data-index="3">
+              <div class="slide-content">
+                <img class="slide-image" src="assets/imagem4.jpg" alt="" />
+              </div>
+            </div>
+            <div class="slide-item" data-slide="item" data-index="4">
+              <div class="slide-content">
+                <img class="slide-image" src="assets/imagem5.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="slide-controls" data-slide="controls-wrapper"></div>
+        </div>
+      </div>
+
+      <div class="midias">
+        <ul>
+          <li><a href="https://www.facebook.com/expotendas" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+
+          <li><a href="https://www.instagram.com/expotendas/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+
+          <li><a href="https://www.youtube.com/@expotendascaxiasdosul8127" target="_blank"><i
+                class="fa-brands fa-youtube"></i></a></li>
+
+          <li><a href="#linkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="quem-somos">
+      <h2 class="quem-somos__titulo">Quem somos</h2>
+      <p class="quem-somos__texto">Expo Tendas, com mais de 10 anos de experiência e mais de 1.500 clientes em seu
+        portfólio, é referência na Serra Gaúcha em locação de coberturas (tendas), pisos, palcos, tablados, estandes,
+        passarelas, camarotes e outros. Pela vasta experiência no mercado, consegue entregar serviços personalizados e
+        customizados aos mais exigentes clientes.<br><br>As estruturas da EXPOTENDAS, desenvolvidas com materiais de
+        avançada tecnologia e alta qualidade, foram especialmente desenhadas para as severas condições climáticas da
+        região Sul, com maior resistência a ventos, temporais e rígidas trocas de temperaturas.<br><br>Esse desenho e
+        tecnologia tem registro no INPI - CERTIFICADO DE REGISTRO DE DESENHO INDUSTRIAL - DI7101268-0. As coberturas de
+        lonas têm tecnologia antichama e nossas obras sempre recebem aprovação do PPCI do Corpo de Bombeiros.<br><br>A
+        Expo Tendas é registrada no CREA-RS sob número 198108, com engenheiro responsável no quadro de funcionários.
+        Todos os serviços prestados são garantidos com fornecimento de ART e Laudo Técnico. Além disso, a empresa
+        utiliza mão de obra altamente especializada e treinada, observando toda a legislação trabalhista e fiscal,
+        especialmente no que diz respeito a trabalho de menores.</p>
+    </section>
+
+    <section id="produtos">
+      <div class="produto">
+        <h2>Produtos</h2>
+        <p>A Expotendas disponibiliza tendas com desenho industrial depositado no INPI através
+          docódigo DI-7101268-0, tendo assim exclusividade no modelo adotado.<br>As lonas possuem proteção UV,
+          antichama,
+          antimofo e blackout, para maior conforto e segurança. Oferecemos locação de tendas brancas e translúcidas com
+          perfeito acabamento, com calhas e pés arredondados, deixando o ambiente ainda mais elegante. Disponibilizamos
+          também pisos, palcos, tablados, passarelas, pistas de dança, túnel, móveis, pirâmides, camarotes, áreas VIP,
+          bretes de isolamento e galpões.<br>Temos tendas nos seguintes tamanhos: 05x05, 05x10, 08x10 e 10x10.</p>
+      </div>
+      <div class="cards">
+        <a href="eventos.html" target="_blank">
+          <div class="card contact">
+            <div class="icon">
+              <img src="assets/eventosimg.jpg" alt="">
+            </div>
+            <h3>Eventos</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <button>Saiba mais</button>
+          </div>
+        </a>
+
+        <a href="galpao.html" target="_blank">
+          <div class="card shop">
+            <div class="icon">
+              <img src="assets/galpaoimg.jpg" alt="">
+            </div>
+            <h3>Galpão Industrial</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <button>Saiba mais</button>
+          </div>
+        </a>
+
+        <!-- <a href="">
+          <div class="card about">
+            <div class="icon">
+              <img src="" alt="">
+            </div>
+            <h3>About us.</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <button>Saiba mais</button>
+          </div>
+        </a> -->
+
+        <!-- <a href="">
+          <div class="card about">
+            <div class="icon">
+              <img src="" alt="">
+            </div>
+            <h3>About us.</h3>
+            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+            <button>Saiba mais</button>
+          </div>
+        </a> -->
+      </div>
+    </section>
+
+    <section id="contatos">
+      <div class="atendimento">
+        <div class="contatos">
+          <h3 class="contatos__titulo">Outras dúvidas:</h3>
+          <a class="contato__texto"><i class="fa-solid fa-phone"></i>(54) 3028-1133</a>
+          <a class="contato__texto"><i class="fa-solid fa-envelope"></i>contato@expotendas.com.br</a>
+          <a class="contato__texto"><i class="fa-solid fa-envelope"></i>comercial@expotendas.com.br</a>
+          <a class="contato__texto"><i class="fa-solid fa-envelope"></i>financeiro@expotendas.com.br</a>
+        </div>
+
+        <div class="horario">
+          <h3 class="horario__titulo">Atendimento:</h3>
+          <p class="horario__texto">Segunda à sexta-feira<br>08:30 - 12:00<br>13:30 - 18:00</p>
+        </div>
+      </div>
+
+      <div class="localizacao">
+        <h3 class="endereco">Endereço:</h3>
+        <p>Rua Ludovico Cavinatto, 281 - CEP: 95032-620<br>Bairro Nossa Senhora da Saúde<br>Caxias do Sul - RS</p>
+        <iframe class="maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.0913266652133!2d-51.20582188436369!3d-29.13249659642027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea2c0e6044b67%3A0x500f7d240248332!2sExpotendas%20-%20Lonas%2C%20Tendas%20e%20Pir%C3%A2mides%20para%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1678650743991!5m2!1spt-BR!2sbr"
+          width="100%" height="380px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <p class="marca">EXPO TENDAS é uma marca registrada de CONCI TURISMO E EVENTOS LTDA | CNPJ 10.665.441/0001-66</p>
+      <p class="copyright">&#169;Desenvolvido por <a href="">Gabriel Zuco Brezolin</a></p>
+    </footer>
+  </main>
+
+  <script src="./script.js"></script>
+  <script>
+    initSlider({
+      autoPlay: true,
+      startAtIndex: 0,
+      timeInterval: 2000
+    })
+  </script>
+  <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
+  <script>
+      (function () {
+        window.onload = function () {
+          new BlipChat()
+            .withAppKey('ZXhwb3RlbmRhc2h1bWFubzo2N2M5YmM2Ni03NDc5LTRlNjYtODRjOS1iMDI0MDljNzc1MWE=')
+            .withButton({ "color": "#2CC3D5", "icon": "" })
+            .withCustomCommonUrl('https://expotendas.chat.blip.ai/')
+            .build();
+        };
+      })();
+  </script>
+</body>
+</html>

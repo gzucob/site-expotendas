@@ -1,0 +1,108 @@
+#produtos {
+    display: block;
+    flex-direction: column;
+    background-color: var(--cor-de-fundo);
+    font-family: var(--fonte-principal);
+    padding: 100px 10px;
+}
+
+.produto h2 {
+    font-weight: bold 700;
+    color: var(--cinza);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.produto p {
+    color: var(--cinza);
+    text-align: justify;
+    padding: 0 5px;
+    padding-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--cor-card-background);
+    box-shadow: var(--preto);
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 0px 10px 2px var(--cinza-claro); 
+    box-shadow: 0px 0px 10px 2px var(--cinza-claro);
+    width: 200px;
+    height: 300px;
+    font-family: var(--fonte-principal);
+    color: var(--cinza);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card h3 {
+    font-size: 100%;
+    margin: 16px 0;
+}
+
+.card span {
+    font-weight: 300;
+    max-width: 240px;
+    font-size: 80%;
+    margin-bottom: 32px;
+}
+
+.card button {
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    border: 0;
+    font-size: 80%;
+    font-weight: 500;
+    color: var(--branco);
+}
+
+button {
+    background: var(--azul-degrade)
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+    #produtos p{
+        padding-bottom: 50px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    #produtos {
+        min-height: 100vh;
+    }
+
+    #produtos p{
+        padding: 50px 100px;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+        transition: .5s;
+    }
+}

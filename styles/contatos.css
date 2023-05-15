@@ -1,0 +1,69 @@
+#contatos {
+    display: block;
+    background: var(--azul-degrade);
+    font-family: var(--fonte-principal);
+    color: var(--branco);
+}
+
+.atendimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contatos {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.contatos__titulo {
+    text-align: center;
+}
+
+.contatos__texto {
+    text-align: justify;
+}
+
+.fa-solid {
+    padding: 5px;
+}
+
+.horario {
+    display: flex;
+    flex-direction: column;
+}
+
+.horario__titulo {
+    text-align: center;
+}
+
+.horario__texto {
+    text-align: center;
+}
+
+.localizacao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+    .atendimento {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media (min-width: 1024px) {
+    .atendimento {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}
