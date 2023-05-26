@@ -68,7 +68,7 @@
   width: 100%;
   top: 70px;
   right: 0px;
-  background-color: var(--branco);
+  background-color: var(--cor-de-fundo);
   transition: 0.6s;
   z-index: 1000;
   height: 0px;
@@ -77,7 +77,7 @@
 }
 
 #menu li {
-  background-color: var(--branco);
+  background-color: var(--cor-de-fundo);
   font-family: var(--fonte-principal);
   font-weight: bold;
 }
