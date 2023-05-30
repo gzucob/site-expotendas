@@ -93,6 +93,19 @@
   color: var(--cinza);
 }
 
+#midias-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+#midias-header ul {
+  display: flex;
+  flex-direction: row;
+}
+
+
 @media (min-width: 720px) and (max-width: 1023px) {
   .logo {
     width: 200px;
@@ -101,7 +114,7 @@
 }
 
 @media (min-width: 1024px) {
-  #header{
+  #header {
     display: flex;
     justify-content: space-around;
   }

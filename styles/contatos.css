@@ -1,54 +1,56 @@
 #contatos {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background: var(--azul-degrade);
     font-family: var(--fonte-principal);
     color: var(--branco);
+}
+
+.midias {
+    font-size: 36px;
+}
+
+.midias ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    gap: 3vh;
+    padding: 10px 10px;
+}
+
+.midias a {
+    color: var(--preto);
+    padding: 5px;
+}
+
+.midias a:hover {
+    color: var(--branco);
+    transition: 1s;
 }
 
 .atendimento {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 .contatos {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-}
-
-.contatos__titulo {
-    text-align: center;
-}
-
-.contatos__texto {
-    text-align: justify;
 }
 
 .fa-solid {
     padding: 5px;
 }
 
-.horario {
-    display: flex;
-    flex-direction: column;
+.maps {
+    padding-bottom: 10px;
 }
 
-.horario__titulo {
-    text-align: center;
-}
-
-.horario__texto {
-    text-align: center;
-}
-
-.localizacao {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px 0 10px 0;
-}
 
 @media (min-width: 720px) and (max-width: 1023px) {
     .atendimento {
