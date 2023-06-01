@@ -7,6 +7,27 @@
   padding: 10px 10px;
 }
 
+.midias {
+  font-size: 28px;
+}
+
+.midias ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  gap: 3vh;
+}
+
+.midias a {
+  color: var(--preto);
+}
+
+.midias a:hover {
+  color: var(--azul);
+  transition: 1s;
+}
+
 .marca {
   display: block;
   text-align: center;

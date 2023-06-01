@@ -67,6 +67,10 @@
   color: var(--cinza);
 }
 
+.fa-bars, .fa-times {
+  color: var(--cinza);
+}
+
 #midias-header {
   display: flex;
   justify-content: center;

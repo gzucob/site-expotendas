@@ -7,35 +7,13 @@
     color: var(--branco);
 }
 
-.midias {
-    font-size: 36px;
-}
-
-.midias ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    text-align: center;
-    gap: 3vh;
-    padding: 10px 10px;
-}
-
-.midias a {
-    color: var(--preto);
-    padding: 5px;
-}
-
-.midias a:hover {
-    color: var(--branco);
-    transition: 1s;
-}
-
 .atendimento {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 10px;
+    padding: 10px 10px;
+    font-size: 12px;
 }
 
 .contatos {
@@ -43,14 +21,19 @@
     flex-direction: column;
 }
 
+.contatos, .localizacao, .horario {
+    padding: 10px 0;
+}
+
 .fa-solid {
     padding: 5px;
 }
 
 .maps {
+    width: 100%;
+    height: 300px;
     padding-bottom: 10px;
 }
-
 
 @media (min-width: 720px) and (max-width: 1023px) {
     .atendimento {
@@ -58,14 +41,80 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-evenly;
+        font-size: 12px;
+    }
+
+    .maps {
+        width: 100%;
+        height: 300px;
+        padding-bottom: 10px;
     }
 }
 
-@media (min-width: 1024px) {
-    .atendimento {
+@media (min-width: 1024px) and (max-width: 1599px) {
+    #contatos {
+        max-width: 100vw;
+        min-height: 70vh;
         display: flex;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
-        justify-content: space-evenly;
+        text-align: center;
+    }
+
+    .atendimento {
+        width: 50%;
+        padding: 0 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .contatos, .localizacao, .horario {
+        padding: 20px 0;
+    }
+
+    .maps {
+        width: 50%;
+        height: 590px;
+        padding-bottom: 0;
+    }
+
+}
+
+@media (min-width: 1600px) {
+    #contatos {
+        max-width: 100vw;
+        min-height: 70vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .atendimento {
+        width: 50%;
+        padding: 0 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .contatos, .localizacao, .horario {
+        padding: 20px 0;
+    }
+
+    .maps {
+        width: 50%;
+        height: 650px;
+        padding-bottom: 0;
     }
 }
+

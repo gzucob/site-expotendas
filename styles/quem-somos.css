@@ -20,9 +20,9 @@
 
 @media (min-width: 1024px) {
   #quem-somos {
-    height: 100vh;
-    width: 100vw;
-    padding: 100px;
+    padding: 0 100px;
+    max-width: 100vw;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;

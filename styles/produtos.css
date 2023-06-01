@@ -3,7 +3,7 @@
     flex-direction: column;
     background-color: var(--cor-de-fundo);
     font-family: var(--fonte-principal);
-    padding: 100px 10px;
+    padding: 0 10px;
 }
 
 .produto h2 {
@@ -25,6 +25,7 @@
     flex-direction: column;
     align-items: center;
     gap: 5vh;
+    padding-bottom: 7vh;
 }
 
 .card {
@@ -87,15 +88,42 @@ button {
     }
 }
 
-@media (min-width: 1024px) {
-    #produtos {
+@media (min-width: 1024px) and (max-width: 1599px) {
+    #produtos { 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 100px;
+        max-width: 100vw;
         min-height: 100vh;
     }
 
-    #produtos p{
-        padding: 50px 100px;
-    }
     .cards {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1600px) {
+    #produtos {
+        padding: 0 100px;
+        max-width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+
+    .produto {
+        max-width: 50%;
+    }
+
+    .cards {
+        max-width: 50%;
         display: flex;
         flex-direction: row;
         justify-content: center;
