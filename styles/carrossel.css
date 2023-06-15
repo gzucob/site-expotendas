@@ -50,14 +50,17 @@
     background: transparent;
     color: var(--branco);
     cursor: pointer;
-    font-size: 36px;
+    font-size: 24px;
     position: absolute;
     z-index: 1;
 }
 
-.slide-nav-previous,
+.slide-nav-previous {
+    left: 10px;
+}
+
 .slide-nav-next {
-    display: none;
+    right: 10px;
 }
 
 .slide-controls {

@@ -28,3 +28,14 @@ html {
     list-style: none;
     text-decoration: none;
 }
+
+.whats {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.whats:hover {
+    transform: scale(1.3);
+    transition: .5s;
+}

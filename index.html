@@ -9,7 +9,6 @@
   <link rel="website icon" type="svg" href="assets/logo-white.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
-  <script src="https://kit.fontawesome.com/3e2a2075af.js" crossorigin="anonymous"></script>
 
 <body>
   <header id="header">
@@ -194,31 +193,23 @@
         </ul>
       </div>
       <p class="marca">EXPO TENDAS é uma marca registrada de CONCI TURISMO E EVENTOS LTDA | CNPJ 10.665.441/0001-66</p>
-      <p class="copyright">&#169;Desenvolvido por <a href="">Gabriel Zuco Brezolin</a></p>
+      <p class="copyright">&#169;Desenvolvido por <a href="https://github.com/gzucob" target="_blank">Gabriel Zuco Brezolin</a></p>
     </footer>
   </main>
 
+  <div class="whats">
+    <a href="https://wa.me/555430281133" target="_blank"><img src="assets/WhatsApp.png" width="60" alt=""></a>
+  </div>
+  
+  <script src="https://kit.fontawesome.com/3e2a2075af.js" crossorigin="anonymous"></script>
   <script src="./hamburguer.js"></script>
   <script src="./carrossel.js"></script>
   <script>
     initSlider({
       autoPlay: true,
       startAtIndex: 0,
-      timeInterval: 2000
+      timeInterval: 5000
     })
   </script>
-  <script src="https://unpkg.com/blip-chat-widget" type="text/javascript"></script>
-  <script>
-      (function () {
-        window.onload = function () {
-          new BlipChat()
-            .withAppKey('ZXhwb3RlbmRhc2h1bWFubzo2N2M5YmM2Ni03NDc5LTRlNjYtODRjOS1iMDI0MDljNzc1MWE=')
-            .withButton({ "color": "#2CC3D5", "icon": "" })
-            .withCustomCommonUrl('https://expotendas.chat.blip.ai/')
-            .build();
-        };
-      })();
-  </script>
 </body>
-
 </html>
