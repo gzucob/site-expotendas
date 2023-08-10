@@ -1,146 +1,22 @@
 #carrossel {
-    padding-top: 90px;
-    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--azul-degrade);
+    padding-top: 100px;
 }
 
-.carrossel__slogan {
+.slogan {
     font-family: var(--fonte-principal);
     font-weight: bold 700;
     color: var(--branco);
     text-align: center;
+    padding-bottom: 10px;
 }
 
-.wrapper {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
 
-.slide-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-}
-
-.slide-list {
-    display: flex;
-}
-
-.slide-item {
-    cursor: grab;
-    flex-shrink: 0;
-    width: 100vw;
-    height: 30vh;
-    padding: 10px 10px;
-}
-
-.slide-image {
-    -webkit-box-shadow: 0px 0px 10px 0px var(--preto);
-    box-shadow: 0px 0px 10px 0px var(--preto);
-    border-radius: 10px;
-    width: 100%;
-    height: 30vh;
-}
-
-.slide-nav-button {
-    border: none;
-    background: transparent;
-    color: var(--branco);
-    cursor: pointer;
-    font-size: 24px;
-    position: absolute;
-    z-index: 1;
-}
-
-.slide-nav-previous {
-    left: 10px;
-}
-
-.slide-nav-next {
-    right: 10px;
-}
-
-.slide-controls {
-    margin: 15px auto 0;
-}
-
-.slide-control-button {
-    border: none;
-    color: var(--branco);
-    cursor: pointer;
-    background: transparent;
-    font-size: 8px;
-    margin: 0 5px;
-}
-
-.slide-control-button.active {
-    color: var(--cinza)
-}
-
-@media (min-width: 720px) and (max-width: 1023px) {
-    .slide-nav-previous,
-    .slide-nav-next {
-        display: flex;
-    }
-
-    .slide-nav-previous {
-        left: 10px;
-    }
-
-    .slide-nav-next {
-        right: 10px;
-    }
-
-    .slide-item {
-        width: 100vw;
-        height: 50vh;
-        padding: 10px 10px;
-    }
-
-    .slide-image {
-        width: 100%;
-        height: 50vh;
-    }
-
-    .slide-controls {
-        margin: 30px auto 0;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    #carrossel {
-        max-width: 100vw;
-        min-height: 100vh;
-    }
-
-    .wrapper {
-        padding: 20px 0;
-    }
-
-    .slide-nav-previous,
-    .slide-nav-next {
-        display: flex;
-    }
-
-    .slide-nav-previous {
-        left: 100px;
-    }
-
-    .slide-nav-next {
-        right: 100px;
-    }
-
-    .slide-item {
-        width: 100vw;
-        height: 75vh;
-        padding: 10px 100px;
-    }
-
-    .slide-image {
-        width: 100%;
-        height: 75vh;
-    }
+.carousel-item img {
+    max-height: 80vh;
+    margin-bottom: 20px;
 }

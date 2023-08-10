@@ -20,7 +20,7 @@
 }
 
 .midias a {
-  color: var(--preto);
+  color: var(--cinza);
 }
 
 .midias a:hover {
@@ -32,12 +32,12 @@
   display: block;
   text-align: center;
 }
-  
+
 .copyright {
   display: block;
   text-align: center;
 }
-  
+
 .copyright a {
   color: var(--cinza);
-} 
+}

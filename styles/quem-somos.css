@@ -1,28 +1,40 @@
 #quem-somos {
-  display: block;
   padding: 100px 10px;
   background-color: var(--cor-de-fundo);
   font-family: var(--fonte-principal);
 }
 
-.quem-somos__titulo {
+.quem-somos-titulo {
   font-weight: bold 700;
   color: var(--cinza);
   text-align: center;
   padding-bottom: 10px;
 }
 
-.quem-somos__texto {
+.quem-somos-texto {
   color: var(--cinza);
-  text-align: justify;
-  padding: 5px;
+  text-align: start;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.logo-portfolio {
+  width: 20%;
+  max-height: 30vh;
+  background: transparent;
 }
 
 @media (min-width: 1024px) {
   #quem-somos {
-    padding: 0 100px;
-    max-width: 100vw;
-    min-height: 100vh;
+    padding: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;

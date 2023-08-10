@@ -1,117 +1,32 @@
-#header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-  height: 70px;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navbar {
   background-color: var(--cor-de-fundo);
   background-image: linear-gradient(to right, green 0%, green 33.33%, red 33.33%, red 66.66%, yellow 66.66%, yellow 100%);
-  /* background-image: linear-gradient(to right, green, red, yellow); */
-  background-size: 100% 3px; 
+  background-size: 100% 3px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  font-family: var(--fonte-principal);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.logo {
+  width: 30vw;
+  height: 7vh;
+}
+
+.offcanvas-header {
+  background-color: var(--cor-de-fundo);
+  background-image: linear-gradient(to right, green 0%, green 33.33%, red 33.33%, red 66.66%, yellow 66.66%, yellow 100%);
+  background-size: 100% 3px;
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
-.logo {
-  width: 200px;
-  height: 200px;
-  padding: 0 10px;
-}
-
-#nav.active #menu {
-  height: calc(100vh - 70px);
-  visibility: visible;
-  overflow-y: auto;
-}
-
-#btn-mobile {
-  display: flex;
-  padding: 0.5rem 1rem;
-  font-size: 1.3rem;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-#menu {
-  display: block;
-  position: absolute;
-  width: 100%;
-  top: 70px;
-  right: 0px;
-  background-color: var(--cor-de-fundo);
-  transition: 0.6s;
-  z-index: 1000;
-  height: 0px;
-  visibility: hidden;
-  overflow-y: hidden;
-}
-
-#menu li {
-  background-color: var(--cor-de-fundo);
-  font-family: var(--fonte-principal);
-  font-weight: bold;
-}
-
-#menu a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 0;
-  margin: 0 1rem;
-  border-bottom: var(--cinza-claro);
+.nav-link i {
   color: var(--cinza);
 }
 
-.fa-bars, .fa-times {
-  color: var(--cinza);
-}
-
-#midias-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-}
-
-#midias-header ul {
-  display: flex;
-  flex-direction: row;
-}
-
-
-@media (min-width: 720px) and (max-width: 1023px) {
-  .logo {
-    width: 200px;
-    height: 200px;
-  }
-}
-
-@media (min-width: 1024px) {
-  #header {
-    display: flex;
-    justify-content: space-around;
-  }
-
-  #nav button {
-    display: none;
-  }
-
-  #menu {
-    display: flex;
-    position: inherit;
-    visibility: visible;
-    overflow-y: visible;
-    flex-direction: row;
-    align-items: center;
-  }
-
-  #menu a:hover {
-    color: var(--azul);
-    transition: 1s;
-  }
+.nav-link i:hover {
+  color: var(--azul);
+  transition: 1s;
 }
