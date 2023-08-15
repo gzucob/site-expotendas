@@ -18,10 +18,27 @@
     padding-bottom: 30px;
 }
 
+.card-modal-carrossel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
 .card {
+    width: 18rem;
+    margin-bottom: 70px;
     border: none;
     -webkit-box-shadow: 0px 0px 10px 1px var(--cinza-claro);
     box-shadow: 0px 0px 10px 1px var(--cinza-claro);
+    background: var(--cor-de-fundo);
+}
+
+.card, 
+.carousel-inner {
+    border-radius: 5px;
 }
 
 .card:hover,
@@ -35,7 +52,6 @@
     color: white;
     border: none;
 }
-
 
 @media (min-width: 1024px) {
     #produtos {
