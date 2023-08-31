@@ -4,19 +4,73 @@
     align-items: center;
     justify-content: center;
     background: var(--azul-degrade);
-    padding-top: 100px;
+    padding-top: 90px;
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-white {
+    width: 25%;
+    padding-bottom: 10px;
 }
 
 .slogan {
     font-family: var(--fonte-principal);
+    font-size: 20px;
     font-weight: bold 700;
     color: var(--branco);
     text-align: center;
-    padding-bottom: 10px;
+}
+ 
+.carrossel-home img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    border: none;
 }
 
+.contato-home {
+    text-decoration: none;
+    color: var(--branco);
+    font-size: 18px;
+    font-weight: 400;
+}
 
-.carousel-item img {
-    max-height: 80vh;
-    margin-bottom: 20px;
+.contato-home:hover {
+    color: var(--azul-degrade);
+    transition: 1s;
+}
+
+.contato-home i {
+    padding: 5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* @media (min-width: 768px) {
+    #carrossel {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+    }
+} */
+
+@media (min-width: 1400px) {
+    #carrossel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 100px;
+        padding-top: 100px;
+    }
+
+    .logo-white {
+        width: 25%;
+        padding-bottom: 10px;
+    }
 }

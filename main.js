@@ -1,15 +1,38 @@
+// Ao clicar em uma ancora fecha o offcanvasMenu
 document.addEventListener("DOMContentLoaded", function () {
-    // Obtém todos os links do menu
-    const menuLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const menuLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  const offcanvasMenu = document.getElementById("offcanvasNavbar")
 
-    // Obtém o elemento do menu offcanvas
-    const offcanvasMenu = document.getElementById("offcanvasNavbar");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      offcanvasMenu.classList.remove("show");
+    })
+  })
+})
 
-    // Adiciona um evento de clique para cada link do menu
-    menuLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            // Fecha o menu offcanvas
-            offcanvasMenu.classList.remove("show"); // Remover a classe "show" para esconder o offcanvas
-        });
+document.addEventListener('DOMContentLoaded', function () {
+  var contatoTextos = document.querySelectorAll('.contato-texto');
+
+  // Adicionar o ouvinte de clique para cada link de contato
+  contatoTextos.forEach(function (contatoTexto) {
+    contatoTexto.addEventListener('click', function () {
+      var textToCopy = contatoTexto.getAttribute('data-copy');
+      copyToClipboard(textToCopy);
+      alert('Texto copiado para a área de transferência!');
     });
+  });
+
+  // Função para copiar texto para a área de transferência
+  function copyToClipboard(text) {
+    var tempTextarea = document.createElement('textarea');
+    tempTextarea.value = text;
+    document.body.appendChild(tempTextarea);
+
+    tempTextarea.select();
+    tempTextarea.setSelectionRange(0, 99999);
+
+    document.execCommand('copy');
+
+    document.body.removeChild(tempTextarea);
+  }
 });
