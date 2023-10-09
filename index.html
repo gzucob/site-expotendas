@@ -2,436 +2,546 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Expo Tendas</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="website icon" type="svg" href="assets/logo-white.svg">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Expo Tendas</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="website icon" type="svg" href="assets/logo-white.svg">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
 
 <body>
 
-  <!-- Menu -->
-  <header id="home" class="header">
-    <nav class="navbar navbar-expand-lg w-100 d-flex align-items-center justify-content-between bg-body-tertiary fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex justify-content-center align-items-center" href="#home">
-          <img class="logo" src="assets/logo.svg" alt="logo-expotendas">
-        </a>
+	<!-- Menu -->
+	<header id="home" class="header">
+		<nav
+			class="navbar navbar-expand-lg w-100 d-flex align-items-center justify-content-between bg-body-tertiary fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand d-flex justify-content-center align-items-center" href="#home">
+					<img class="logo" src="assets/logo.svg" alt="logo-expotendas">
+				</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+					aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
-          <div class="offcanvas-header">
-            <img class="logo" src="assets/logo.svg" alt="logo-expotendas" class="offcanvas-title"
-              id="offcanvasNavbarLabel"></img>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
+					<div class="offcanvas-header">
+						<img class="logo" src="assets/logo.svg" alt="logo-expotendas" class="offcanvas-title"
+							id="offcanvasNavbarLabel"></img>
+						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+					</div>
 
-          <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-lg-around align-items-lg-center">
+					<div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-lg-around align-items-lg-center">
 
-            <div class="navegacao d-flex justify-content-start">
-              <ul class="navbar-nav d-flex flex-column flex-lg-row gap-lg-2">
-                <li class="nav-item">
-                  <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#quem-somos">Quem somos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#produtos">Produtos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contato">Contato</a>
-                </li>
-              </ul>
-            </div>
+						<div class="navegacao d-flex justify-content-start">
+							<ul class="navbar-nav d-flex flex-column flex-lg-row gap-lg-2">
+								<li class="nav-item">
+									<a class="nav-link" href="#home">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#quem-somos">Quem somos</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#produtos">Produtos</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#contato">Contato</a>
+								</li>
+							</ul>
+						</div>
 
-            <div class="midias d-flex justify-content-center">
-              <ul class="navbar-nav d-flex flex-row gap-5 gap-lg-2">
-                <li class="nav-item">
-                  <a class="nav-link" type="button" target="_blank">
-                    <i class="bi bi-facebook"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" target="_blank">
-                    <i class="bi bi-instagram"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" target="_blank">
-                    <i class="bi bi-youtube"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+						<div class="midias d-flex justify-content-center">
+							<ul class="navbar-nav d-flex flex-row gap-5 gap-lg-2">
+								<li class="nav-item">
+									<a class="nav-link" type="button" target="_blank">
+										<i class="bi bi-facebook"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#" target="_blank">
+										<i class="bi bi-instagram"></i>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#" target="_blank">
+										<i class="bi bi-youtube"></i>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
 
-  <main>
-    <!-- Carrossel -->
-    <section id="carrossel">
-      <div class="apresentacao">
-        <img class="logo-white" src="assets/logo-white.svg" alt="">
-        <h1 class="slogan">A solução prática para o seu evento!</h1>
-        <a class="contato-home" href="https://wa.me/555430281133" target="_blank"
-          alt="clique para iniciar uma conversa no whatsapp"><i class="bi bi-whatsapp"></i>(54) 3028-1133</a>
-      </div>
+	<main>
+		<!-- Carrossel -->
+		<section id="carrossel">
+			<div class="apresentacao">
+				<img class="logo-white" src="assets/logo-white.svg" alt="">
+				<h1 class="slogan">A solução prática para o seu evento!</h1>
+				<a class="contato-home" href="https://wa.me/555430281133" target="_blank"
+					alt="clique para iniciar uma conversa no whatsapp"><i class="bi bi-whatsapp"></i>(54) 3028-1133</a>
+			</div>
 
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active carrossel-home">
-            <img src="assets/imagem1.svg" class="d-block w-100" alt="">
-          </div>
-          <div class="carousel-item carrossel-home">
-            <img src="assets/imagem2.svg" class="d-block w-100" alt="">
-          </div>
-          <div class="carousel-item carrossel-home">
-            <img src="assets/imagem3.svg" class="d-block w-100" alt="">
-          </div>
-          <div class="carousel-item carrossel-home">
-            <img src="assets/imagem4.svg" class="d-block w-100" alt="">
-          </div>
-          <div class="carousel-item carrossel-home">
-            <img src="assets/imagem5.svg" class="d-block w-100" alt="">
-          </div>
-        </div>
+			<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active carrossel-home">
+						<img src="assets/imagem1.svg" class="d-block w-100" alt="">
+					</div>
+					<div class="carousel-item carrossel-home">
+						<img src="assets/imagem2.svg" class="d-block w-100" alt="">
+					</div>
+					<div class="carousel-item carrossel-home">
+						<img src="assets/imagem3.svg" class="d-block w-100" alt="">
+					</div>
+					<div class="carousel-item carrossel-home">
+						<img src="assets/imagem4.svg" class="d-block w-100" alt="">
+					</div>
+					<div class="carousel-item carrossel-home">
+						<img src="assets/imagem5.svg" class="d-block w-100" alt="">
+					</div>
+				</div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-          data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-    </section>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+					data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+					data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</section>
 
-    <!-- Quem Somos -->
-    <section id="quem-somos">
-      <div class="quem-somos">
-        <h2 class="quem-somos-titulo">Quem somos</h2>
-        <p class="quem-somos-texto">Expo Tendas, com mais de 15 anos de experiência e mais de 5.000 clientes em seu
-          portfólio, é referência na Serra Gaúcha em locação de coberturas (tendas e galpões industriais), pisos,
-          palcos, tablados, estandes, passarelas, camarotes e outros. Pela vasta experiência no mercado, consegue
-          entregar
-          serviços personalizados e customizados aos mais exigentes clientes.<br><br>As estruturas da EXPOTENDAS,
-          desenvolvidas com materiais de avançada tecnologia e alta qualidade, foram especialmente desenhadas para as
-          severas condições climáticas da
-          região Sul, com maior resistência a ventos, temporais e rígidas trocas de temperaturas.<br><br>Esse desenho
-          e tecnologia tem registro no INPI - CERTIFICADO DE REGISTRO DE DESENHO INDUSTRIAL - DI7101268-0. As
-          coberturas
-          de lonas têm tecnologia antichama e nossas obras sempre recebem aprovação do PPCI do Corpo de
-          Bombeiros.<br><br>A Expo Tendas é registrada no CREA-RS sob número 198108, com engenheiro responsável no
-          quadro de funcionários.
-          Todos os serviços prestados são garantidos com fornecimento de ART e Laudo Técnico. Além disso, a empresa
-          utiliza mão de obra altamente especializada e treinada, observando toda a legislação trabalhista e fiscal,
-          especialmente no que diz respeito a trabalho de menores.
-        </p>
-      </div>
+		<!-- Quem Somos -->
+		<section id="quem-somos">
+			<div class="quem-somos">
+				<h2 class="quem-somos-titulo">Quem somos</h2>
+				<p class="quem-somos-texto">Expo Tendas, com mais de 15 anos de experiência e mais de 5.000 clientes em
+					seu
+					portfólio, é referência na Serra Gaúcha em locação de coberturas (tendas e galpões industriais),
+					pisos,
+					palcos, tablados, estandes, passarelas, camarotes e outros. Pela vasta experiência no mercado,
+					consegue
+					entregar
+					serviços personalizados e customizados aos mais exigentes clientes.<br><br>As estruturas da
+					EXPOTENDAS,
+					desenvolvidas com materiais de avançada tecnologia e alta qualidade, foram especialmente desenhadas
+					para as
+					severas condições climáticas da
+					região Sul, com maior resistência a ventos, temporais e rígidas trocas de temperaturas.<br><br>Esse
+					desenho
+					e tecnologia tem registro no INPI - CERTIFICADO DE REGISTRO DE DESENHO INDUSTRIAL - DI7101268-0. As
+					coberturas
+					de lonas têm tecnologia antichama e nossas obras sempre recebem aprovação do PPCI do Corpo de
+					Bombeiros.<br><br>A Expo Tendas é registrada no CREA-RS sob número 198108, com engenheiro
+					responsável no
+					quadro de funcionários.
+					Todos os serviços prestados são garantidos com fornecimento de ART e Laudo Técnico. Além disso, a
+					empresa
+					utiliza mão de obra altamente especializada e treinada, observando toda a legislação trabalhista e
+					fiscal,
+					especialmente no que diz respeito a trabalho de menores.
+				</p>
+			</div>
 
-      <div class="portfolio">
-        <div class="portfolio-rgb">
-          <img class="img-rgb" src="assets/logo-bento-rgb.svg" alt="">
-          <img class="img-rgb" src="assets/logo-caxias-rgb.svg" alt="">
-          <img class="img-rgb" src="assets/logo-garibaldi-rgb.svg" alt="">
-          <img class="img-rgb" src="assets/logo-marcopolo-rgb.svg" alt="">
-          <img class="img-rgb" src="assets/logo-weg-rgb.svg" alt="">
-          <img class="img-rgb" src="assets/logo-hyva-rgb.svg" alt="">
-          <img class="img-rgb" src="assets/logo-mercopar-rgb.svg" alt="">
-          <img class="img-rgb" src="assets/logo-fenamassa-rgb.svg" alt="">
-          <img class="img-rgb" src="assets/logo-festadauva-rgb.svg" alt="">
-        </div>
-      </div>
-    </section>
+			<div class="portfolio">
+				<div class="portfolio-rgb">
+					<img class="img-rgb" src="assets/logo-bento-rgb.svg" alt="">
+					<img class="img-rgb" src="assets/logo-caxias-rgb.svg" alt="">
+					<img class="img-rgb" src="assets/logo-garibaldi-rgb.svg" alt="">
+					<img class="img-rgb" src="assets/logo-marcopolo-rgb.svg" alt="">
+					<img class="img-rgb" src="assets/logo-weg-rgb.svg" alt="">
+					<img class="img-rgb" src="assets/logo-hyva-rgb.svg" alt="">
+					<img class="img-rgb" src="assets/logo-mercopar-rgb.svg" alt="">
+					<img class="img-rgb" src="assets/logo-fenamassa-rgb.svg" alt="">
+					<img class="img-rgb" src="assets/logo-festadauva-rgb.svg" alt="">
+				</div>
+			</div>
+		</section>
 
-    <!-- Produtos -->
-    <section id="produtos">
-      <div class="produto">
-        <h2>Produtos</h2>
-        <p>A Expotendas disponibiliza tendas e galpões industriais com desenho industrial depositado no INPI através
-          docódigo DI-7101268-0, tendo assim exclusividade no modelo adotado.<br>As lonas possuem proteção UV,
-          antichama, antimofo e blackout, para maior conforto e segurança. Oferecemos locação de tendas brancas e
-          translúcidas com perfeito acabamento, com calhas e pés arredondados, deixando o ambiente ainda mais elegante.
-          Disponibilizamos também pisos, palcos, tablados, passarelas, pistas de dança, túnel, móveis, pirâmides,
-          camarotes, áreas VIP, bretes de isolamento e galpões.<br>Temos tendas nos seguintes tamanhos: 05x05, 05x10,
-          08x10 e 10x10.</p>
-      </div>
+		<!-- Produtos -->
+		<section id="produtos">
+			<div class="produto">
+				<h2>Produtos</h2>
+				<p>A Expotendas disponibiliza tendas e galpões industriais com desenho industrial depositado no INPI
+					através
+					docódigo DI-7101268-0, tendo assim exclusividade no modelo adotado.<br>As lonas possuem proteção UV,
+					antichama, antimofo e blackout, para maior conforto e segurança. Oferecemos locação de tendas
+					brancas e
+					translúcidas com perfeito acabamento, com calhas e pés arredondados, deixando o ambiente ainda mais
+					elegante.
+					Disponibilizamos também pisos, palcos, tablados, passarelas, pistas de dança, túnel, móveis,
+					pirâmides,
+					camarotes, áreas VIP, bretes de isolamento e galpões.<br>Temos tendas nos seguintes tamanhos: 05x05,
+					05x10,
+					08x10 e 10x10.</p>
+			</div>
 
 
-      <div class="card-modal-carrossel">
-        <div class="card">
-          <img src="assets/eventos-card.svg" class="card-img-top" width="100%" height="100%">
+			<div class="card-modal-carrossel">
 
-          <div class="card-body">
-            <h5 class="card-title">Eventos</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
-              data-bs-target="#OpenModalEventos">Saiba Mais</button>
-          </div>
-        </div>
+				<div class="card-group">
+					<div class="card">
+						<img src="assets/galpao-card.svg" class="card-img-top">
 
-        <div id="OpenModalEventos" class="modal">
-          <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
-            <div class="modal-content">
+						<div class="card-body">
+							<h5 class="card-title">Eventos</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's
+								content.</p>
+							<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
+								data-bs-target="#OpenModalEventos">Saiba Mais</button>
+						</div>
+					</div>
 
-              <div class="modal-header">
-                <h3 class="modal-title">Eventos</h3>
-                <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-              </div>
+					<div id="OpenModalEventos" class="modal">
+						<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+							<div class="modal-content">
 
-              <div class="modal-body">
-                <div id="carrossel-eventos" class="carousel slide" data-bs-ride="carousel">
+								<div class="modal-header">
+									<h3 class="modal-title">Eventos</h3>
+									<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+								</div>
 
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="img-modal" src="assets/imagem1.svg" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="img-modal" src="assets/imagem2.svg" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="img-modal" src="assets/imagem3.svg" alt="...">
-                    </div>
-                  </div>
+								<div class="modal-body">
+									<div id="carrossel-eventos" class="carousel slide h-0" data-bs-ride="carousel">
 
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-eventos"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carrossel-eventos"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img class="img-modal" src="assets/imagem1.svg" alt="...">
+											</div>
+											<div class="carousel-item">
+												<img class="img-modal" src="assets/imagem2.svg" alt="...">
+											</div>
+											<div class="carousel-item">
+												<img class="img-modal" src="assets/imagem3.svg" alt="...">
+											</div>
+										</div>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non recusandae perferendis,
-                  neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio? Dolorem dolorum ipsa
-                  ducimus sed nobis!</p>
-              </div>
+										<button class="carousel-control-prev" type="button" data-bs-target="#carrossel-eventos"
+											data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Previous</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-bs-target="#carrossel-eventos"
+											data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Next</span>
+										</button>
+									</div>
 
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger w-50 text-nowrap" data-bs-dismiss="modal">Fechar</button>
-              </div>
-            </div>
-          </div>
-        </div>
+									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
+										recusandae perferendis,
+										neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
+										Dolorem dolorum
+										ipsa
+										ducimus sed nobis!</p>
+								</div>
 
-        <div class="card">
-          <img src="assets/galpao-card.svg" class="card-img-top" width="100%" height="100%">
+								<div class="modal-footer">
+									<a href="https://wa.me/555430281133" target="_blank"><button type="button"
+											class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
+											Orçamento</button></a>
+									<button type="button" class="btn btn-danger text-nowrap" data-bs-dismiss="modal">Fechar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-          <div class="card-body">
-            <h5 class="card-title">Galpão Industrial</h5>
-            <p class="card-text">Some quick example text to build on the card title and make the bulk of the card's
-              content.</p>
-            <button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
-              data-bs-target="#OpenModalGalpao">Saiba Mais</button>
-          </div>
-        </div>
+				<div class="card-group">
+					<div class="card">
+						<img src="assets/galpao-card.svg" class="card-img-top">
 
-        <div id="OpenModalGalpao" class="modal">
-          <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
-            <div class="modal-content w-auto h-auto">
+						<div class="card-body">
+							<h5 class="card-title">Galpão Industrial</h5>
+							<p class="card-text">Some quick example text to build on the card title and make the bulk of the card's content.</p>
+							<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
+								data-bs-target="#OpenModalGalpao">Saiba Mais</button>
+						</div>
+					</div>
 
-              <div class="modal-header">
-                <h3 class="modal-title">Galpão</h3>
-                <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-              </div>
+					<div id="OpenModalGalpao" class="modal">
+						<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+							<div class="modal-content w-auto h-auto">
 
-              <div class="modal-body">
-                <div id="carrossel-galpao" class="carousel slide" data-bs-ride="carousel">
+								<div class="modal-header">
+									<h3 class="modal-title">Galpão</h3>
+									<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+								</div>
 
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="img-modal" src="assets/imagem1.svg" alt="">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="img-modal" src="assets/imagem2.svg" alt="">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="img-modal" src="assets/imagem3.svg" alt="">
-                    </div>
-                  </div>
+								<div class="modal-body">
+									<div id="carrossel-galpao" class="carousel slide" data-bs-ride="carousel">
 
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-galpao"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carrossel-galpao"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img class="img-modal" src="assets/imagem1.svg" alt="">
+											</div>
+											<div class="carousel-item">
+												<img class="img-modal" src="assets/imagem2.svg" alt="">
+											</div>
+											<div class="carousel-item">
+												<img class="img-modal" src="assets/imagem3.svg" alt="">
+											</div>
+										</div>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non recusandae perferendis,
-                  neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio? Dolorem dolorum ipsa
-                  ducimus sed nobis!</p>
-              </div>
+										<button class="carousel-control-prev" type="button" data-bs-target="#carrossel-galpao"
+											data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Previous</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-bs-target="#carrossel-galpao"
+											data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Next</span>
+										</button>
+									</div>
 
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger w-50 text-nowrap" data-bs-dismiss="modal">Fechar</button>
-              </div>
-            </div>
-          </div>
-        </div>
+									<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
+										recusandae perferendis,
+										neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
+										Dolorem dolorum ipsa
+										ducimus sed nobis!</p>
+								</div>
 
-        <div class="card">
+								<div class="modal-footer">
+									<a href="https://wa.me/555430281133" target="_blank"><button type="button"
+											class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
+											Orçamento</button></a>
+									<button type="button" class="btn btn-danger text-nowrap" data-bs-dismiss="modal">Fechar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-          <img src="assets/galpao-card.svg" class="card-img-top" width="100%" height="100%">
+				<div class="card-group">
+					<div class="card">
 
-          <div class="card-body">
-            <h5 class="card-title">Feiras</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
-              data-bs-target="#OpenModalFeiras">Saiba Mais</button>
-          </div>
-        </div>
+						<img src="assets/galpao-card.svg" class="card-img-top">
 
-        <div id="OpenModalFeiras" class="modal">
-          <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
-            <div class="modal-content w-auto h-auto">
+						<div class="card-body">
+							<h5 class="card-title">Feiras</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's
+								content.</p>
+							<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
+								data-bs-target="#OpenModalFeiras">Saiba Mais</button>
+						</div>
+					</div>
 
-              <div class="modal-header">
-                <h3 class="modal-title">Feiras</h3>
-                <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-              </div>
+					<div id="OpenModalFeiras" class="modal">
+						<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+							<div class="modal-content w-auto h-auto">
 
-              <div class="modal-body">
-                <div id="carrossel-feiras" class="carousel slide" data-bs-ride="carousel">
+								<div class="modal-header">
+									<h3 class="modal-title">Feiras</h3>
+									<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+								</div>
 
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="img-modal" src="assets/imagem1.svg" alt="">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="img-modal" src="assets/imagem2.svg" alt="">
-                    </div>
-                    <div class="carousel-item">
-                      <img class="img-modal" src="assets/imagem3.svg" alt="">
-                    </div>
-                  </div>
+								<div class="modal-body">
+									<div id="carrossel-feiras" class="carousel slide" data-bs-ride="carousel">
 
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carrossel-feiras"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carrossel-feiras"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                </div>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img class="img-modal" src="assets/imagem1.svg" alt="">
+											</div>
+											<div class="carousel-item">
+												<img class="img-modal" src="assets/imagem2.svg" alt="">
+											</div>
+											<div class="carousel-item">
+												<img class="img-modal" src="assets/imagem3.svg" alt="">
+											</div>
+										</div>
 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non recusandae perferendis,
-                  neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio? Dolorem dolorum ipsa
-                  ducimus sed nobis!</p>
-              </div>
+										<button class="carousel-control-prev" type="button" data-bs-target="#carrossel-feiras"
+											data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Previous</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-bs-target="#carrossel-feiras"
+											data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Next</span>
+										</button>
+									</div>
 
-              <div class="modal-footer">
-                <button type="button" class="btn btn-danger w-50 text-nowrap" data-bs-dismiss="modal">Fechar</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+									<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
+										recusandae perferendis,
+										neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
+										Dolorem dolorum ipsa
+										ducimus sed nobis!</p>
+								</div>
 
-    <!-- Contato -->
-    <section id="contato">
-      <div class="atendimento">
-        <div class="contatos">
-          <h3 class="contatos-titulo">Outras dúvidas:</h3>
-          <a class="contato-texto" href="https://wa.me/555430281133" target="_blank"><i class="bi bi-whatsapp"></i>(54)
-            3028-1133</a>
-          <a class="contato-texto" data-copy="contato@expotendas.com.br"><i
-              class="bi bi-envelope-fill"></i>contato@expotendas.com.br</a>
-          <a class="contato-texto" data-copy="comercial@expotendas.com.br"><i
-              class="bi bi-envelope-fill"></i>comercial@expotendas.com.br</a>
-          <a class="contato-texto" data-copy="financeiro@expotendas.com.br"><i
-              class="bi bi-envelope-fill"></i>financeiro@expotendas.com.br</a>
-        </div>
+								<div class="modal-footer">
+									<a href="https://wa.me/555430281133" target="_blank"><button type="button"
+											class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
+											Orçamento</button></a>
+									<button type="button" class="btn btn-danger text-nowrap" data-bs-dismiss="modal">Fechar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-        <div class="localizacao">
-          <h3 class="endereco">Endereço:</h3>
-          <p>Rua Ludovico Cavinatto, 281 - CEP: 95032-620<br>Bairro Nossa Senhora da Saúde<br>Caxias do Sul - RS</p>
-        </div>
+				<div class="card-group">
+					<div class="card">
 
-        <div class="horario">
-          <h3 class="horario-titulo">Atendimento:</h3>
-          <p class="horario-texto">Segunda à sexta-feira<br>08:30 - 12:00<br>13:30 - 18:00</p>
-        </div>
-      </div>
+						<img src="assets/galpao-card.svg" class="card-img-top">
 
-      <iframe class="maps"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.0913266652133!2d-51.20582188436369!3d-29.13249659642027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea2c0e6044b67%3A0x500f7d240248332!2sExpotendas%20-%20Lonas%2C%20Tendas%20e%20Pir%C3%A2mides%20para%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1678650743991!5m2!1spt-BR!2sbr"
-        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </section>
+						<div class="card-body">
+							<h5 class="card-title">Festas</h5>
+							<p class="card-text">Some quick example text to build on the card title and make up the bulk
+								of the card's content.</p>
+							<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
+								data-bs-target="#OpenModalFestas">Saiba Mais</button>
+						</div>
+					</div>
 
-    <!-- Rodape -->
-    <footer id="footer">
-      <div class="midias">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/expotendas" target="_blank">
-              <i class="bi bi-facebook"></i>
-            </a>
-          </li>
+					<div id="OpenModalFestas" class="modal">
+						<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+							<div class="modal-content w-auto h-auto">
 
-          <li>
-            <a href="https://www.instagram.com/expotendas/" target="_blank">
-              <i class="bi bi-instagram"></i>
-            </a>
-          </li>
+								<div class="modal-header">
+									<h3 class="modal-title">Festas</h3>
+									<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+								</div>
 
-          <li>
-            <a href="https://www.youtube.com/@expotendascaxiasdosul8127" target="_blank">
-              <i class="bi bi-youtube"></i>
-            </a>
-          </li>
+								<div class="modal-body">
+									<div id="carrossel-feiras" class="carousel slide" data-bs-ride="carousel">
 
-          <li>
-            <a href="#linkedin" target="_blank">
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<img class="img-modal" src="assets/imagem1.svg" alt="">
+											</div>
+											<div class="carousel-item">
+												<img class="img-modal" src="assets/imagem2.svg" alt="">
+											</div>
+											<div class="carousel-item">
+												<img class="img-modal" src="assets/imagem3.svg" alt="">
+											</div>
+										</div>
 
-      <p class="marca">EXPO TENDAS é uma marca registrada de CONCI TURISMO E EVENTOS LTDA | CNPJ 10.665.441/0001-66</p>
+										<button class="carousel-control-prev" type="button" data-bs-target="#carrossel-feiras"
+											data-bs-slide="prev">
+											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Previous</span>
+										</button>
+										<button class="carousel-control-next" type="button" data-bs-target="#carrossel-feiras"
+											data-bs-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="visually-hidden">Next</span>
+										</button>
+									</div>
 
-      <p class="copyright">&#169;Desenvolvido por <a href="https://github.com/gzucob" target="_blank">Gabriel Zuco
-          Brezolin</a></p>
-    </footer>
-  </main>
+									<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
+										recusandae perferendis,
+										neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
+										Dolorem dolorum ipsa
+										ducimus sed nobis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto animi minima nam debitis necessitatibus voluptates sapiente iusto consectetur itaque neque facilis sed ducimus, inventore velit libero dolorem fugiat officiis sequi!</p>
+								</div>
 
-  <div class="whats">
-    <a href="https://wa.me/555430281133" target="_blank"><img src="assets/whatsapp.svg" width="60" alt=""></a>
-  </div>
+								<div class="modal-footer">
+									<a href="https://wa.me/555430281133" target="_blank"><button type="button"
+											class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
+											Orçamento</button></a>
+									<button type="button" class="btn btn-danger text-nowrap" data-bs-dismiss="modal">Fechar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
+			</div>
+		</section>
+
+		<!-- Contato -->
+		<section id="contato">
+			<div class="atendimento">
+				<div class="contatos">
+					<h3 class="contatos-titulo">Outras dúvidas:</h3>
+					<a class="contato-texto" href="https://wa.me/555430281133" target="_blank"><i class="bi bi-whatsapp"></i>(54)
+						3028-1133</a>
+					<a class="contato-texto" href="mailto:contato@expotendas.com.br"><i
+							class="bi bi-envelope-fill"></i>contato@expotendas.com.br</a>
+					<a class="contato-texto" href="mailto:comercial@expotendas.com.br"><i
+							class="bi bi-envelope-fill"></i>comercial@expotendas.com.br</a>
+					<a class="contato-texto" href="mailto:financeiro@expotendas.com.br"><i
+							class="bi bi-envelope-fill"></i>financeiro@expotendas.com.br</a>
+				</div>
+
+				<div class="localizacao">
+					<h3 class="endereco">Endereço:</h3>
+					<p>Rua Ludovico Cavinatto, 281 - CEP: 95032-620<br>Bairro Nossa Senhora da Saúde<br>Caxias do Sul -
+						RS</p>
+				</div>
+
+				<div class="horario">
+					<h3 class="horario-titulo">Atendimento:</h3>
+					<p class="horario-texto">Segunda à sexta-feira<br>08:30 - 12:00<br>13:30 - 18:00</p>
+				</div>
+			</div>
+
+			<iframe class="maps"
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.0913266652133!2d-51.20582188436369!3d-29.13249659642027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea2c0e6044b67%3A0x500f7d240248332!2sExpotendas%20-%20Lonas%2C%20Tendas%20e%20Pir%C3%A2mides%20para%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1678650743991!5m2!1spt-BR!2sbr"
+				style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</section>
+
+		<!-- Rodape -->
+		<footer id="footer">
+			<div class="midias">
+				<ul>
+					<li>
+						<a href="https://www.facebook.com/expotendas" target="_blank">
+							<i class="bi bi-facebook"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.instagram.com/expotendas/" target="_blank">
+							<i class="bi bi-instagram"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.youtube.com/@expotendascaxiasdosul8127" target="_blank">
+							<i class="bi bi-youtube"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="#linkedin" target="_blank">
+							<i class="bi bi-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<p class="marca">EXPO TENDAS é uma marca registrada de CONCI TURISMO E EVENTOS LTDA | CNPJ
+				10.665.441/0001-66</p>
+
+			<p class="copyright">&#169;Desenvolvido por <a href="https://github.com/gzucob" target="_blank">Gabriel Zuco
+					Brezolin</a></p>
+		</footer>
+	</main>
+
+	<div class="whats">
+		<a href="https://wa.me/555430281133" target="_blank"><img src="assets/whatsapp.svg" width="60" alt=""></a>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="main.js"></script>
 </body>
 
 </html>

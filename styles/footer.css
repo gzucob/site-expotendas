@@ -1,43 +1,43 @@
 #footer {
-  display: block;
-  background-color: var(--cor-de-fundo);
-  font-family: var(--fonte-principal);
-  font-size: 16px;
-  color: var(--cinza);
-  padding: 10px 10px;
+	display: block;
+	background-color: var(--cor-de-fundo);
+	font-family: var(--fonte-principal);
+	font-size: 16px;
+	color: var(--cinza);
+	padding: 10px 10px;
 }
 
 .midias {
-  font-size: 28px;
+	font-size: 28px;
 }
 
 .midias ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  gap: 3vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	gap: 3vh;
 }
 
 .midias a {
-  color: var(--cinza);
+	color: var(--cinza);
 }
 
 .midias a:hover {
-  color: var(--azul);
-  transition: 1s;
+	color: var(--azul);
+	transition: 1s;
 }
 
 .marca {
-  display: block;
-  text-align: center;
+	display: block;
+	text-align: center;
 }
 
 .copyright {
-  display: block;
-  text-align: center;
+	display: block;
+	text-align: center;
 }
 
 .copyright a {
-  color: var(--cinza);
+	color: var(--cinza);
 }

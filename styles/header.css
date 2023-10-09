@@ -1,37 +1,37 @@
 .navbar {
-  background-color: var(--cor-de-fundo);
-  background-image: linear-gradient(to right, green 0%, green 33.33%, red 33.33%, red 66.66%, yellow 66.66%, yellow 100%);
-  background-size: 100% 3px;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  font-family: var(--fonte-principal);
-  font-weight: bold;
-  font-size: 16px;
+	background-color: var(--cor-de-fundo);
+	background-image: linear-gradient(to right, green 0%, green 33.33%, red 33.33%, red 66.66%, yellow 66.66%, yellow 100%);
+	background-size: 100% 3px;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	font-family: var(--fonte-principal);
+	font-weight: bold;
+	font-size: 16px;
 }
 
 .logo {
-  width: 30vw;
-  max-height: 5vh;
+	width: 30vw;
+	max-height: 5vh;
 }
 
 .logo:hover {
-  transform: scale(1.1);
-  transition: .5s;
+	transform: scale(1.1);
+	transition: .5s;
 }
 
 .offcanvas-header {
-  background-color: var(--cor-de-fundo);
-  background-image: linear-gradient(to right, green 0%, green 33.33%, red 33.33%, red 66.66%, yellow 66.66%, yellow 100%);
-  background-size: 100% 3px;
-  background-repeat: no-repeat;
-  background-position: bottom;
+	background-color: var(--cor-de-fundo);
+	background-image: linear-gradient(to right, green 0%, green 33.33%, red 33.33%, red 66.66%, yellow 66.66%, yellow 100%);
+	background-size: 100% 3px;
+	background-repeat: no-repeat;
+	background-position: bottom;
 }
 
 .nav-link i {
-  color: var(--cinza);
+	color: var(--cinza);
 }
 
 .nav-link i:hover {
-  color: var(--azul);
-  transition: 1s;
+	color: var(--azul);
+	transition: 1s;
 }

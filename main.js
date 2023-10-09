@@ -1,38 +1,33 @@
-// Ao clicar em uma ancora fecha o offcanvasMenu
+// //Ao clicar em uma ancora fecha o offcanvasMenu
+// document.addEventListener("DOMContentLoaded", function () {
+//   const menuLinks = document.querySelectorAll(".navbar-nav .nav-link");
+//   const offcanvasMenu = document.getElementById("offcanvasNavbar")
+
+//   menuLinks.forEach(link => {
+//     link.addEventListener("click", () => {
+//       offcanvasMenu.classList.remove("show");
+//     })
+//   })
+// })
+
+
 document.addEventListener("DOMContentLoaded", function () {
-  const menuLinks = document.querySelectorAll(".navbar-nav .nav-link");
-  const offcanvasMenu = document.getElementById("offcanvasNavbar")
+	const menuLinks = document.querySelectorAll(".navbar-nav .nav-link");
+	const offcanvasMenu = document.getElementById("offcanvasNavbar");
 
-  menuLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      offcanvasMenu.classList.remove("show");
-    })
-  })
-})
+	menuLinks.forEach(link => {
+		link.addEventListener("click", () => {
+			// Verificar se o menu offcanvas está aberto
+			if (offcanvasMenu.classList.contains("show")) {
+				// Fechar o menu offcanvas
+				offcanvasMenu.classList.remove("show");
 
-document.addEventListener('DOMContentLoaded', function () {
-  var contatoTextos = document.querySelectorAll('.contato-texto');
-
-  // Adicionar o ouvinte de clique para cada link de contato
-  contatoTextos.forEach(function (contatoTexto) {
-    contatoTexto.addEventListener('click', function () {
-      var textToCopy = contatoTexto.getAttribute('data-copy');
-      copyToClipboard(textToCopy);
-      alert('Texto copiado para a área de transferência!');
-    });
-  });
-
-  // Função para copiar texto para a área de transferência
-  function copyToClipboard(text) {
-    var tempTextarea = document.createElement('textarea');
-    tempTextarea.value = text;
-    document.body.appendChild(tempTextarea);
-
-    tempTextarea.select();
-    tempTextarea.setSelectionRange(0, 99999);
-
-    document.execCommand('copy');
-
-    document.body.removeChild(tempTextarea);
-  }
+				// Adicionar um ouvinte de evento 'transitionend' ao menu offcanvas
+				offcanvasMenu.addEventListener("transitionend", () => {
+					// Habilitar o rolamento da tela após a transição do menu ser concluída
+					document.body.style.overflow = "auto";
+				}, { once: true }); // Remove o ouvinte após ser executado uma vez
+			}
+		});
+	});
 });
