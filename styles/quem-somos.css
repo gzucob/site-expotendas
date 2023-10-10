@@ -12,6 +12,7 @@
 }
 
 .quem-somos-titulo {
+	font-size: 2rem;
 	font-weight: bold 700;
 	color: var(--cinza);
 	text-align: center;
@@ -19,6 +20,7 @@
 }
 
 .quem-somos-texto {
+	font-size: 1rem;
 	color: var(--cinza);
 	text-align: start;
 }

@@ -6,7 +6,7 @@
 	background-position: bottom;
 	font-family: var(--fonte-principal);
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 .logo {
@@ -28,6 +28,7 @@
 }
 
 .nav-link i {
+	font-size: 1.5rem;
 	color: var(--cinza);
 }
 

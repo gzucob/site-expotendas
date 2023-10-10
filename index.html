@@ -24,12 +24,13 @@
 					<img class="logo" src="assets/logo.svg" alt="logo-expotendas">
 				</a>
 
-				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-					aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+					data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 
-				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+				<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+					aria-labelledby="offcanvasNavbarLabel">
 
 					<div class="offcanvas-header">
 						<img class="logo" src="assets/logo.svg" alt="logo-expotendas" class="offcanvas-title"
@@ -37,7 +38,8 @@
 						<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 					</div>
 
-					<div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-lg-around align-items-lg-center">
+					<div
+						class="offcanvas-body d-flex flex-column flex-lg-row justify-content-lg-around align-items-lg-center">
 
 						<div class="navegacao d-flex justify-content-start">
 							<ul class="navbar-nav d-flex flex-column flex-lg-row gap-lg-2">
@@ -56,7 +58,7 @@
 							</ul>
 						</div>
 
-						<div class="midias d-flex justify-content-center">
+						<div class="midias-header d-flex justify-content-center">
 							<ul class="navbar-nav d-flex flex-row gap-5 gap-lg-2">
 								<li class="nav-item">
 									<a class="nav-link" type="button" target="_blank">
@@ -188,281 +190,282 @@
 					08x10 e 10x10.</p>
 			</div>
 
-
 			<div class="card-modal-carrossel">
+				<div class="card">
+					<img src="assets/galpao-card.svg" class="card-img-top">
 
-				<div class="card-group">
-					<div class="card">
-						<img src="assets/galpao-card.svg" class="card-img-top">
-
-						<div class="card-body">
-							<h5 class="card-title">Eventos</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's
-								content.</p>
-							<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
-								data-bs-target="#OpenModalEventos">Saiba Mais</button>
-						</div>
+					<div class="card-body">
+						<h5 class="card-title">Eventos</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk
+							of the card's
+							content.</p>
+						<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
+							data-bs-target="#OpenModalEventos">Saiba Mais</button>
 					</div>
+				</div>
 
-					<div id="OpenModalEventos" class="modal">
-						<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
-							<div class="modal-content">
+				<div id="OpenModalEventos" class="modal">
+					<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+						<div class="modal-content">
 
-								<div class="modal-header">
-									<h3 class="modal-title">Eventos</h3>
-									<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-								</div>
+							<div class="modal-header">
+								<h3 class="modal-title">Eventos</h3>
+								<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+							</div>
 
-								<div class="modal-body">
-									<div id="carrossel-eventos" class="carousel slide h-0" data-bs-ride="carousel">
+							<div class="modal-body">
+								<div id="carrossel-eventos" class="carousel slide h-0" data-bs-ride="carousel">
 
-										<div class="carousel-inner">
-											<div class="carousel-item active">
-												<img class="img-modal" src="assets/imagem1.svg" alt="...">
-											</div>
-											<div class="carousel-item">
-												<img class="img-modal" src="assets/imagem2.svg" alt="...">
-											</div>
-											<div class="carousel-item">
-												<img class="img-modal" src="assets/imagem3.svg" alt="...">
-											</div>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img class="img-modal" src="assets/imagem1.svg" alt="...">
 										</div>
-
-										<button class="carousel-control-prev" type="button" data-bs-target="#carrossel-eventos"
-											data-bs-slide="prev">
-											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Previous</span>
-										</button>
-										<button class="carousel-control-next" type="button" data-bs-target="#carrossel-eventos"
-											data-bs-slide="next">
-											<span class="carousel-control-next-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Next</span>
-										</button>
+										<div class="carousel-item">
+											<img class="img-modal" src="assets/imagem2.svg" alt="...">
+										</div>
+										<div class="carousel-item">
+											<img class="img-modal" src="assets/imagem3.svg" alt="...">
+										</div>
 									</div>
 
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
-										recusandae perferendis,
-										neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
-										Dolorem dolorum
-										ipsa
-										ducimus sed nobis!</p>
+									<button class="carousel-control-prev" type="button"
+										data-bs-target="#carrossel-eventos" data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button"
+										data-bs-target="#carrossel-eventos" data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+									</button>
 								</div>
 
-								<div class="modal-footer">
-									<a href="https://wa.me/555430281133" target="_blank"><button type="button"
-											class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
-											Orçamento</button></a>
-									<button type="button" class="btn btn-danger text-nowrap" data-bs-dismiss="modal">Fechar</button>
-								</div>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
+									recusandae perferendis,
+									neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
+									Dolorem dolorum
+									ipsa
+									ducimus sed nobis!</p>
+							</div>
+
+							<div class="modal-footer">
+								<a href="https://wa.me/555430281133" target="_blank"><button type="button"
+										class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
+										Orçamento</button></a>
+								<button type="button" class="btn btn-danger text-nowrap"
+									data-bs-dismiss="modal">Fechar</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="card-group">
-					<div class="card">
-						<img src="assets/galpao-card.svg" class="card-img-top">
+				<div class="card">
+					<img src="assets/galpao-card.svg" class="card-img-top">
 
-						<div class="card-body">
-							<h5 class="card-title">Galpão Industrial</h5>
-							<p class="card-text">Some quick example text to build on the card title and make the bulk of the card's content.</p>
-							<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
-								data-bs-target="#OpenModalGalpao">Saiba Mais</button>
-						</div>
+					<div class="card-body">
+						<h5 class="card-title">Galpão Industrial</h5>
+						<p class="card-text">Some quick example text to build on the card title and make the bulk of the
+							card's
+							content.</p>
+						<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
+							data-bs-target="#OpenModalGalpao">Saiba Mais</button>
 					</div>
+				</div>
 
-					<div id="OpenModalGalpao" class="modal">
-						<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
-							<div class="modal-content w-auto h-auto">
+				<div id="OpenModalGalpao" class="modal">
+					<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+						<div class="modal-content w-auto h-auto">
 
-								<div class="modal-header">
-									<h3 class="modal-title">Galpão</h3>
-									<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-								</div>
+							<div class="modal-header">
+								<h3 class="modal-title">Galpão</h3>
+								<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+							</div>
 
-								<div class="modal-body">
-									<div id="carrossel-galpao" class="carousel slide" data-bs-ride="carousel">
+							<div class="modal-body">
+								<div id="carrossel-galpao" class="carousel slide" data-bs-ride="carousel">
 
-										<div class="carousel-inner">
-											<div class="carousel-item active">
-												<img class="img-modal" src="assets/imagem1.svg" alt="">
-											</div>
-											<div class="carousel-item">
-												<img class="img-modal" src="assets/imagem2.svg" alt="">
-											</div>
-											<div class="carousel-item">
-												<img class="img-modal" src="assets/imagem3.svg" alt="">
-											</div>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img class="img-modal" src="assets/imagem1.svg" alt="">
 										</div>
-
-										<button class="carousel-control-prev" type="button" data-bs-target="#carrossel-galpao"
-											data-bs-slide="prev">
-											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Previous</span>
-										</button>
-										<button class="carousel-control-next" type="button" data-bs-target="#carrossel-galpao"
-											data-bs-slide="next">
-											<span class="carousel-control-next-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Next</span>
-										</button>
+										<div class="carousel-item">
+											<img class="img-modal" src="assets/imagem2.svg" alt="">
+										</div>
+										<div class="carousel-item">
+											<img class="img-modal" src="assets/imagem3.svg" alt="">
+										</div>
 									</div>
 
-									<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
-										recusandae perferendis,
-										neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
-										Dolorem dolorum ipsa
-										ducimus sed nobis!</p>
+									<button class="carousel-control-prev" type="button"
+										data-bs-target="#carrossel-galpao" data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button"
+										data-bs-target="#carrossel-galpao" data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+									</button>
 								</div>
 
-								<div class="modal-footer">
-									<a href="https://wa.me/555430281133" target="_blank"><button type="button"
-											class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
-											Orçamento</button></a>
-									<button type="button" class="btn btn-danger text-nowrap" data-bs-dismiss="modal">Fechar</button>
-								</div>
+								<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+									nam non
+									recusandae perferendis,
+									neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
+									Dolorem dolorum ipsa
+									ducimus sed nobis!</p>
+							</div>
+
+							<div class="modal-footer">
+								<a href="https://wa.me/555430281133" target="_blank"><button type="button"
+										class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
+										Orçamento</button></a>
+								<button type="button" class="btn btn-danger text-nowrap"
+									data-bs-dismiss="modal">Fechar</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="card-group">
-					<div class="card">
+				<div class="card">
 
-						<img src="assets/galpao-card.svg" class="card-img-top">
+					<img src="assets/galpao-card.svg" class="card-img-top">
 
-						<div class="card-body">
-							<h5 class="card-title">Feiras</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's
-								content.</p>
-							<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
-								data-bs-target="#OpenModalFeiras">Saiba Mais</button>
-						</div>
+					<div class="card-body">
+						<h5 class="card-title">Feiras</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk
+							of the card's
+							content.</p>
+						<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
+							data-bs-target="#OpenModalFeiras">Saiba Mais</button>
 					</div>
+				</div>
 
-					<div id="OpenModalFeiras" class="modal">
-						<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
-							<div class="modal-content w-auto h-auto">
+				<div id="OpenModalFeiras" class="modal">
+					<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+						<div class="modal-content w-auto h-auto">
 
-								<div class="modal-header">
-									<h3 class="modal-title">Feiras</h3>
-									<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-								</div>
+							<div class="modal-header">
+								<h3 class="modal-title">Feiras</h3>
+								<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+							</div>
 
-								<div class="modal-body">
-									<div id="carrossel-feiras" class="carousel slide" data-bs-ride="carousel">
+							<div class="modal-body">
+								<div id="carrossel-feiras" class="carousel slide" data-bs-ride="carousel">
 
-										<div class="carousel-inner">
-											<div class="carousel-item active">
-												<img class="img-modal" src="assets/imagem1.svg" alt="">
-											</div>
-											<div class="carousel-item">
-												<img class="img-modal" src="assets/imagem2.svg" alt="">
-											</div>
-											<div class="carousel-item">
-												<img class="img-modal" src="assets/imagem3.svg" alt="">
-											</div>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img class="img-modal" src="assets/imagem1.svg" alt="">
 										</div>
-
-										<button class="carousel-control-prev" type="button" data-bs-target="#carrossel-feiras"
-											data-bs-slide="prev">
-											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Previous</span>
-										</button>
-										<button class="carousel-control-next" type="button" data-bs-target="#carrossel-feiras"
-											data-bs-slide="next">
-											<span class="carousel-control-next-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Next</span>
-										</button>
+										<div class="carousel-item">
+											<img class="img-modal" src="assets/imagem2.svg" alt="">
+										</div>
+										<div class="carousel-item">
+											<img class="img-modal" src="assets/imagem3.svg" alt="">
+										</div>
 									</div>
 
-									<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
-										recusandae perferendis,
-										neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
-										Dolorem dolorum ipsa
-										ducimus sed nobis!</p>
+									<button class="carousel-control-prev" type="button"
+										data-bs-target="#carrossel-feiras" data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button"
+										data-bs-target="#carrossel-feiras" data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+									</button>
 								</div>
 
-								<div class="modal-footer">
-									<a href="https://wa.me/555430281133" target="_blank"><button type="button"
-											class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
-											Orçamento</button></a>
-									<button type="button" class="btn btn-danger text-nowrap" data-bs-dismiss="modal">Fechar</button>
-								</div>
+								<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+									nam non
+									recusandae perferendis,
+									neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
+									Dolorem dolorum ipsa
+									ducimus sed nobis!</p>
+							</div>
+
+							<div class="modal-footer">
+								<a href="https://wa.me/555430281133" target="_blank"><button type="button"
+										class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
+										Orçamento</button></a>
+								<button type="button" class="btn btn-danger text-nowrap"
+									data-bs-dismiss="modal">Fechar</button>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="card-group">
-					<div class="card">
+				<div class="card">
+					<img src="assets/galpao-card.svg" class="card-img-top">
 
-						<img src="assets/galpao-card.svg" class="card-img-top">
-
-						<div class="card-body">
-							<h5 class="card-title">Festas</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's content.</p>
-							<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
-								data-bs-target="#OpenModalFestas">Saiba Mais</button>
-						</div>
+					<div class="card-body">
+						<h5 class="card-title">Festas</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk
+							of the card's content.</p>
+						<button type="button" class="btn custom-btn btn-primary text-nowrap" data-bs-toggle="modal"
+							data-bs-target="#OpenModalFestas">Saiba Mais</button>
 					</div>
+				</div>
 
-					<div id="OpenModalFestas" class="modal">
-						<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
-							<div class="modal-content w-auto h-auto">
+				<div id="OpenModalFestas" class="modal">
+					<div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
+						<div class="modal-content w-auto h-auto">
 
-								<div class="modal-header">
-									<h3 class="modal-title">Festas</h3>
-									<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
-								</div>
+							<div class="modal-header">
+								<h3 class="modal-title">Festas</h3>
+								<button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
+							</div>
 
-								<div class="modal-body">
-									<div id="carrossel-feiras" class="carousel slide" data-bs-ride="carousel">
+							<div class="modal-body">
+								<div id="carrossel-feiras" class="carousel slide" data-bs-ride="carousel">
 
-										<div class="carousel-inner">
-											<div class="carousel-item active">
-												<img class="img-modal" src="assets/imagem1.svg" alt="">
-											</div>
-											<div class="carousel-item">
-												<img class="img-modal" src="assets/imagem2.svg" alt="">
-											</div>
-											<div class="carousel-item">
-												<img class="img-modal" src="assets/imagem3.svg" alt="">
-											</div>
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img class="img-modal" src="assets/imagem1.svg" alt="">
 										</div>
-
-										<button class="carousel-control-prev" type="button" data-bs-target="#carrossel-feiras"
-											data-bs-slide="prev">
-											<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Previous</span>
-										</button>
-										<button class="carousel-control-next" type="button" data-bs-target="#carrossel-feiras"
-											data-bs-slide="next">
-											<span class="carousel-control-next-icon" aria-hidden="true"></span>
-											<span class="visually-hidden">Next</span>
-										</button>
+										<div class="carousel-item">
+											<img class="img-modal" src="assets/imagem2.svg" alt="">
+										</div>
+										<div class="carousel-item">
+											<img class="img-modal" src="assets/imagem3.svg" alt="">
+										</div>
 									</div>
 
-									<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam non
-										recusandae perferendis,
-										neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
-										Dolorem dolorum ipsa
-										ducimus sed nobis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto animi minima nam debitis necessitatibus voluptates sapiente iusto consectetur itaque neque facilis sed ducimus, inventore velit libero dolorem fugiat officiis sequi!</p>
+									<button class="carousel-control-prev" type="button"
+										data-bs-target="#carrossel-feiras" data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button"
+										data-bs-target="#carrossel-feiras" data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+									</button>
 								</div>
 
-								<div class="modal-footer">
-									<a href="https://wa.me/555430281133" target="_blank"><button type="button"
-											class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
-											Orçamento</button></a>
-									<button type="button" class="btn btn-danger text-nowrap" data-bs-dismiss="modal">Fechar</button>
-								</div>
+								<p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+									nam non
+									recusandae perferendis,
+									neque temporibus, saepe laborum earum in deleniti ex! Laborum, dignissimos odio?
+									Dolorem dolorum ipsa
+									ducimus sed nobis! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Architecto animi minima
+									nam debitis necessitatibus voluptates sapiente iusto consectetur itaque neque
+									facilis sed ducimus,
+									inventore velit libero dolorem fugiat officiis sequi!</p>
+							</div>
+
+							<div class="modal-footer">
+								<a href="https://wa.me/555430281133" target="_blank"><button type="button"
+										class="btn btn-orcamento text-nowrap" data-bs-dismiss="modal">Solicitar
+										Orçamento</button></a>
+								<button type="button" class="btn btn-danger text-nowrap"
+									data-bs-dismiss="modal">Fechar</button>
 							</div>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</section>
 
@@ -471,7 +474,8 @@
 			<div class="atendimento">
 				<div class="contatos">
 					<h3 class="contatos-titulo">Outras dúvidas:</h3>
-					<a class="contato-texto" href="https://wa.me/555430281133" target="_blank"><i class="bi bi-whatsapp"></i>(54)
+					<a class="contato-texto" href="https://wa.me/555430281133" target="_blank"><i
+							class="bi bi-whatsapp"></i>(54)
 						3028-1133</a>
 					<a class="contato-texto" href="mailto:contato@expotendas.com.br"><i
 							class="bi bi-envelope-fill"></i>contato@expotendas.com.br</a>
@@ -495,7 +499,8 @@
 
 			<iframe class="maps"
 				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.0913266652133!2d-51.20582188436369!3d-29.13249659642027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea2c0e6044b67%3A0x500f7d240248332!2sExpotendas%20-%20Lonas%2C%20Tendas%20e%20Pir%C3%A2mides%20para%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1678650743991!5m2!1spt-BR!2sbr"
-				style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				style="border:0;" allowfullscreen="" loading="lazy"
+				referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</section>
 
 		<!-- Rodape -->
