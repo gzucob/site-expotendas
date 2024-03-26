@@ -1,0 +1,22 @@
+#footer {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	font-size: 1rem;
+	color: var(--branco);
+	padding: 10px;
+}
+
+.marca {
+	text-align: center;
+}
+
+.copyright {
+	text-align: center;
+}
+
+.copyright a {
+	color: var(--branco);
+}

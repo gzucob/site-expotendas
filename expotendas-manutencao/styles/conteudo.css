@@ -1,0 +1,47 @@
+#informativo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 1rem;
+	color: var(--branco);
+}
+
+.logo-expotendas {
+    width: 30%;
+    padding-bottom: 20px 10px;
+}
+
+#conteudo {
+	display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+	font-size: 1rem;
+	color: var(--branco);
+	padding: 10px;
+}
+
+.midias ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	gap: 3vh;
+}
+
+.midias a {
+	color: var(--branco);
+}
+
+.midias a:hover {
+	color: var(--cinza);
+	transition: 1s;
+}
+
+.midias i {
+	font-size: 2rem;
+}

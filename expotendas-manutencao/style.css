@@ -1,0 +1,28 @@
+@import url(styles/conteudo.css);
+@import url(styles/contato.css);
+@import url(styles/footer.css);
+
+:root {
+	/* --cor-de-fundo: #FFFFFF; */
+	--branco: #FFFFFF;
+	/* --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%); */
+	--fonte-principal: "Poppins";
+	--azul: #002F52;
+	--cinza: #474646;
+	/* --cinza-claro: #858585; */
+	--preto: #000000;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+    background-color: var(--azul);
+    font-family: var(--fonte-principal);
+}

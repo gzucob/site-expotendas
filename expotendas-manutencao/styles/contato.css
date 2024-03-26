@@ -1,0 +1,78 @@
+#contato {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	font-family: var(--fonte-principal);
+	color: var(--branco);
+}
+
+.atendimento {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 10px 10px;
+	font-size: 0.75rem;
+}
+
+.contatos {
+	display: flex;
+	flex-direction: column;
+}
+
+.contato-texto {
+	text-align: left;
+	color: var(--branco);
+}
+
+.contatos i {
+	font-size: 1rem;
+	padding: 5px;
+	color: var(--branco);
+}
+
+.contatos,
+.localizacao,
+.horario {
+	padding: 10px 0;
+}
+
+.maps {
+	width: 100%;
+	height: 200px;
+}
+
+@media (min-width: 720px) and (max-width: 1023px) {
+	.atendimento {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-evenly;
+		font-size: 0.75rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	#contato {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.atendimento {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 1rem;
+	}
+
+	.contatos,
+	.localizacao,
+	.horario {
+		padding: 20px;
+	}
+}
