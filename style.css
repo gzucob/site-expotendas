@@ -1,5 +1,5 @@
 @import url(styles/header.css);
-@import url(styles/carrossel.css);
+@import url(styles/home.css);
 @import url(styles/quem-somos.css);
 @import url(styles/produtos.css);
 @import url(styles/contatos.css);
@@ -15,6 +15,7 @@
 	--cinza: #474646;
 	--cinza-claro: #858585;
 	--preto: #000000;
+	--vermelho: #FF0000;
 }
 
 html {

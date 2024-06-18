@@ -1,14 +1,9 @@
-#quem-somos {
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-	background-color: var(--cor-de-fundo);
-	font-family: var(--fonte-principal);
-}
-
 .quem-somos {
 	display: flex;
 	flex-direction: column;
+	background-color: var(--cor-de-fundo);
+	font-family: var(--fonte-principal);
+	padding: 60px 10px 0 10px;
 }
 
 .quem-somos-titulo {
@@ -25,73 +20,84 @@
 	text-align: start;
 }
 
-.portfolio-rgb {
+.slider-portfolio {
+	display: none;
+}
+
+.mobile-portfolio {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }
 
-
-.img-rgb {
+.mobile-portfolio-img {
 	width: 100px;
 	height: auto;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-	.img-rgb {
-		width: 130px;
-		height: auto;
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-1750px);
 	}
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
-	#quem-somos {
-		display: flex;
-		flex-direction: column;
-		padding: 100px;
-		background-color: var(--cor-de-fundo);
-		font-family: var(--fonte-principal);
+@media (min-width: 769px) {
+	.quem-somos {
+		padding: 30px;
 	}
 
-	.img-rgb {
-		width: 145px;
+	.mobile-portfolio {
+		display: none;
+	}
+
+	.slider-portfolio {
+		display: block;
 		height: auto;
+		margin: auto;
+		overflow: hidden;
+		position: relative;
+		width: 90%;
 	}
 
-	.img-rgb {
-		filter: grayscale(1);
-		transition: 1s;
+	.slider-portfolio::before,
+	.slider-portfolio::after {
+		content: "";
+		height: 200px;
+		position: absolute;
+		width: 350px;
+		z-index: 2;
 	}
 
-	.img-rgb:hover {
-		filter: grayscale(0);
-		transition: 1s;
+	.slider-portfolio::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	.slider-portfolio::before {
+		left: 0;
+		top: 0;
+	}
+
+	.slider-portfolio .slide-track {
+		animation: scroll 40s linear infinite;
+		display: flex;
+		width: 6300px;
+	}
+
+	.slider-portfolio .slide-portfolio {
+		height: 200px;
+		width: 350px;
 	}
 }
 
-@media (min-width: 1440px) {
-	#quem-somos {
-		display: flex;
-		flex-direction: column;
-		padding: 0 100px;
-		padding-top: 100px;
-		background-color: var(--cor-de-fundo);
-		font-family: var(--fonte-principal);
-	}
-
-	.img-rgb {
-		width: 250px;
-		height: auto;
-	}
-
-	.img-rgb {
-		filter: grayscale(1);
-		transition: 1s;
-	}
-
-	.img-rgb:hover {
-		filter: grayscale(0);
-		transition: 1s;
+@media (min-width: 1024px) {
+	.quem-somos {
+		padding: 70px 100px 0 100px;
 	}
 }
