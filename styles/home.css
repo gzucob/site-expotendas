@@ -1,0 +1,62 @@
+.home {
+    padding-top: calc(16vh - 8vh );
+}
+
+.apresentacao {
+    position: relative;
+    height: 30vh;
+    width: 100%;
+    background: url('/assets/img-background.svg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--branco);
+    text-align: center;
+    padding: 30px;
+}
+
+.slogan {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    padding: 0 10px;
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) {
+    .apresentacao {
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        background: url('/assets/img-background.svg') no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--branco);
+        text-align: center;
+        padding: 70px;
+    }
+
+    .slogan {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilos para desktops */
+@media (min-width: 1024px) {
+    .apresentacao {
+        position: relative;
+        height: 80vh;
+        width: 100%;
+        background: url('/assets/img-background.svg') no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--branco);
+        text-align: center;
+        padding: 50px;
+    }
+
+    .slogan {
+        font-size: 2rem;
+    }
+}
