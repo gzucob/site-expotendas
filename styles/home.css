@@ -16,12 +16,13 @@
 }
 
 .slogan {
+    font-family: var(--fonte-principal);
+    font-weight: bold 700;
     font-size: 1rem;
     margin-bottom: 20px;
     padding: 0 10px;
 }
 
-/* Estilos para tablets */
 @media (min-width: 768px) {
     .apresentacao {
         position: relative;
@@ -41,7 +42,6 @@
     }
 }
 
-/* Estilos para desktops */
 @media (min-width: 1024px) {
     .apresentacao {
         position: relative;
