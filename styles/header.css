@@ -23,16 +23,20 @@
 .navbar-links-social {
     display: none;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
+    padding: 20px;
     position: fixed;
     top: 8vh;
-    left: 0;
-    width: 100%;
-    height: 50%;
+    right: 0;
+    width: 50%;
+    height: 100%;
     background-color: var(--cor-de-fundo);
-    justify-content: center;
-    align-items: center;
     z-index: 999;
+}
+
+.navbar-links-social.show {
+    display: flex; /* Exibe o menu quando a classe show está presente */
 }
 
 .navbar-links {
@@ -84,8 +88,9 @@
     z-index: 998;
 }
 
-.navbar-links-social.show {
-    display: flex; /* Exibe o menu quando a classe show está presente */
+.overlay.show {
+    display: block;
+    opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -101,7 +106,6 @@
         position: static;
         width: auto;
         height: auto;
-        background-color: var();
     }
     .navbar-links {
         flex-direction: row;
