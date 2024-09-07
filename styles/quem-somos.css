@@ -20,6 +20,15 @@
 	text-align: start;
 }
 
+.img-base-estrategica-vertical {
+	width: 100%;
+	height: 70%;
+}
+
+.img-base-estrategica-horizontal {
+	display: none;
+}
+
 .slider-portfolio {
 	display: none;
 }
@@ -46,7 +55,7 @@
 	}
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
 	.quem-somos {
 		padding: 30px;
 	}
@@ -98,6 +107,24 @@
 
 @media (min-width: 1024px) {
 	.quem-somos {
-		padding: 70px 100px 0 100px;
+		padding: 85px 100px 0 100px;
+	}
+
+	.quem-somos-apresentacao {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+		gap: 2vh;
+		align-items: center;
+	}
+
+	.img-base-estrategica-vertical {
+		display: none;
+	}
+	
+	.img-base-estrategica-horizontal {
+		display: flex;
+		width: 100%;
+		height: 100%;
 	}
 }
