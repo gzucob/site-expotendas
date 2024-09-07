@@ -23,8 +23,66 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Array com os caminhos das imagens
+    const logos = [
+        "assets/logo-bento.svg",
+        "assets/logo-caxias.svg",
+        "assets/logo-fenamassa.svg",
+        "assets/logo-festadauva.svg",
+        "assets/logo-garibaldi.svg",
+        "assets/logo-hyva.svg",
+        "assets/logo-marcopolo.svg",
+        "assets/logo-mercopar.svg",
+        "assets/logo-weg.svg"
+    ];
 
-//Config Galeria Imagens Desktop/Mobile
+    // Função para criar as imagens para o layout mobile
+    const mobilePortfolio = document.querySelector('.mobile-portfolio');
+    logos.forEach(logo => {
+        const img = document.createElement('img');
+        img.src = logo;
+        img.alt = "";
+        img.classList.add('mobile-portfolio-img');
+        mobilePortfolio.appendChild(img);
+    });
+
+    // Função para criar as imagens para o slider
+    const slideTrack = document.querySelector('.slide-track');
+    logos.concat(logos).forEach(logo => { // Duplica as imagens para o loop contínuo
+        const slideDiv = document.createElement('div');
+        slideDiv.classList.add('slide-portfolio');
+        
+        const img = document.createElement('img');
+        img.src = logo;
+        img.height = 200;
+        img.width = 350;
+        img.alt = "";
+
+        slideDiv.appendChild(img);
+        slideTrack.appendChild(slideDiv);
+    });
+
+    // Variáveis de controle da animação
+    let position = 0;
+    const slideWidth = 350; // Largura de cada slide
+    const totalSlides = logos.length * 2; // Considerando o array duplicado
+
+    // Função para animar o slider
+    function animateSlider() {
+        position -= 1; // Move 1px por ciclo de animação
+        if (Math.abs(position) >= slideWidth * totalSlides / 2) {
+            // Quando chegar ao final, reseta a posição
+            position = 0;
+        }
+        slideTrack.style.transform = `translateX(${position}px)`;
+    }
+
+    // Iniciar a animação com intervalo
+    setInterval(animateSlider, 10); // Velocidade controlada pela frequência do intervalo
+});
+
+// Config Galeria Imagens Desktop/Mobile
 const images = document.querySelectorAll('.galeria-img');
 let currentIndex = 0;
 

@@ -45,16 +45,6 @@
 	height: auto;
 }
 
-@keyframes scroll {
-	0% {
-		transform: translateX(0);
-	}
-
-	100% {
-		transform: translateX(-1750px);
-	}
-}
-
 @media (min-width: 768px) {
 	.quem-somos {
 		padding: 30px;
@@ -76,9 +66,7 @@
 	.slider-portfolio::before,
 	.slider-portfolio::after {
 		content: "";
-		height: 200px;
 		position: absolute;
-		width: 350px;
 		z-index: 2;
 	}
 
@@ -94,14 +82,8 @@
 	}
 
 	.slider-portfolio .slide-track {
-		animation: scroll 40s linear infinite;
 		display: flex;
 		width: 6300px;
-	}
-
-	.slider-portfolio .slide-portfolio {
-		height: 200px;
-		width: 350px;
 	}
 }
 
