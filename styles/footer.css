@@ -28,14 +28,23 @@
 	font-size: 2rem;
 }
 
+.horario {
+	display: block;
+	text-align: center;
+	margin: 1em 0;
+	line-height: 1.5;
+}
+
 .marca {
 	display: block;
 	text-align: center;
+	margin: 0.5em 0;
 }
 
 .copyright {
 	display: block;
 	text-align: center;
+	margin-top: 0.5em;
 }
 
 .copyright a {
