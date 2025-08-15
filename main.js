@@ -1,3 +1,24 @@
+// Função para enviar dados para o webhook (mantendo o URL seguro)
+const enviarParaWebhook = async (dados) => {
+    // Construção do URL do webhook de forma segura
+    // Usando uma abordagem que dificulta a extração direta do URL
+    const dominio = ['n8n', 'expotendas', 'com', 'br'].join('.');
+    const caminho = ['webhook', '2b89c47e-5cb8-41ff-8f37-0befb3458660'].join('/');
+    const url = `https://${dominio}/${caminho}`;
+    
+    // Configuração da requisição
+    const opcoes = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(dados)
+    };
+    
+    // Enviar a requisição
+    return await fetch(url, opcoes);
+};
+
 // Config Navbar Hamburguer
 document.addEventListener('DOMContentLoaded', function() {
     const navbarLinksSocial = document.getElementById('navbarLinksSocial');
@@ -83,6 +104,82 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Configuração do formulário de contato
+    const formContato = document.getElementById('form-contato');
+    const formMensagem = document.getElementById('form-mensagem');
+    
+    if (formContato) {
+        formContato.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Obter os valores do formulário
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const departamento = document.getElementById('departamento').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            // Validação básica
+            if (!nome || !email || !departamento || !mensagem) {
+                mostrarMensagem('Por favor, preencha todos os campos obrigatórios.', 'erro');
+                return;
+            }
+            
+            // Preparar os dados para envio
+            const dados = {
+                nome,
+                email,
+                telefone,
+                departamento,
+                mensagem,
+                data_envio: new Date().toISOString(),
+                email_departamento: `${departamento}@expotendas.com.br`
+            };
+            
+            // Mostrar mensagem de carregamento
+            mostrarMensagem('Enviando mensagem...', '');
+            
+            try {
+                // Enviar dados para o webhook
+                const resposta = await enviarParaWebhook(dados);
+                
+                if (resposta.ok) {
+                    // Limpar o formulário
+                    formContato.reset();
+                    mostrarMensagem('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'sucesso');
+                } else {
+                    mostrarMensagem('Erro ao enviar mensagem. Por favor, tente novamente mais tarde.', 'erro');
+                }
+            } catch (erro) {
+                console.error('Erro ao enviar formulário:', erro);
+                mostrarMensagem('Erro ao enviar mensagem. Por favor, tente novamente mais tarde.', 'erro');
+            }
+        });
+    }
+    
+    // Função para mostrar mensagens de sucesso ou erro
+    function mostrarMensagem(texto, tipo) {
+        if (formMensagem) {
+            formMensagem.textContent = texto;
+            formMensagem.className = 'form-mensagem';
+            
+            if (tipo) {
+                formMensagem.classList.add(tipo);
+            }
+            
+            // Rolar até a mensagem
+            formMensagem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Limpar mensagem após 5 segundos se for sucesso
+            if (tipo === 'sucesso') {
+                setTimeout(() => {
+                    formMensagem.textContent = '';
+                    formMensagem.className = 'form-mensagem';
+                }, 5000);
+            }
+        }
+    }
+    
     // Config Galeria Imagens Desktop/Mobile
     const images = document.querySelectorAll('.galeria-img');
     let currentIndex = 0;

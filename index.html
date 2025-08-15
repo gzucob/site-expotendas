@@ -164,30 +164,40 @@
 
 		<!-- Contato -->
 		<section id="contato" class="contato">
-			<div class="atendimento">
-				<div class="contatos">
-					<h3 class="contatos-titulo">Outras dúvidas:</h3>
-					<a class="contato-texto" href="https://wa.me/555430281133" target="_blank"><i
-							class="bi bi-whatsapp"></i>(54)
-						3028-1133</a>
-					<a class="contato-texto" href="mailto:contato@expotendas.com.br"><i
-							class="bi bi-envelope-fill"></i>contato@expotendas.com.br</a>
-					<a class="contato-texto" href="mailto:comercial@expotendas.com.br"><i
-							class="bi bi-envelope-fill"></i>comercial@expotendas.com.br</a>
-					<a class="contato-texto" href="mailto:financeiro@expotendas.com.br"><i
-							class="bi bi-envelope-fill"></i>financeiro@expotendas.com.br</a>
-				</div>
 
-				<div class="localizacao">
-					<h3 class="endereco">Endereço:</h3>
-					<p>Rua Ludovico Cavinatto, 281 - CEP: 95032-620<br>Bairro Nossa Senhora da Saúde<br>Caxias do Sul -
-						RS</p>
-				</div>
-
-				<div class="horario">
-					<h3 class="horario-titulo">Atendimento:</h3>
-					<p class="horario-texto">Segunda à sexta-feira<br>08:30 - 12:00<br>13:30 - 18:00</p>
-				</div>
+			<div class="formulario-contato">
+				<h3 class="formulario-titulo">Fale Conosco</h3>
+				<form id="form-contato" class="form-contato">
+					<div class="form-grupo">
+						<label for="nome">Seu nome:</label>
+						<input type="text" id="nome" name="nome" required>
+					</div>
+					<div class="form-grupo">
+						<label for="email">Seu e-mail:</label>
+						<input type="email" id="email" name="email" required>
+					</div>
+					<div class="form-grupo">
+						<label for="telefone">Telefone (opcional):</label>
+						<input type="tel" id="telefone" name="telefone">
+					</div>
+					<div class="form-grupo">
+						<label for="departamento">Selecione um departamento:</label>
+						<select id="departamento" name="departamento" required>
+							<option value="" disabled selected>Escolha um departamento</option>
+							<option value="comercial">Comercial</option>
+							<option value="financeiro">Financeiro</option>
+							<option value="operacional">Operacional</option>
+						</select>
+					</div>
+					<div class="form-grupo">
+						<label for="mensagem">Mensagem:</label>
+						<textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+					</div>
+					<div class="form-grupo">
+						<button type="submit" class="btn-enviar">Enviar Mensagem</button>
+					</div>
+					<div id="form-mensagem" class="form-mensagem"></div>
+				</form>
 			</div>
 
 			<iframe class="maps"
