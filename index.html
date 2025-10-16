@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <title>Expo Tendas</title>
+
+  <!-- Fonte Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/public/assets/logo-expotendas.svg" />
+</head>
+
+<body>
+  <!-- Menu -->
+  <header id="header" class="header">
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <a href="#" onclick="location.reload(true); return false;">
+          <img src="/public/assets/logo-expotendas.svg" alt="Logo Expo Tendas" />
+        </a>
+      </div>
+      <div class="navbar-toggle" id="navbarToggle" onclick="toggleMenu()">
+        <i class="bi bi-list"></i>
+      </div>
+      <div class="navbar-links-social" id="navbarLinksSocial">
+        <div class="navbar-links" id="navbarLinks">
+          <a href="#home" onclick="closeMenu()">Home</a>
+          <a href="#quem-somos" onclick="closeMenu()">Quem Somos</a>
+          <a href="#produtos" onclick="closeMenu()">Produtos</a>
+          <a href="#contato" onclick="closeMenu()">Contato</a>
+          <div class="navbar-social">
+            <a href="https://www.facebook.com/expotendas" target="_blank" class="bi bi-facebook"></a>
+            <a href="https://www.instagram.com/expotendas/" target="_blank" class="bi bi-instagram"></a>
+            <a href="https://www.youtube.com/@expotendascaxiasdosul8127" target="_blank" class="bi bi-youtube"></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+  </header>
+
+  <main>
+    <!-- Home -->
+    <section id="home" class="home">
+      <div class="apresentacao">
+        <h1 class="slogan">A solução prática para o seu evento!</h1>
+      </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="quem-somos">
+      <h2 class="quem-somos-titulo">Quem somos</h2>
+      <div class="quem-somos-apresentacao">
+        <div class="base-estrategica-horizontal">
+          <img class="img-base-estrategica-horizontal"
+            src="/public/assets/base-estrategica-horizonal.jpg" loading="lazy"
+            alt="Base estratégica horizontal" />
+        </div>
+
+        <p class="quem-somos-texto">
+          Expo Tendas, com mais de 15 anos de experiência e mais de 5.000 clientes em seu portfólio, é referência na
+          Serra Gaúcha em locação de coberturas (tendas e galpões industriais), pisos, palcos, tablados, estandes,
+          passarelas, camarotes e outros. Pela vasta experiência no mercado, consegue entregar serviços personalizados e
+          customizados aos mais exigentes clientes.<br /><br />As estruturas da EXPOTENDAS, desenvolvidas com materiais
+          de avançada tecnologia e alta qualidade, foram especialmente desenhadas para as severas condições climáticas
+          da região Sul, com maior resistência a ventos, temporais e rígidas trocas de temperaturas.<br /><br />Esse
+          desenho e tecnologia têm registro no INPI - CERTIFICADO DE REGISTRO DE DESENHO INDUSTRIAL - DI7101268-0. As
+          coberturas de lonas têm tecnologia antichama e nossas obras sempre recebem aprovação do PPCI do Corpo de
+          Bombeiros.<br /><br />A Expo Tendas é registrada no CREA-RS sob número 198108, com engenheiro responsável no
+          quadro de funcionários. Todos os serviços prestados são garantidos com fornecimento de ART e Laudo Técnico.
+          Além disso, a empresa utiliza mão de obra altamente especializada e treinada, observando toda a legislação
+          trabalhista e fiscal, especialmente no que diz respeito a trabalho de menores.
+        </p>
+
+        <div class="base-estrategica-vertical">
+          <img class="img-base-estrategica-vertical" src="/public/assets/base-estrategica-vertical.jpg"
+            loading="lazy" alt="Base estratégica vertical" />
+        </div>
+      </div>
+
+      <div class="mobile-portfolio"></div>
+      <div class="slider-portfolio">
+        <div class="slide-track"></div>
+      </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+      <div class="produto">
+        <h2>Produtos</h2>
+        <p>
+          A Expotendas disponibiliza tendas e galpões industriais com desenho industrial depositado no INPI através do
+          código DI-7101268-0, tendo assim exclusividade no modelo adotado.<br />As lonas possuem proteção UV,
+          antichama, antimofo e blackout, para maior conforto e segurança. Oferecemos locação de tendas brancas e
+          translúcidas com perfeito acabamento, com calhas e pés arredondados, deixando o ambiente ainda mais elegante.
+          Disponibilizamos também pisos, palcos, tablados, passarelas, pistas de dança, túnel, móveis, pirâmides,
+          camarotes, áreas VIP, bretes de isolamento e galpões.<br />Temos tendas nos seguintes tamanhos: 05x05, 05x10,
+          08x10 e 10x10.
+        </p>
+      </div>
+
+      <div class="galeria">
+        <button id="btnGaleria" class="btn-galeria" type="button" data-bs-toggle="collapse"
+          data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Abrir Galeria de Imagens
+        </button>
+
+        <div class="collapse collapse-img" id="collapseExample">
+          <div class="card-img">
+            <img class="galeria-img" src="/public/assets/img-tendas-size01.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-tendas-size02.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-background.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-evento04.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-evento03.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-evento02.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-evento01.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-galpao01.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-pracadante01.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-pracadante02.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-noturna01.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-noturna02.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-fenamassa.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-feiralivrocxs01.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-feiralivrocxs02.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-feiralivrobento.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-unimed.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-pavilhoes01.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-pavilhoes02.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-interior01.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-interior02.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-interior03.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-interior04.jpg" alt="" />
+            <img class="galeria-img" src="/public/assets/img-interior05.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div id="overlay-galeria" class="overlay-galeria">
+        <span class="close-btn" onclick="closeOverlayGaleria()"><i class="bi bi-x"></i></span>
+        <img class="overlay-galeria-img" id="overlay-galeria-img" />
+        <button class="prev-btn" onclick="showPrev()"><i class="bi bi-chevron-left"></i></button>
+        <button class="next-btn" onclick="showNext()"><i class="bi bi-chevron-right"></i></button>
+      </div>
+
+      <div class="orcamento">
+        <button id="btnOrcamento" class="btn-orcamento" type="button">
+          <a href="https://wa.me/555430281133" target="_blank">Solicitar Orçamento</a>
+        </button>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="contato">
+      <div class="formulario-contato">
+        <h3 class="formulario-titulo">Fale Conosco</h3>
+        <form id="form-contato" class="form-contato">
+          <div class="form-grupo">
+            <label for="nome">Seu nome:</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="form-grupo">
+            <label for="email">Seu e-mail:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-grupo">
+            <label for="telefone">Telefone (opcional):</label>
+            <input type="tel" id="telefone" name="telefone" />
+          </div>
+          <div class="form-grupo">
+            <label for="departamento">Selecione um departamento:</label>
+            <select id="departamento" name="departamento" required>
+              <option value="" disabled selected>Escolha um departamento</option>
+              <option value="comercial">Comercial</option>
+              <option value="financeiro">Financeiro</option>
+              <option value="operacional">Operacional</option>
+            </select>
+          </div>
+          <div class="form-grupo">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+          </div>
+          <div class="form-grupo">
+            <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+          </div>
+          <div id="form-mensagem" class="form-mensagem"></div>
+        </form>
+      </div>
+
+      <iframe class="maps"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.0913266652133!2d-51.20582188436369!3d-29.13249659642027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea2c0e6044b67%3A0x500f7d240248332!2sExpotendas%20-%20Lonas%2C%20Tendas%20e%20Pir%C3%A2mides%20para%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1678650743991!5m2!1spt-BR!2sbr"
+        style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="footer" class="footer">
+      <div class="midias">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/expotendas" target="_blank"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/expotendas/" target="_blank"><i class="bi bi-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@expotendascaxiasdosul8127" target="_blank"><i
+                class="bi bi-youtube"></i></a>
+          </li>
+          <li>
+            <a href="#linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="horario">
+        Atendimento de segunda à sexta-feira<br />
+        08:30 - 12:00 | 13:30 - 18:00
+      </p>
+
+      <p class="marca">
+        EXPO TENDAS é uma marca registrada de EXPOTENDAS LOCACOES LTDA | CNPJ 10.665.441/0001-66
+      </p>
+
+      <p class="copyright">
+        &#169; Desenvolvido por
+        <a href="https://github.com/gzucob" target="_blank">gzucob</a>
+      </p>
+    </footer>
+  </main>
+
+  <div class="whats">
+    <a href="https://wa.me/555430281133" target="_blank">
+      <img src="public/assets/logo-whatsapp.svg" width="60" alt="WhatsApp" />
+    </a>
+  </div>
+
+  <!-- JS principal (Vite) -->
+  <script type="module" src="/src/main.js"></script>
+
+</body>
+</html>

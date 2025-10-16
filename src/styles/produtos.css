@@ -1,0 +1,194 @@
+.produtos {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	background-color: var(--cor-de-fundo);
+	font-family: var(--fonte-principal);
+	padding-top: 60px;
+}
+
+.produto {
+	padding: 10px;
+}
+
+.produto h2 {
+	font-weight: bold 700;
+	color: var(--cinza);
+	text-align: center;
+}
+
+.produto p {
+	color: var(--cinza);
+	text-align: start;
+}
+
+.btn-galeria {
+	border: none;
+	background-image: var(--azul-degrade);
+	border-radius: 8px;
+	padding: 20px 40px;
+	text-decoration: none;
+	color: var(--branco);
+	font-size: 1rem;
+}
+
+.collapse-img {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.card-img {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	height: auto;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 10px 1px var(--cinza-claro);
+	box-shadow: 0px 0px 10px 1px var(--cinza-claro);
+	background: var(--cor-de-fundo);
+	padding: 14px;
+}
+
+.galeria-img {
+	width: 95%;
+	height: auto;
+	border-radius: 10px;
+	margin: 8px;
+}
+
+.overlay-galeria {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	justify-content: center;
+	align-items: center;
+	z-index: 9999999;
+}
+
+.overlay-galeria.show {
+	display: flex;
+}
+
+.overlay-galeria-img {
+	max-width: 95%;
+	max-height: 95%;
+	position: relative;
+}
+
+.close-btn, .prev-btn, .next-btn {
+	display: none;
+	position: absolute;
+	color: var(--branco);
+	font-size: 2rem;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	padding: 10px;
+	z-index: 9999999;
+}
+
+.close-btn {
+	top: 10px;
+	right: 10px;
+	font-size: 3rem;
+}
+
+.prev-btn {
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+}
+
+.next-btn {
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+}
+
+.overlay-galeria.show .close-btn,
+.overlay-galeria.show .prev-btn,
+.overlay-galeria.show .next-btn {
+	display: block;
+}
+
+.orcamento {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+.btn-orcamento {
+	background-color: var(--vermelho);
+	border-radius: 8px;
+	border: none;
+	padding: 20px 60px;
+}	
+
+.btn-orcamento a {
+	text-decoration: none;
+	color: var(--branco);
+	font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+	.produto {
+		padding: 30px;
+	}
+}
+
+@media (min-width: 1024px) {
+	.produto {
+		padding: 30px 100px;
+	}
+
+	.btn-galeria:hover {
+		transform: scale(1.1);
+		transition: 1s;
+	}
+
+	.collapse-img {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.card-img {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 80%;
+	}
+
+	.galeria-img {
+		width: 22%;
+		height: auto;
+		border-radius: 10px;
+		margin: 8px;
+	}
+
+	.galeria-img:hover {
+		transform: scale(1.1);
+		transition: 1s;
+	}
+
+	.btn-orcamento:hover {
+		transform: scale(1.1);
+		transition: 1s;
+	}
+}
