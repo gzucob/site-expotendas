@@ -1,21 +1,17 @@
-// Configuração do menu hamburguer e overlay
-document.addEventListener('DOMContentLoaded', () => {
-  const navbarLinksSocial = document.getElementById('navbarLinksSocial');
-  const navbarToggle = document.getElementById('navbarToggle');
-  const overlay = document.getElementById('overlay');
+// Ao clicar no logo, rola suavemente para o topo da página
+const logo = document.querySelector(".navbar-logo");
+if (logo) {
+  logo.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
-  // Função para abrir/fechar menu
-  window.toggleMenu = () => {
-    const ativo = navbarLinksSocial.classList.contains('show');
-    navbarLinksSocial.classList.toggle('show', !ativo);
-    overlay.classList.toggle('show', !ativo);
-    navbarToggle.innerHTML = ativo ? '<i class="bi bi-list"></i>' : '<i class="bi bi-x"></i>';
-  };
-  
-  // Função para fechar menu ao clicar em link
-  window.closeMenu = () => {
-    navbarLinksSocial.classList.remove('show');
-    overlay.classList.remove('show');
-    navbarToggle.innerHTML = '<i class="bi bi-list"></i>';
-  };
+// Efeito de fundo ao rolar a página
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
 });

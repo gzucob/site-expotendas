@@ -17,32 +17,19 @@
 </head>
 
 <body>
-  <!-- Menu -->
+  <!-- Navbar -->
   <header id="header" class="header">
     <nav class="navbar">
       <div class="navbar-logo">
-        <a href="#" onclick="location.reload(true); return false;">
-          <img src="/public/assets/logo-expotendas.svg" alt="Logo Expo Tendas" />
-        </a>
+        <img src="/public/assets/logo-expotendas.svg" alt="Logo Expo Tendas" />
       </div>
-      <div class="navbar-toggle" id="navbarToggle" onclick="toggleMenu()">
-        <i class="bi bi-list"></i>
-      </div>
-      <div class="navbar-links-social" id="navbarLinksSocial">
-        <div class="navbar-links" id="navbarLinks">
-          <a href="#home" onclick="closeMenu()">Home</a>
-          <a href="#quem-somos" onclick="closeMenu()">Quem Somos</a>
-          <a href="#produtos" onclick="closeMenu()">Produtos</a>
-          <a href="#contato" onclick="closeMenu()">Contato</a>
-          <div class="navbar-social">
-            <a href="https://www.facebook.com/expotendas" target="_blank" class="bi bi-facebook"></a>
-            <a href="https://www.instagram.com/expotendas/" target="_blank" class="bi bi-instagram"></a>
-            <a href="https://www.youtube.com/@expotendascaxiasdosul8127" target="_blank" class="bi bi-youtube"></a>
-          </div>
-        </div>
+
+      <div class="icons">
+        <a href="https://www.facebook.com/expotendas" target="_blank" class="bi bi-facebook"></a>
+        <a href="https://www.instagram.com/expotendas/" target="_blank" class="bi bi-instagram"></a>
+        <a href="https://wa.me/555430281133" target="_blank"><i class="bi bi-whatsapp"></i></a>
       </div>
     </nav>
-    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
   </header>
 
   <main>
@@ -58,9 +45,8 @@
       <h2 class="quem-somos-titulo">Quem somos</h2>
       <div class="quem-somos-apresentacao">
         <div class="base-estrategica-horizontal">
-          <img class="img-base-estrategica-horizontal"
-            src="/public/assets/base-estrategica-horizonal.jpg" loading="lazy"
-            alt="Base estratégica horizontal" />
+          <img class="img-base-estrategica-horizontal" src="/public/assets/base-estrategica-horizonal.jpg"
+            loading="lazy" alt="Base estratégica horizontal" />
         </div>
 
         <p class="quem-somos-texto">
@@ -79,8 +65,8 @@
         </p>
 
         <div class="base-estrategica-vertical">
-          <img class="img-base-estrategica-vertical" src="/public/assets/base-estrategica-vertical.jpg"
-            loading="lazy" alt="Base estratégica vertical" />
+          <img class="img-base-estrategica-vertical" src="/public/assets/base-estrategica-vertical.jpg" loading="lazy"
+            alt="Base estratégica vertical" />
         </div>
       </div>
 
@@ -243,4 +229,5 @@
   <script type="module" src="/src/main.js"></script>
 
 </body>
+
 </html>
