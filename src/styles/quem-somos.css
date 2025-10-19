@@ -3,15 +3,18 @@
 	flex-direction: column;
 	background-color: var(--cor-de-fundo);
 	font-family: var(--fonte-principal);
-	padding: 60px 10px 0 10px;
+	padding: 10px;
 }
 
-.quem-somos-titulo {
-	font-size: 2rem;
-	font-weight: bold 700;
-	color: var(--cinza);
-	text-align: center;
-	padding-bottom: 10px;
+.quem-somos img {
+	display: block;
+	margin: 20px auto 20px auto;
+	width: 180px;
+	height: auto;
+}
+
+.quem-somos-conteiner {
+	gap: 15px;
 }
 
 .quem-somos-texto {
@@ -20,13 +23,52 @@
 	text-align: start;
 }
 
-.img-base-estrategica-vertical {
+.swiper {
 	width: 100%;
-	height: 70%;
+	margin: 40px auto;
 }
 
-.img-base-estrategica-horizontal {
-	display: none;
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 10px;
+}
+
+.card-base {
+	background: var(--azul-degrade);
+	color: var(--branco);
+	border-radius: 40px;
+	padding: 20px 30px;
+	align-items: center;
+	height: 210px;
+	margin: 0 auto;
+}
+
+.icone-base {
+	font-size: 2rem;
+}
+
+.icone-missao {
+	color: var(--vermelho);
+}
+
+.icone-visao {
+	color: var(--amarelo);
+}
+
+.icone-negocio {
+	color: var(--verde);
+}
+
+.card-base h3 {
+	font-size: 1.5rem;
+	color: var(--azul-claro);
+}
+
+.card-base p {
+	font-size: 1rem;
+	line-height: 2;
+	margin-bottom: 10px;
 }
 
 .slider-portfolio {
@@ -46,8 +88,13 @@
 }
 
 @media (min-width: 768px) {
-	.quem-somos {
-		padding: 30px;
+	.swiper-slide {
+		padding: 0 10px 0 10px;
+	}
+
+	.card-base {
+		height: 290px;
+		margin: 0 auto;
 	}
 
 	.mobile-portfolio {
@@ -57,10 +104,11 @@
 	.slider-portfolio {
 		display: block;
 		height: auto;
-		margin: auto;
+		margin: 0 auto;
 		overflow: hidden;
 		position: relative;
-		width: 90%;
+		width: 100%;
+		max-width: 1920px;
 	}
 
 	.slider-portfolio::before,
@@ -89,24 +137,85 @@
 
 @media (min-width: 1024px) {
 	.quem-somos {
-		padding: 85px 100px 0 100px;
+		padding: 0;
 	}
 
-	.quem-somos-apresentacao {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto;
-		gap: 2vh;
-		align-items: center;
-	}
-
-	.img-base-estrategica-vertical {
-		display: none;
-	}
-	
-	.img-base-estrategica-horizontal {
+	.quem-somos-conteiner {
 		display: flex;
-		width: 100%;
-		height: 100%;
+		flex-direction: column;
+		align-items: center;
+		padding: 0;
+	}
+
+	.quem-somos-texto {
+		font-size: 1.2rem;
+		padding: 10px;
+	}
+
+	.swiper {
+		margin: 0;
+	}
+
+	.card-base {
+		height: 20vh;
+		max-width: 450px;
+		margin: 0 auto;
+	}
+
+	.icone-base {
+		font-size: 2.15rem;
+	}
+
+	.card-base h3 {
+		font-size: 1.65rem;
+	}
+
+	.card-base p {
+		font-size: 1.10rem;
+		line-height: 1.35;
+	}
+}
+
+@media (min-width: 1440px) {
+	.quem-somos {
+		padding: 0;
+	}
+
+	.quem-somos-conteiner {
+		padding: 0;
+	}
+
+	.quem-somos-texto {
+		font-size: 1.2rem;
+		padding: 10px;
+		max-width: 1920px;
+	}
+
+	.swiper {
+		max-width: 1600px;
+		margin: 0;
+	}
+
+	.swiper-slide {
+		padding: 0 5px;
+	}
+
+	.card-base {
+		height: 20vh;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+	.icone-base {
+		font-size: 2.25rem;
+	}
+
+	.card-base h3 {
+		font-size: 1.8rem;
+	}
+
+	.card-base p {
+		font-size: 1.25rem;
+		line-height: 1.5;
 	}
 }
