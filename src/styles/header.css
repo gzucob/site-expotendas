@@ -89,8 +89,29 @@
   }
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 769px) and (max-width: 1439px) {
   .navbar {
     width: 70%;
+    height: 65px;
+    padding: 0 30px;
+  }
+
+  .icons {
+    gap: 20px;
+  }
+
+  .navbar .icons a {
+    font-size: 1.4rem;
+  }
+
+  .navbar-logo img {
+    height: 36px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .navbar {
+    width: 75%;
+    top: 20px;
   }
 }
