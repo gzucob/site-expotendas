@@ -71,20 +71,27 @@
 	margin-bottom: 10px;
 }
 
-.slider-portfolio {
-	display: none;
+.portfolio-swiper {
+	width: 100%;
+	overflow: hidden;
 }
 
-.mobile-portfolio {
+.portfolio-swiper .swiper-wrapper {
+	transition-timing-function: linear !important;
+}
+
+.portfolio-swiper .swiper-slide {
+	width: auto !important;
+	/* evita “encaixar” slides fixos */
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }
 
-.mobile-portfolio-img {
-	width: 100px;
-	height: auto;
+.portfolio-logo {
+	width: 350px;
+	height: 200px;
+	object-fit: contain;
 }
 
 @media (min-width: 768px) {
@@ -97,41 +104,9 @@
 		margin: 0 auto;
 	}
 
-	.mobile-portfolio {
-		display: none;
-	}
-
-	.slider-portfolio {
-		display: block;
+	.portfolio-logo {
+		width: 140px;
 		height: auto;
-		margin: 0 auto;
-		overflow: hidden;
-		position: relative;
-		width: 100%;
-		max-width: 1920px;
-	}
-
-	.slider-portfolio::before,
-	.slider-portfolio::after {
-		content: "";
-		position: absolute;
-		z-index: 2;
-	}
-
-	.slider-portfolio::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
-
-	.slider-portfolio::before {
-		left: 0;
-		top: 0;
-	}
-
-	.slider-portfolio .slide-track {
-		display: flex;
-		width: 6300px;
 	}
 }
 
@@ -217,5 +192,10 @@
 	.card-base p {
 		font-size: 1.25rem;
 		line-height: 1.5;
+	}
+
+	.portfolio-swiper {
+		max-width: 1200px;
+		width: auto;
 	}
 }
