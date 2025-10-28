@@ -1,51 +1,51 @@
 .quem-somos {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--cor-de-fundo);
-	font-family: var(--fonte-principal);
-	padding: 10px;
 }
 
 .quem-somos img {
 	display: block;
 	margin: 20px auto 20px auto;
-	width: 180px;
+	width: 160px;
 	height: auto;
 }
 
-.quem-somos-conteiner {
-	gap: 15px;
+.quem-somos-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 8px;
 }
 
 .quem-somos-texto {
-	font-size: 1rem;
+	font-size: 16px;
 	color: var(--cinza);
 	text-align: start;
 }
 
-.swiper {
-	width: 100%;
-	margin: 40px auto;
-}
-
-.swiper-slide {
-	display: flex;
-	justify-content: center;
-	padding-bottom: 10px;
+.cards-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	grid-column-gap: 12px;
+	grid-row-gap: 12px;
+	margin-top: 40px;
+	margin-bottom: 40px;
 }
 
 .card-base {
 	background: var(--azul-degrade);
 	color: var(--branco);
-	border-radius: 40px;
-	padding: 20px 30px;
+	border-radius: 32px;
+	padding: 20px 28px;
 	align-items: center;
-	height: 210px;
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
 }
 
 .icone-base {
-	font-size: 2rem;
+	font-size: 40px;
 }
 
 .icone-missao {
@@ -61,14 +61,13 @@
 }
 
 .card-base h3 {
-	font-size: 1.5rem;
+	font-size: 24px;
 	color: var(--azul-claro);
 }
 
 .card-base p {
-	font-size: 1rem;
+	font-size: 16px;
 	line-height: 2;
-	margin-bottom: 10px;
 }
 
 .portfolio-swiper {
@@ -88,114 +87,65 @@
 	align-items: center;
 }
 
-.portfolio-logo {
-	width: 350px;
-	height: 200px;
-	object-fit: contain;
-}
-
 @media (min-width: 768px) {
 	.swiper-slide {
-		padding: 0 10px 0 10px;
+		padding: 0 12px;
 	}
 
-	.card-base {
-		height: 290px;
-		margin: 0 auto;
+	.quem-somos-container {
+		padding: 0 16px;
 	}
 
-	.portfolio-logo {
-		width: 140px;
-		height: auto;
+	.cards-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 04px;
+		grid-row-gap: 04px;
 	}
 }
 
 @media (min-width: 1024px) {
-	.quem-somos {
-		padding: 0;
-	}
-
-	.quem-somos-conteiner {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 0;
+	.quem-somos-container {
+		padding: 0 24px;
 	}
 
 	.quem-somos-texto {
-		font-size: 1.2rem;
-		padding: 10px;
+		font-size: 20px;
 	}
 
 	.swiper {
 		margin: 0;
 	}
 
-	.card-base {
-		height: 20vh;
-		max-width: 450px;
-		margin: 0 auto;
-	}
-
 	.icone-base {
-		font-size: 2.15rem;
+		font-size: 44px;
 	}
 
 	.card-base h3 {
-		font-size: 1.65rem;
+		font-size: 28px;
 	}
 
 	.card-base p {
-		font-size: 1.10rem;
-		line-height: 1.35;
+		font-size: 20px;
 	}
 }
 
 @media (min-width: 1440px) {
-	.quem-somos {
-		padding: 0;
-	}
-
-	.quem-somos-conteiner {
-		padding: 0;
+	.quem-somos-container {
+		padding: 0 52px;
 	}
 
 	.quem-somos-texto {
-		font-size: 1.2rem;
-		padding: 10px;
-		max-width: 1920px;
-	}
-
-	.swiper {
-		max-width: 1600px;
-		margin: 0;
-	}
-
-	.swiper-slide {
-		padding: 0 5px;
-	}
-
-	.card-base {
-		height: 20vh;
-		max-width: 500px;
-		margin: 0 auto;
-	}
-
-	.icone-base {
-		font-size: 2.25rem;
-	}
-
-	.card-base h3 {
-		font-size: 1.8rem;
-	}
-
-	.card-base p {
-		font-size: 1.25rem;
-		line-height: 1.5;
+		line-height: 2;
 	}
 
 	.portfolio-swiper {
-		max-width: 1200px;
-		width: auto;
+		max-width: var(--size-max);
+	}
+
+	.cards-container {
+		grid-column-gap: 20px;
+		grid-row-gap: 20px;
 	}
 }
