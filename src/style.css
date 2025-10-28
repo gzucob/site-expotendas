@@ -6,7 +6,6 @@
 @import url(./styles/footer.css);
 
 :root {
-	
 	/* Colors */
 	--cor-de-fundo: #ffffff;
 	--branco: #ffffff;
@@ -28,7 +27,10 @@
 
 	/* Padding and Width from Navbar */
 	--nav-w: min(90%, var(--size-max));
-	--nav-pad: 12px;
+	--nav-pad-x: 12px; /* padding horizontal do .navbar */
+	--nav-top: 12px; /* distância do topo do viewport */
+	--gap-y: 8px; /* respiro entre nav e menu */
+	--nav-h: 0px; /* preenchida via JS abaixo */
 }
 
 * {

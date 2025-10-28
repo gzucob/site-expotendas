@@ -11,7 +11,7 @@
 
 .navbar {
 	position: fixed;
-	top: 12px;
+	top: var(--nav-top);
 	width: var(--nav-w);
 	max-width: var(--size-max);
 	margin: 0 auto;
@@ -19,7 +19,7 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: var(--nav-pad);
+	padding: var(--nav-pad-x);
 }
 
 .navbar,
@@ -56,8 +56,8 @@
 	align-items: start;
 	gap: 20px;
 	padding: 28px;
-	top: 7vh;
-	right: calc((100% - var(--nav-w)) / 2 + var(--nav-pad));
+	top: calc(var(--nav-top) + var(--nav-h) + var(--gap-y));
+	right: calc((100% - var(--nav-w)) / 2 + var(--nav-pad-x));
 	width: auto;
 	height: auto;
 }

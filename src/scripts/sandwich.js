@@ -25,3 +25,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 });
+
+(function () {
+	const root = document.documentElement;
+	const nav = document.querySelector(".navbar");
+
+	function syncNavVars() {
+		if (!nav) return;
+		root.style.setProperty("--nav-h", nav.offsetHeight + "px");
+	}
+
+	// inicializa e atualiza quando necessário
+	window.addEventListener("load", syncNavVars);
+	window.addEventListener("resize", syncNavVars);
+	window.addEventListener("scroll", syncNavVars); // se o nav muda altura ao “scrolled”
+})();
