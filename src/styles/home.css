@@ -1,46 +1,39 @@
 .apresentacao {
     position: relative;
     width: 100%;
-    background: url('/assets/img-background.jpg') no-repeat center center/cover;
+    height: 30vh;
+    background: url('/assets/bg/background.svg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--branco);
     text-align: center;
-    padding: 30px;
+    padding: 32px 0;
 }
 
 .slogan {
-    font-family: var(--fonte-principal);
-    font-weight: bold 700;
-    font-size: 1rem;
-    margin-bottom: 50%;
-    padding: 50px 10px;
-}
-
-@media (min-width: 480px) {
-    .slogan {
-        font-size: 1.3rem;
-    }
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 48px;
 }
 
 @media (min-width: 768px) {
     .apresentacao {
-        padding: 50px;
+        height: 55vh;
+        padding: 40px;
     }
-
     .slogan {
-        font-size: 1.5rem;
+        font-size: 20px;
     }
 }
 
 @media (min-width: 1024px) {
     .apresentacao {
-        height: 80vh;
-        padding: 50px;
+        height: 60vh;
+        padding: 48px;
     }
 
     .slogan {
-        font-size: 2rem;
+        font-size: 28px;
     }
 }

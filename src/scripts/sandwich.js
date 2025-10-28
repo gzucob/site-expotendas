@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
+// Sincroniza variáveis CSS com a altura do navbar
 (function () {
 	const root = document.documentElement;
 	const nav = document.querySelector(".navbar");
