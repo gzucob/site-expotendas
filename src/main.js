@@ -1,12 +1,12 @@
 // Importar Bootstrap Icons
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Arquivo CSS principal
-import './style.css';
+import "./style.css";
 
 // Módulos JS
-import './scripts/navbar.js';
-import './scripts/sandwich.js';
-import './scripts/slider.js';
-import './scripts/galeria.js';
-import './scripts/contato.js';
+import "./scripts/navbar.js";
+import "./scripts/sandwich.js";
+import "./scripts/carousel.js";
+import "./scripts/gallery.js";
+import "./scripts/contact.js";

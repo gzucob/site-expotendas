@@ -1,8 +1,8 @@
 @import url(./styles/header.css);
 @import url(./styles/home.css);
-@import url(./styles/quem-somos.css);
-@import url(./styles/produtos.css);
-@import url(./styles/contatos.css);
+@import url(./styles/about.css);
+@import url(./styles/products.css);
+@import url(./styles/contact.css);
 @import url(./styles/footer.css);
 
 :root {
@@ -25,12 +25,17 @@
 	/* Container max-widht */
 	--size-max: 1440px;
 
-	/* Padding and Width from Navbar */
+	/* Padding and width from Navbar */
 	--nav-w: min(90%, var(--size-max));
 	--nav-pad-x: 12px; /* padding horizontal do .navbar */
 	--nav-top: 12px; /* distância do topo do viewport */
 	--gap-y: 8px; /* respiro entre nav e menu */
 	--nav-h: 0px; /* preenchida via JS abaixo */
+
+	/* Box shadow */
+	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.12);
+	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.16);
+	--shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.24), 0 6px 12px rgba(0, 0, 0, 0.20);
 }
 
 * {
