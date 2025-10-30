@@ -236,6 +236,7 @@
 						<button class="chip-outline" data-filter="all" aria-pressed="true">
 							Todos
 						</button>
+						<button class="chip-outline" data-filter="size">Comparar tamanhos</button>
 						<button class="chip-outline" data-filter="tendas">Tendas</button>
 						<button class="chip-outline" data-filter="tablados">
 							Tablados
@@ -381,6 +382,24 @@
 								<div class="swiper-caption">Tablados • palco</div>
 							</div>
 
+							<div class="swiper-slide" data-cat="size">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/tendas-size-cima.svg" loading="lazy"
+										decoding="async" alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="size">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/tendas-size-pov.svg" loading="lazy"
+										decoding="async" alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
 						</div>
 						<div class="swiper-button-prev" aria-label="Imagem anterior"></div>
 						<div class="swiper-button-next" aria-label="Próxima imagem"></div>
@@ -396,19 +415,19 @@
 				<h3 class="formulario-titulo">Fale Conosco</h3>
 				<form id="form-contato" class="form-contato">
 					<div class="form-grupo">
-						<label for="nome">Seu nome:</label>
-						<input type="text" id="nome" name="nome" required />
+						<!-- <label for="nome"></label> -->
+						<input type="text" id="nome" name="nome" required placeholder="Seu nome" />
 					</div>
 					<div class="form-grupo">
-						<label for="email">Seu e-mail:</label>
-						<input type="email" id="email" name="email" required />
+						<!-- <label for="email"></label> -->
+						<input type="email" id="email" name="email" required placeholder="Seu e-mail" />
 					</div>
 					<div class="form-grupo">
-						<label for="telefone">Telefone (opcional):</label>
-						<input type="tel" id="telefone" name="telefone" />
+						<!-- <label for="telefone""></label> -->
+						<input type="tel" id="telefone" name="telefone" placeholder="Seu telefone (opcional)" />
 					</div>
 					<div class="form-grupo">
-						<label for="departamento">Selecione um departamento:</label>
+						<!-- <label for="departamento"></label> -->
 						<select id="departamento" name="departamento" required>
 							<option value="" disabled selected>
 								Escolha um departamento
@@ -419,8 +438,9 @@
 						</select>
 					</div>
 					<div class="form-grupo">
-						<label for="mensagem">Mensagem:</label>
-						<textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+						<!-- <label for="mensagem" ></label> -->
+						<textarea id="mensagem" name="mensagem" rows="5" required
+							placeholder="Digite aqui a sua mensagem!"></textarea>
 					</div>
 					<div class="form-grupo">
 						<button type="submit" class="btn-enviar">Enviar Mensagem</button>
