@@ -1,52 +1,71 @@
 import Swiper from "swiper";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
-import "swiper/css/bundle";
+import { Navigation, Pagination, Keyboard, Zoom } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/zoom"
 
-const images = [
-	"/assets/carousel/evento-noturno01.svg",
-	"/assets/carousel/evento-noturno02.svg",
-	"/assets/carousel/evento-noturno03.svg",
-	"/assets/carousel/evento01.svg",
-	"/assets/carousel/feira-livro-antonio-prado.svg",
-	"/assets/carousel/feira-livro-cxs01.svg",
-	"/assets/carousel/feira-livro-cxs02.svg",
-	"/assets/carousel/fenamassa.svg",
-	"/assets/carousel/festa-uva.svg",
-	"/assets/carousel/interior01.svg",
-	"/assets/carousel/interior02.svg",
-	"/assets/carousel/interior03.svg",
-	"/assets/carousel/maesa.svg",
-	"/assets/carousel/parque-estacao-carlos-barbosa.svg",
-	"/assets/carousel/tendas-size-cima.svg",
-	"/assets/carousel/tendas-size-pov.svg",
-];
+// Modal
+const modal = document.getElementById("galeria-modal");
+const openBtn = document.getElementById("open-gallery");
+const closeBtn = document.getElementById("close-gallery");
+const filterChips = Array.from(document.querySelectorAll(".chip-outline"));
 
-// 1) Popular antes de inicializar
-const wrapper = document.querySelector(".gallery-swiper .gallery-wrapper");
-if (wrapper) {
-	wrapper.innerHTML = images
-		.map(
-			(src, i) => `
-    <div class="swiper-slide" aria-label="Slide ${i + 1}">
-      <img src="${src}" alt="Imagem ${
-				i + 1
-			}: eventos realizados com os produtos da expotendas" decoding="async" />
-    </div>
-  `
-		)
-		.join("");
+function openModal() {
+	modal.setAttribute("aria-hidden", "false");
+	document.body.style.overflow = "hidden";
+	// atualiza o swiper após abrir
+	setTimeout(() => gallery.update(), 0);
+}
+function closeModal() {
+	modal.setAttribute("aria-hidden", "true");
+	document.body.style.overflow = "";
 }
 
-const swiper = new Swiper(".gallery-swiper", {
+openBtn?.addEventListener("click", openModal);
+closeBtn?.addEventListener("click", closeModal);
+modal?.addEventListener("click", (e) => {
+	if (e.target === modal) closeModal();
+});
+window.addEventListener("keydown", (e) => {
+	if (e.key === "Escape") closeModal();
+});
 
-	modules: [Autoplay, EffectFade, Navigation, Pagination],
-	
-	effect: "fade",
-	fadeEffect: { crossFade: true },
-	speed: 700,
+// Swiper
+const gallery = new Swiper("#swiper-galeria", {
+	modules: [Navigation, Pagination, Keyboard, Zoom],
+
 	slidesPerView: 1,
+	spaceBetween: 14,
+	centeredSlides: true,
 	loop: true,
-	autoplay: { delay: 3000, disableOnInteraction: false },
+	preloadImages: false,
+	lazy: true,
+	keyboard: { enabled: true },
+	zoom: { maxRatio: 2, toggle: true },
 	navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-	pagination: { clickable: true },
+	pagination: { el: ".swiper-pagination", clickable: true },
+	breakpoints: {
+		768: { slidesPerView: 1.25 },
+		1024: { slidesPerView: 1.5 },
+	},
+});
+
+// Filtro por categoria (tendas | tablados | montagem)
+function applyFilter(cat) {
+	const slides = document.querySelectorAll("#swiper-galeria .swiper-slide");
+	slides.forEach((slide) => {
+		const sCat = slide.getAttribute("data-cat");
+		const show = cat === "all" || sCat === cat;
+		slide.style.display = show ? "" : "none";
+	});
+	gallery.update();
+}
+
+filterChips.forEach((chip) => {
+	chip.addEventListener("click", () => {
+		filterChips.forEach((c) => c.setAttribute("aria-pressed", "false"));
+		chip.setAttribute("aria-pressed", "true");
+		applyFilter(chip.dataset.filter);
+	});
 });

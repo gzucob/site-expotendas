@@ -105,37 +105,290 @@
 			</div>
 		</section>
 
-		<!-- Produtos -->
-		<section id="products" class="produtos">
-			<div class="produto">
-				<h2>Produtos</h2>
-				<p>
-					A Expotendas disponibiliza tendas e galpões industriais com desenho
-					industrial depositado no INPI através do código DI-7101268-0, tendo
-					assim exclusividade no modelo adotado.<br />As lonas possuem
-					proteção UV, antichama, antimofo e blackout, para maior conforto e
-					segurança. Oferecemos locação de tendas brancas e translúcidas com
-					perfeito acabamento, com calhas e pés arredondados, deixando o
-					ambiente ainda mais elegante. Disponibilizamos também pisos, palcos,
-					tablados, passarelas, pistas de dança, túnel, móveis, pirâmides,
-					camarotes, áreas VIP, bretes de isolamento e galpões.<br />Temos
-					tendas nos seguintes tamanhos: 05x05, 05x10, 08x10 e 10x10.
+		<div id="app"></div>
+
+		<!-- Section Produtos -->
+		<section id="products" class="produtos container" aria-labelledby="titulo-produtos">
+			<header class="produtos__header">
+				<span class="eyebrow">
+					Serra Gaúcha • Aluguel de estruturas para eventos
+				</span>
+
+				<h1 id="titulo-produtos">
+					Tendas e tablados para eventos, com montagem rápida e segura
+				</h1>
+
+				<div class="meta">
+					<span class="badge inpi" title="Desenho industrial depositado no INPI">
+						INPI DI-7101268-0
+					</span>
+					<span class="divider" aria-hidden="true">•</span>
+					<span class="badge azul">Referência em aluguel de tendas na serra gaúcha</span>
+				</div>
+
+				<p class="lede">
+					Tendas piramidais, estruturadas e tensionadas, além de tablados
+					modulares.<br> Atendimento ágil, equipe própria e operação focada em
+					prazos.
 				</p>
-			</div>
-			<div class="swiper mySwiper gallery-swiper">
-				<div class="swiper-wrapper gallery-wrapper"></div>
-				<div class="swiper-button-next"></div>
-				<div class="swiper-button-prev"></div>
+
+				<div class="actions">
+					<button class="btn btn-primaria" id="open-gallery" aria-haspopup="dialog"
+						aria-controls="galeria-modal">
+						Ver galeria
+					</button>
+
+					<a class="btn btn-contorno" id="cta-whats" href="https://wa.me/555430281133" target="_blank"
+						rel="noopener">
+						Solicitar Orçamento
+					</a>
+				</div>
+			</header>
+
+			<!-- Diferenciais -->
+			<ul class="benefits" aria-label="Diferenciais">
+				<li class="benefit">
+					<h3>Logística sem drama</h3>
+					<p>Entrega e montagem sincronizadas com o cronograma do evento.</p>
+				</li>
+				<li class="benefit">
+					<h3>Segurança e estabilidade</h3>
+					<p>Estruturas niveladas, ancoragem correta e inspeção no local.</p>
+				</li>
+				<li class="benefit">
+					<h3>Prazos cumpridos</h3>
+					<p>Janela de montagem combinada e cumprida. Sem susto no dia.</p>
+				</li>
+			</ul>
+
+			<!-- Cards de Produto -->
+			<div class="grid" role="list">
+				<article class="card" role="listitem">
+					<div class="card-media">
+						<img src="/assets/gallery/feira-livro-antonio-prado.svg" loading="lazy" decoding="async"
+							alt="Tendas para a feira do livro em Antonio Prado">
+						<span class="tag azul">Tendas</span>
+					</div>
+					<div class="card-content">
+						<h3>Tendas para eventos</h3>
+						<div class="badges">
+							<span class="chip">Piramidal</span>
+							<span class="chip">Estruturada</span>
+							<span class="chip">Tensionada</span>
+							<span class="chip">Laterais opcionais</span>
+						</div>
+						<ul class="bullets">
+							<li>Tamanhos: 05x05, 05x10, 08x10 e 10x10.</li>
+							<li>Montagem rápida e acabamento limpo.</li>
+							<li>Proteção UV e vedação com calhas.</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="card" role="listitem">
+					<div class="card-media">
+						<img src="assets/gallery/interior01.svg" loading="lazy" decoding="async"
+							alt="Tablado mais decoração no interior das tendas">
+						<span class="tag verde">Tablados</span>
+					</div>
+					<div class="card-content">
+						<h3>Tablados modulares</h3>
+						<div class="badges">
+							<span class="chip">Módulos niveláveis</span>
+							<span class="chip">Acabamento antiderrapante</span>
+							<span class="chip">Perímetro seguro</span>
+						</div>
+						<ul class="bullets">
+							<li>Palcos, passarelas, pistas e áreas técnicas.</li>
+							<li>Nível ajustado no local, mesmo em terreno irregular.</li>
+							<li>Integra com tendas para um conjunto sólido.</li>
+						</ul>
+					</div>
+				</article>
 			</div>
 
-			<!-- <div class="orcamento">
-					<button id="btnOrcamento" class="btn-orcamento" type="button">
-						<a href="https://wa.me/555430281133" target="_blank"
-							>Solicitar Orçamento</a
-						>
-					</button>
-				</div> -->
+			<!-- Texto institucional -->
+			<details class="copy">
+				<summary>Mais detalhes técnicos</summary>
+				<div class="copy__inner">
+					<p>
+						A Expotendas disponibiliza tendas e galpões industriais com desenho
+						industrial depositado no INPI através do código
+						<strong>DI-7101268-0</strong>, tendo assim exclusividade no modelo
+						adotado.<br />As lonas possuem proteção UV, antichama, antimofo e
+						blackout, para maior conforto e segurança. Oferecemos locação de
+						tendas brancas e translúcidas com perfeito acabamento, com calhas e
+						pés arredondados, deixando o ambiente ainda mais elegante.
+						Disponibilizamos também pisos, palcos, tablados, passarelas, pistas
+						de dança, túnel, móveis, pirâmides, camarotes, áreas VIP, bretes de
+						isolamento e galpões.
+					</p>
+				</div>
+			</details>
 		</section>
+
+		<!-- Modal da Galeria -->
+		<div class="modal" id="galeria-modal" aria-hidden="true" role="dialog" aria-modal="true"
+			aria-label="Galeria de imagens">
+			<div class="dialog">
+				<div class="dialog-header">
+					<div class="filters" role="group" aria-label="Filtros">
+						<button class="chip-outline" data-filter="all" aria-pressed="true">
+							Todos
+						</button>
+						<button class="chip-outline" data-filter="tendas">Tendas</button>
+						<button class="chip-outline" data-filter="tablados">
+							Tablados
+						</button>
+						<button class="chip-outline" data-filter="noturno">
+							Noturno
+						</button>
+					</div>
+
+					<button class="close" id="close-gallery" aria-label="Fechar galeria">
+						<i class="bi bi-x-lg"></i>
+					</button>
+				</div>
+
+				<div class="dialog-body">
+					<div class="swiper gallery-swiper" id="swiper-galeria">
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/evento01.svg" loading="lazy" decoding="async"
+										alt="Tenda montada em evento externo" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tendas • evento externo</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/maesa.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tendas • estruturada</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="noturno">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/evento-noturno01.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • módulo nivelado</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="noturno">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/evento-noturno02.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Montagem • equipe</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="noturno">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/evento-noturno03.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tendas • piramidal</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/feira-livro-cxs01.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/feira-livro-cxs02.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/feira-livro-antonio-prado.svg" loading="lazy"
+										decoding="async" alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tablados">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/interior01.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tablados">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/interior02.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tablados">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/interior03.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/fenamassa.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/festa-uva.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/parque-estacao-carlos-barbosa.svg" loading="lazy"
+										decoding="async" alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+								<div class="swiper-caption">Tablados • palco</div>
+							</div>
+
+						</div>
+						<div class="swiper-button-prev" aria-label="Imagem anterior"></div>
+						<div class="swiper-button-next" aria-label="Próxima imagem"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Contato -->
 		<section id="contact" class="contato">
