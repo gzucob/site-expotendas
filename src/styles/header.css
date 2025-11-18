@@ -1,187 +1,187 @@
 .header {
-	position: relative;
-	width: 100%;
-	height: auto;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 99;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
 }
 
 .navbar {
-	position: fixed;
-	top: var(--nav-top);
-	width: var(--nav-w);
-	max-width: var(--size-max);
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: var(--nav-pad-x);
+  position: fixed;
+  top: var(--nav-top);
+  width: var(--nav-w);
+  max-width: var(--size-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--nav-pad-x);
 }
 
 .navbar,
 .navbar-links-mobile.show {
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-	transition: background 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
-	border-radius: 12px;
-	box-shadow: var(--shadow-md);
-	-webkit-box-shadow: var(--shadow-md);
-	-moz-box-shadow: var(--shadow-md);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.3s ease, width 0.3s ease, box-shadow 0.3s ease;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-md);
+  -webkit-box-shadow: var(--shadow-md);
+  -moz-box-shadow: var(--shadow-md);
 }
 
 .navbar.scrolled,
 .navbar-links-mobile.show.scrolled {
-	background: rgba(192, 192, 192, 0.85);
-	border: 1px solid rgba(192, 192, 192, 0.85);
-	box-shadow: var(--shadow-md);
-	-webkit-box-shadow: var(--shadow-md);
-	-moz-box-shadow: var(--shadow-md);
+  background: var(--bg-mobile);
+  border: 1px solid var(--bg-mobile);
+  box-shadow: var(--shadow-md);
+  -webkit-box-shadow: var(--shadow-md);
+  -moz-box-shadow: var(--shadow-md);
 }
 
 .navbar-logo {
-	display: flex;
-	cursor: pointer;
+  display: flex;
+  cursor: pointer;
 }
 
 .navbar-logo img {
-	height: 28px;
-	width: auto;
-	object-fit: contain;
+  height: 28px;
+  width: auto;
+  object-fit: contain;
 }
 
 .navbar-links-mobile {
-	position: fixed;
-	display: none;
-	flex-direction: column;
-	align-items: start;
-	gap: 20px;
-	padding: 28px;
-	top: calc(var(--nav-top) + var(--nav-h) + var(--gap-y));
-	right: calc((100% - var(--nav-w)) / 2 + var(--nav-pad-x));
-	width: auto;
-	height: auto;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  padding: 28px;
+  top: calc(var(--nav-top) + var(--nav-h) + var(--gap-y));
+  right: calc((100% - var(--nav-w)) / 2 + var(--nav-pad-x));
+  width: auto;
+  height: auto;
 }
 
 .navbar-links-mobile.show {
-	display: flex;
+  display: flex;
 }
 
 .navbar-links-mobile a {
-	color: var(--branco);
-	font-size: 16px;
+  color: var(--font-color-secundary);
+  font-size: var(--font-md);
 }
 
 .navbar-toggle {
-	display: block;
-	font-size: 24px;
-	cursor: pointer;
-	color: var(--branco);
+  display: block;
+  font-size: var(--font-xl);
+  cursor: pointer;
+  color: var(--font-color-secundary);
 }
 
 .icons {
-	display: flex;
-	gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .icons a {
-	color: var(--branco);
-	font-size: 20px;
-	transition: color 0.3s ease, transform 0.2s ease;
+  color: var(--font-color-secundary);
+  font-size: var(--font-lg);
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .navbar-links-desktop {
-	display: none;
+  display: none;
 }
 
 @media (min-width: 768px) {
-	.navbar-logo img {
-		height: 32px;
-	}
+  .navbar-logo img {
+    height: 32px;
+  }
 
-	.navbar-links-desktop {
-		display: flex;
-		gap: 20px;
-	}
+  .navbar-links-desktop {
+    display: flex;
+    gap: 20px;
+  }
 
-	.navbar-links-desktop a {
-		color: var(--branco);
-		font-size: 16px;
-	}
+  .navbar-links-desktop a {
+    color: var(--font-color-secundary);
+    font-size: var(--font-md);
+  }
 
-	.navbar-toggle {
-		display: none;
-	}
+  .navbar-toggle {
+    display: none;
+  }
 
-	.navbar-links-mobile {
-		display: none;
-	}
+  .navbar-links-mobile {
+    display: none;
+  }
 
-	.icons {
-		gap: 24px;
-	}
+  .icons {
+    gap: 24px;
+  }
 }
 
 @media (min-width: 1024px) {
-	.navbar-logo img {
-		height: 36px;
-	}
+  .navbar-logo img {
+    height: 36px;
+  }
 
-	.navbar-links-desktop {
-		gap: 24px;
-	}
+  .navbar-links-desktop {
+    gap: 24px;
+  }
 
-	.icons a {
-		font-size: 24px;
-	}
+  .icons a {
+    font-size: var(--font-xl);
+  }
 
-	.icons a:hover {
-		color: var(--cinza-claro);
-	}
+  .icons a:hover {
+    color: var(--font-color-tertiary);
+  }
 
-	.navbar-links-desktop a:hover {
-		color: var(--cinza-claro);
-		text-decoration: underline;
-		text-underline-offset: 4px;
-		transition: color 0.6s ease-in-out;
-	}
+  .navbar-links-desktop a:hover {
+    color: var(--font-color-tertiary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.6s ease-in-out;
+  }
 
-	.navbar-links-desktop a.is-active:hover {
-		color: var(--cinza-claro);
-		text-decoration: underline;
-		text-underline-offset: 4px;
-		transition: color 0.6s ease-in-out;
-	}
+  .navbar-links-desktop a.is-active:hover {
+    color: var(--font-color-tertiary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.6s ease-in-out;
+  }
 
-	.navbar-links-desktop a.is-active {
-		color: var(--branco);
-		text-decoration: underline;
-		text-underline-offset: 4px;
-		transition: color 0.6s ease-in-out;
-	}
+  .navbar-links-desktop a.is-active {
+    color: var(--font-color-secundary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.6s ease-in-out;
+  }
 }
 
 @media (min-width: 1440px) {
-	.navbar {
-		justify-content: space-around;
-	}
+  .navbar {
+    justify-content: space-around;
+  }
 
-	.navbar-logo img {
-		height: 40px;
-	}
+  .navbar-logo img {
+    height: 40px;
+  }
 
-	.navbar-links-desktop {
-		gap: 28px;
-	}
+  .navbar-links-desktop {
+    gap: 28px;
+  }
 
-	.navbar-links-desktop a {
-		font-size: 20px;
-	}
+  .navbar-links-desktop a {
+    font-size: var(--font-lg);
+  }
 
-	.icons a {
-		font-size: 28px;
-	}
+  .icons a {
+    font-size: 28px;
+  }
 }

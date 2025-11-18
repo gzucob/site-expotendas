@@ -1,39 +1,39 @@
 .apresentacao {
-    position: relative;
-    width: 100%;
-    height: 30vh;
-    background: url('/assets/bg/background.svg') no-repeat center center/cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--branco);
-    text-align: center;
-    padding: 32px 0;
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background: url("/assets/bg/background.svg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--font-color-secundary);
+  text-align: center;
+  padding: 32px 0;
 }
 
 .slogan {
-    font-weight: 500;
-    font-size: 16px;
-    padding-top: 48px;
+  font-weight: 500;
+  font-size: var(--font-md);
+  padding-top: 48px;
 }
 
 @media (min-width: 768px) {
-    .apresentacao {
-        height: 55vh;
-        padding: 40px;
-    }
-    .slogan {
-        font-size: 20px;
-    }
+  .apresentacao {
+    height: 55vh;
+    padding: 40px;
+  }
+  .slogan {
+    font-size: var(--font-lg);
+  }
 }
 
 @media (min-width: 1024px) {
-    .apresentacao {
-        height: 60vh;
-        padding: 48px;
-    }
+  .apresentacao {
+    height: 60vh;
+    padding: 48px;
+  }
 
-    .slogan {
-        font-size: 28px;
-    }
+  .slogan {
+    font-size: 28px;
+  }
 }
