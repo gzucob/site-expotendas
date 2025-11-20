@@ -1,135 +1,203 @@
 .contato {
+  font-size: var(--font-md);
+}
+
+.contato-wrap {
+  width: min(92%, var(--size-max));
+  margin: 0 auto;
+  display: grid;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-card {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  background: var(--bg-fade);
-  font-family: var(--fonte-principal);
-  color: var(--font-color-secundary);
-  margin-bottom: 40px;
+  align-items: center;
 }
 
-.formulario-contato {
+.form-header {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
   width: 90%;
-  margin: 40px auto 40px auto;
 }
 
-.formulario-titulo {
+.form-title {
+  color: var(--font-color-primary);
   font-size: var(--font-xl);
-  color: var(--font-color-secundary);
-  font-weight: 500;
-  padding: 20px;
+  padding-top: 16px;
+}
+
+.form-subtitle {
+  color: var(--font-color-tertiary);
 }
 
 .form-contato {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  gap: 12px;
+  width: 90%;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
 .form-grupo {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
+  position: relative;
+  display: grid;
+  align-items: center;
 }
 
-.form-grupo input::placeholder,
-.form-grupo textarea::placeholder {
-  font-size: var(--font-sm);
-  color: var(--font-color-secundary);
-  font-weight: 300;
+.form-ico {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--font-color-tertiary);
+  font-size: var(--font-md);
+}
+
+.bi-chat-text {
+  top: 18%;
 }
 
 .form-grupo input,
 .form-grupo select,
 .form-grupo textarea {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid var(--font-color-secundary);
+  width: 100%;
+  padding: 12px 12px 12px 36px;
   border-radius: var(--radius-sm);
-  padding: 12px;
-  color: var(--font-color-secundary);
+  border: 1px solid var(--border);
+  color: var(--font-color-tertiary);
   font-family: var(--fonte-principal);
+  transition: box-shadow 0.15s ease, border-color 0.15s ease,
+    background 0.15s ease;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+  color: var(--font-color-tertiary);
 }
 
 .form-grupo input:focus,
 .form-grupo select:focus,
 .form-grupo textarea:focus {
   outline: none;
-  border-color: var(--font-color-secundary);
-  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+  border-color: var(--bg-tertiary);
+  box-shadow: 0 0 0 1px var(--bg-tertiary);
 }
 
-.form-grupo select option {
-  background-color: var(--bg-tertiary);
-  color: var(--font-color-secundary);
+.form-actions {
+  display: flex;
+  justify-content: center;
 }
 
 .btn-enviar {
-  background-color: var(--font-color-secundary);
-  color: var(--bg-tertiary);
-  font-weight: 600;
-  padding: 16px 24px;
   border: none;
   border-radius: var(--radius-sm);
-  margin-top: 28px;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  align-self: center;
-  width: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--bg-tertiary);
+  color: var(--font-color-secundary);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.1s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-enviar:hover {
-  background-color: rgba(255, 255, 255, 0.8);
   transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 .form-mensagem {
-  padding: 12px;
+  padding: 12px 16px;
   border-radius: var(--radius-sm);
   font-size: var(--font-sm);
+  display: none;
+  margin-top: 8px;
 }
 
 .form-mensagem.sucesso {
-  background-color: rgba(76, 175, 80, 0.2);
+  display: block;
+  background-color: var(--bg-business);
   border: 1px solid var(--business);
-  color: #e8f5e9;
+  color: var(--font-color-primary);
 }
 
 .form-mensagem.erro {
-  background-color: rgba(244, 67, 54, 0.2);
+  display: block;
+  background-color: var(--bg-mission);
   border: 1px solid var(--mission);
-  color: #ffebee;
+  color: var(--font-color-primary);
+}
+
+.contact-meta {
+  margin-top: 16px;
+  display: grid;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px dashed var(--border);
+  font-size: var(--font-sm);
+  color: var(--font-color-tertiary);
+  width: 90%;
+}
+
+.contact-meta i {
+  color: var(--font-color-tertiary);
+  margin-right: 4px;
+}
+
+.map-aspect {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-bottom-right-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
 }
 
 .maps {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
 @media (min-width: 768px) {
-  .formulario-contato {
-    width: 70%;
+  .form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-meta {
+    font-size: var(--font-md);
   }
 }
 
 @media (min-width: 1024px) {
-  .contato {
-    display: grid;
+  .contato-wrap {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    padding-bottom: 0;
+    align-items: stretch;
   }
 
-  .formulario-contato {
-    grid-column: 1;
-    grid-row: 1;
-    width: 80%;
+  .form-title {
+    font-size: var(--font-2xl);
   }
 
-  .maps {
-    grid-column: 2;
-    grid-row: 1;
-    width: 100%;
-    height: 100%;
-    min-height: 500px;
+  .map-aspect {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
   }
 }

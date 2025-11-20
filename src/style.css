@@ -36,6 +36,7 @@
   --font-md: 16px;
   --font-lg: 20px;
   --font-xl: 24px;
+  --font-2xl: 28px;
 
   /* Padding and width from Navbar */
   --nav-w: min(90%, var(--size-max));
