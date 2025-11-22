@@ -26,7 +26,6 @@
 }
 
 .form-title {
-  color: var(--font-color-primary);
   font-size: var(--font-xl);
   padding-top: 16px;
 }
@@ -153,7 +152,8 @@
   width: 90%;
 }
 
-.contact-meta i {
+.contact-meta i, 
+.contact-meta a {
   color: var(--font-color-tertiary);
   margin-right: 4px;
 }

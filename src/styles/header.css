@@ -13,7 +13,7 @@
   position: fixed;
   top: var(--nav-top);
   width: var(--nav-w);
-  max-width: var(--size-max);
+  width: min(92%, var(--size-max));
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -80,6 +80,8 @@
   font-size: var(--font-xl);
   cursor: pointer;
   color: var(--font-color-secundary);
+  background: none;
+  border: none;
 }
 
 .icons {

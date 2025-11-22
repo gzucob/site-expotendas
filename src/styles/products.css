@@ -1,27 +1,16 @@
 .container {
   width: min(92%, var(--size-max));
   margin-inline: auto;
-  padding: 48px 0 80px;
+  padding-bottom: 48px;
 }
 
-.produtos__header {
+.produtos-header {
   display: grid;
   gap: 12px;
   margin-bottom: 12px;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-full);
-  background: var(--bg-secundary);
-  color: var(--font-color-tertiary);
-  font-size: var(--font-sm);
-}
-
-.produtos__header h1 {
+.produtos-header h2 {
   font-size: clamp(26px, 4vw, 40px);
   letter-spacing: 0.2px;
 }
@@ -56,7 +45,7 @@
 }
 
 .lede {
-  color: var(--font-color-primary);
+  color: var(--font-color-tertiary);
 }
 
 .actions {
@@ -187,7 +176,6 @@
 
 .chip {
   font-size: var(--font-sm);
-  color: var(--font-color-primary);
   border: 1px dashed rgba(0, 0, 0, 0.14);
   border-radius: var(--radius-full);
   padding: 4px 12px;
@@ -227,16 +215,15 @@
   border-bottom: 1px solid var(--border);
 }
 
-.copy__inner {
+.copy-inner {
   padding: 16px;
-  color: var(--font-color-primary);
 }
 
-.copy__inner p {
+.copy-inner p {
   line-height: 1.7;
 }
 
-.copy__inner strong {
+.copy-inner strong {
   color: var(--bg-tertiary);
 }
 
@@ -289,7 +276,6 @@
   border-radius: var(--radius-full);
   cursor: pointer;
   border: 1px solid var(--border);
-  color: var(--font-color-primary);
 }
 
 .chip-outline[aria-pressed="true"] {

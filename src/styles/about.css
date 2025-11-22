@@ -1,6 +1,7 @@
 .quem-somos {
   display: flex;
   flex-direction: column;
+  width: min(92%, var(--size-max));
   gap: 20px;
   padding-top: 24px;
 }
@@ -19,7 +20,6 @@
 
 .qs-title {
   margin: 0;
-  color: var(--bg-tertiary);
   font-size: clamp(24px, 3.6vw, 36px);
   letter-spacing: 0.2px;
 }
@@ -27,7 +27,6 @@
 .qs-lede {
   margin: 0;
   max-width: 75ch;
-  color: var(--font-color-primary);
 }
 
 .qs-badges {
@@ -91,7 +90,6 @@
 
 .card-base p {
   margin: 4px 0 0 0;
-  color: var(--font-color-primary);
   line-height: 1.7;
 }
 
@@ -132,7 +130,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 16px;
+  padding: 0 8px;
 }
 
 .portfolio-logo {

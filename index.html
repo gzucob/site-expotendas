@@ -2,19 +2,41 @@
 <html lang="pt-BR">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="robots" content="noindex, nofollow" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Expo Tendas</title>
+	<!-- Indexação:
+       - Produção: index, follow
+       - Staging:  noindex, nofollow -->
+	<meta name="robots" content="noindex, nofollow">
+
+	<title>Expo Tendas - Tendas e estruturas para eventos na Serra Gaúcha</title>
+
+	<!-- SEO básico -->
+	<meta name="description"
+		content="Locação de tendas, galpões, tablados e palcos na Serra Gaúcha. Estruturas certificadas, montagem ágil e segurança para eventos.">
+	<meta name="author" content="Expo Tendas">
+	<meta name="theme-color" content="#0b2343">
+
+	<!-- URL canônica (produção) -->
+	<link rel="canonical" href="https://www.expotendas.com.br/">
+
+	<!-- Open Graph (social / compartilhamento) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Expo Tendas - Estruturas para eventos na Serra Gaúcha">
+	<meta property="og:description" content="Tendas, galpões e tablados com montagem rápida e segura.">
+	<meta property="og:url" content="https://www.expotendas.com.br/">
+	<meta property="og:image" content="https://www.expotendas.com.br/assets/og-cover.jpg">
+	<meta property="og:site_name" content="Expo Tendas">
+	<meta property="og:locale" content="pt_BR">
 
 	<!-- Fonte Poppins -->
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/ico+xml" href="/public/assets/favicon/favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
 </head>
+
 
 <body>
 	<!-- Navbar -->
@@ -33,27 +55,31 @@
 
 			<ul class="icons">
 				<li>
-					<a href="https://www.facebook.com/expotendas" target="_blank" class="bi bi-facebook"></a>
+					<a href="https://www.facebook.com/expotendas" target="_blank" rel="noopener" aria-label="Facebook"
+						class="bi bi-facebook"></a>
 				</li>
 				<li>
-					<a href="https://www.instagram.com/expotendas/" target="_blank" class="bi bi-instagram"></a>
+					<a href="https://www.instagram.com/expotendas/" target="_blank" rel="noopener"
+						aria-label="Instagram" class="bi bi-instagram"></a>
 				</li>
 				<li>
-					<a href="https://wa.me/555430281133" target="_blank" class="bi bi-whatsapp"></a>
+					<a href="https://wa.me/555430281133" target="_blank" rel="noopener" aria-label="WhatsApp"
+						class="bi bi-whatsapp"></a>
 				</li>
 			</ul>
 
-			<div class="navbar-toggle" id="navbarToggle" onclick="toggleMenu()">
-				<i class="bi bi-list"></i>
-			</div>
+			<button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menu" aria-expanded="false"
+				aria-controls="navbarLinksMobile">
+				<i class="bi bi-list" aria-hidden="true"></i>
+			</button>
 		</nav>
 
-		<ol class="navbar-links-mobile" id="navbarLinksMobile">
+		<ul class="navbar-links-mobile" id="navbarLinksMobile">
 			<li><a href="#home" onclick="closeMenu()">Home</a></li>
 			<li><a href="#about" onclick="closeMenu()">Sobre Nós</a></li>
 			<li><a href="#products" onclick="closeMenu()">Produtos</a></li>
 			<li><a href="#contact" onclick="closeMenu()">Fale Conosco</a></li>
-		</ol>
+		</ul>
 	</header>
 
 	<main>
@@ -65,7 +91,7 @@
 		</section>
 
 		<!-- Quem Somos -->
-		<section id="about" class="quem-somos container">
+		<section id="about" class="quem-somos container" aria-labelledby="titulo-quem-somos">
 
 			<div class="qs-header">
 				<img class="qs-logo" src="/assets/logos/logo-expotendas.svg" alt="Expotendas" />
@@ -178,14 +204,10 @@
 
 		<!-- Section Produtos -->
 		<section id="products" class="produtos container" aria-labelledby="titulo-produtos">
-			<header class="produtos__header">
-				<span class="eyebrow">
-					Serra Gaúcha • Aluguel de estruturas para eventos
-				</span>
-
-				<h1 id="titulo-produtos">
+			<header class="produtos-header">
+				<h2 id="titulo-produtos">
 					Tendas e tablados para eventos, com montagem rápida e segura
-				</h1>
+				</h2>
 
 				<div class="meta">
 					<span class="badge inpi" title="Desenho industrial depositado no INPI">
@@ -231,8 +253,8 @@
 			</ul>
 
 			<!-- Cards de Produto -->
-			<div class="grid" role="list">
-				<article class="card" role="listitem">
+			<div class="grid">
+				<article class="card">
 					<div class="card-media">
 						<img src="/assets/gallery/feira-livro-antonio-prado.svg" loading="lazy" decoding="async"
 							alt="Tendas para a feira do livro em Antonio Prado">
@@ -279,7 +301,7 @@
 			<!-- Texto institucional -->
 			<details class="copy">
 				<summary>Mais detalhes técnicos</summary>
-				<div class="copy__inner">
+				<div class="copy-inner">
 					<p>
 						A Expotendas disponibiliza tendas e galpões industriais com desenho
 						industrial depositado no INPI através do código
@@ -463,7 +485,7 @@
 		</div>
 
 		<!-- Contato -->
-		<section id="contact" class="contato">
+		<section id="contact" class="contato" aria-labelledby="titulo-contato">
 			<div class="contato-wrap">
 				<!-- Card do formulário -->
 				<div class="form-card">
@@ -534,9 +556,13 @@
 							<i class="bi bi-clock"></i> Seg a Sex: 08:30–12:00 • 13:30–18:00
 						</li>
 						<li>
-							<i class="bi bi-envelope"></i> atendimento@expotendas.com.br
+							<i class="bi bi-telephone" aria-hidden="true"></i>
+							<a href="tel:+555430281133">(54) 3028-1133</a>
 						</li>
-						<li><i class="bi bi-telephone"></i>(54) 3028-1133</li>
+						<li>
+							<i class="bi bi-envelope" aria-hidden="true"></i>
+							<a href="mailto:atendimento@expotendas.com.br">atendimento@expotendas.com.br</a>
+						</li>
 					</ul>
 				</div>
 
@@ -556,8 +582,7 @@
 			<div class="footer-wrap">
 				<div class="footer-grid">
 					<div class="footer-brand">
-						<img class="footer-logo" src="assets/logos/logo-expotendas.svg"
-							alt="Expotendas" />
+						<img class="footer-logo" src="assets/logos/logo-expotendas.svg" alt="Expotendas" />
 						<p class="footer-tagline">
 							Estruturas para eventos na Serra Gaúcha. Montagem ágil e segurança
 							em primeiro lugar.
@@ -585,13 +610,17 @@
 
 						<h3>Contato</h3>
 						<ul class="footer-list">
-							<li><i class="bi bi-telephone"></i> (54) 3028-1133</li>
 							<li>
-								<i class="bi bi-envelope"></i> atendimento@expotendas.com.br
+								<i class="bi bi-telephone" aria-hidden="true"></i>
+								<a href="tel:+555430281133">(54) 3028-1133</a>
+							</li>
+							<li>
+								<i class="bi bi-envelope" aria-hidden="true"></i>
+								<a href="mailto:atendimento@expotendas.com.br">atendimento@expotendas.com.br</a>
 							</li>
 							<li>
 								<i class="bi bi-geo-alt"></i> Rua Ludovico Cavinato, 177 - Caxias
-							do Sul — RS
+								do Sul — RS
 							</li>
 						</ul>
 					</div>
@@ -599,11 +628,11 @@
 
 				<div class="footer-legal">
 					<p class="marca">
-						EXPO TENDAS é uma marca registrada de EXPOTENDAS LOCAÇÕES LTDA |
+						EXPOTENDAS é uma marca registrada de EXPOTENDAS LOCAÇÕES LTDA |
 						CNPJ 10.665.441/0001-66
 					</p>
 					<p class="copyright">
-						© Desenvolvido por 
+						© Desenvolvido por
 						<a href="https://github.com/gzucob" target="_blank" rel="noopener">gzucob</a>
 					</p>
 				</div>
@@ -613,6 +642,6 @@
 
 	<!-- JS principal (Vite) -->
 	<script type="module" src="/src/main.js"></script>
+</script>
 </body>
-
 </html>

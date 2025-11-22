@@ -1,30 +1,45 @@
 //Sandwich Menu Funtion
-document.addEventListener("DOMContentLoaded", function () {
-	const navbarLinksSocial = document.getElementById("navbarLinksMobile");
-	const navbarToggle = document.getElementById("navbarToggle");
+const navbarLinksMobile = document.getElementById("navbarLinksMobile");
+const navbarToggle = document.getElementById("navbarToggle");
 
-	window.toggleMenu = function () {
-		if (navbarLinksSocial.classList.contains("show")) {
-			navbarLinksSocial.classList.remove("show");
-			navbarToggle.innerHTML = '<i class="bi bi-list"></i>';
-		} else {
-			navbarLinksSocial.classList.add("show");
-			navbarToggle.innerHTML = '<i class="bi bi-x"></i>';
-		}
-	};
+const ICON_OPEN = '<i class="bi bi-list" aria-hidden="true"></i>';
+const ICON_CLOSE = '<i class="bi bi-x" aria-hidden="true"></i>';
 
-	window.closeMenu = function () {
-		navbarLinksSocial.classList.remove("show");
-		navbarToggle.innerHTML = '<i class="bi bi-list"></i>';
-	};
+function openMenu() {
+  navbarLinksMobile.classList.add("show");
+  navbarToggle.innerHTML = ICON_CLOSE;
+  navbarToggle.setAttribute("aria-expanded", "true");
+}
 
-	window.addEventListener("scroll", () => {
-		if (window.scrollY > 400) {
-			navbarLinksSocial.classList.remove("show");
-			navbarToggle.innerHTML = '<i class="bi bi-list"></i>';
-		}
-	});
-});
+function closeMenu() {
+  navbarLinksMobile.classList.remove("show");
+  navbarToggle.innerHTML = ICON_OPEN;
+  navbarToggle.setAttribute("aria-expanded", "false");
+}
+
+function toggleMenu() {
+  if (navbarLinksMobile.classList.contains("show")) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+}
+
+// Proteção básica caso o elemento não exista em alguma página
+if (navbarToggle && navbarLinksMobile) {
+  // Clique abre/fecha o menu
+  navbarToggle.addEventListener("click", toggleMenu);
+
+  // Se você ainda usa onclick="closeMenu()" nos links do menu:
+  window.closeMenu = closeMenu;
+
+  // Fecha menu ao rolar
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      closeMenu();
+    }
+  });
+}
 
 // Sincroniza variáveis CSS com a altura do navbar
 (function () {

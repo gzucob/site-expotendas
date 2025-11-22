@@ -69,7 +69,6 @@
 
 .footer-info p {
   margin: 0 0 8px 0;
-  color: var(--font-color-primary);
 }
 
 .footer-list {
@@ -77,13 +76,13 @@
   padding: 0;
   display: grid;
   gap: 8px;
-  color: var(--font-color-primary);
   list-style: none;
 }
 
-.footer-list i {
-  color: var(--bg-tertiary);
-  margin-right: 8px;
+.footer-list i,
+.footer-list a {
+  color: var(--font-color-tertiary);
+  margin-right: 4px;
 }
 
 .footer-legal {
