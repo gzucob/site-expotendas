@@ -70,7 +70,7 @@
   padding: 12px;
 }
 
-.actions {
+.actions-error404 {
   display: flex;
   flex-wrap: wrap-reverse;
   align-items: center;
@@ -124,7 +124,7 @@
   box-shadow: var(--shadow-md);
 }
 
-.divider {
+.divider-error404 {
   height: 1px;
   background: var(--border);
   margin: 12px 0;
@@ -177,7 +177,7 @@
 }
 
 @media (min-width: 1024px) {
-  .actions {
+  .actions-error404 {
     justify-content: start;
     gap: 200px;
   }
