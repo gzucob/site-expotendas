@@ -4,6 +4,7 @@
 @import url(./styles/products.css);
 @import url(./styles/contact.css);
 @import url(./styles/footer.css);
+@import url(./styles/error404.css);
 
 :root {
   /* Background colors */

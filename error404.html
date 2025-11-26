@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Indexação:
+       - Produção: index, follow
+       - Staging:  noindex, nofollow -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>404 - Page Not Found</title>
+
+    <!-- SEO básico -->
+    <meta name="description"
+        content="Locação de tendas, galpões, tablados e palcos na Serra Gaúcha. Estruturas certificadas, montagem ágil e segurança para eventos.">
+    <meta name="author" content="Expotendas">
+    <meta name="theme-color" content="#0b2343">
+
+    <!-- URL canônica (produção) -->
+    <link rel="canonical" href="https://www.expotendas.com.br/">
+
+    <!-- Open Graph (social / compartilhamento) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Expo Tendas - Estruturas para eventos na Serra Gaúcha">
+    <meta property="og:description" content="Tendas, galpões e tablados com montagem rápida e segura.">
+    <meta property="og:url" content="https://www.expotendas.com.br/">
+    <meta property="og:image" content="https://www.expotendas.com.br/assets/og-cover.jpg">
+    <meta property="og:site_name" content="Expo Tendas">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+</head>
+
+<body>
+    <main class="conteiner-error404">
+        <section class="card404" aria-labelledby="t404" role="alert">
+            <header class="card404-header">
+                <div class="brand">
+                    <img class="brand-logo" src="/assets/logos/logo-expotendas.svg" alt="Expotendas" />
+                </div>
+            </header>
+
+            <div class="hero">
+                <span class="eyebrow"><i class="bi bi-compass" aria-hidden="true"></i> Você se
+                    perdeu</span>
+                <h1 id="t404" class="title404">404 — Página não encontrada</h1>
+                <p class="subtitle404">
+                    A página que você procura pode ter sido movida, renomeada ou não
+                    existe mais. <br>Use os atalhos abaixo ou volte para a página inicial.</p>
+                </p>
+            </div>
+
+            <div class="content">
+                <div class="actions">
+                    <a href="/" class="btn-return-home"><i class="bi bi-house-door"></i> Página inicial</a>
+                    <ul class="midias-error404">
+                        <li>
+                            <a href="https://www.facebook.com/expotendas" target="_blank" rel="noopener"
+                                aria-label="Facebook" class="bi bi-facebook"></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/expotendas/" target="_blank" rel="noopener"
+                                aria-label="Instagram" class="bi bi-instagram"></a>
+                        </li>
+                        <li>
+                            <a href="https://wa.me/555430281133" target="_blank" rel="noopener" aria-label="WhatsApp"
+                                class="bi bi-whatsapp"></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="divider"></div>
+
+                <ul class="quicklinks" aria-label="Atalhos úteis">
+                    <li>
+                        <a class="chip-link" href="/#about"><i class="bi bi-people"></i> Sobre Nós</a>
+                    </li>
+                    <li>
+                        <a class="chip-link" href="/#produtos"><i class="bi bi-grid"></i> Produtos</a>
+                    </li>
+
+                    <li>
+                        <a class="chip-link" href="/#contact"><i class="bi bi-envelope"></i> Fale Conosco</a>
+                    </li>
+                </ul>
+            </div>
+
+            <footer class="foot">
+                <small>Precisa de ajuda? Escreva para
+                    <a href="mailto:atendimento@expotendas.com.br">atendimento@expotendas.com.br</a>
+                    ou ligue <a href="tel:+555430281133">(54) 3028-1133</a>.</small>
+                <small>© Expotendas. Todos os direitos reservados.</small>
+            </footer>
+        </section>
+    </main>
+
+    <!-- JS principal (Vite) -->
+    <script type="module" src="/src/main.js"></script>
+
+</body>
+
+</html>
