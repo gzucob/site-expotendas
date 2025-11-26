@@ -32,8 +32,7 @@ RUN rm -rf /usr/share/nginx/html/*
 # Copia os arquivos do build do Vite
 COPY --from=deps /app/dist /usr/share/nginx/html
 
-# Copia robots.txt e nginx.conf
-COPY public/robots.txt /usr/share/nginx/html/robots.txt
+# Copia nginx.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 3000
