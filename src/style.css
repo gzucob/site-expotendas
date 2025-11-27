@@ -1,0 +1,90 @@
+@import url(./styles/header.css);
+@import url(./styles/home.css);
+@import url(./styles/about.css);
+@import url(./styles/products.css);
+@import url(./styles/contact.css);
+@import url(./styles/footer.css);
+@import url(./styles/error404.css);
+
+:root {
+  /* Background colors */
+  --bg-primary: #ffffff;
+  --bg-secundary: #f7f9fb;
+  --bg-tertiary: #0029f7;
+  --bg-fade: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+  --bg-mobile: rgba(192, 192, 192, 0.85);
+
+  /* Font colors */
+  --font-color-primary: #474646;
+  --font-color-secundary: #ffffff;
+  --font-color-tertiary: #858585;
+
+  /* Other/details colors */
+  --mission: #e63946; /* Icon missão */
+  --bg-mission: #ffeef0; /* BG missão */ 
+  --vision: #f4a261; /* Icon visão */
+  --bg-vision: #fff5e9; /* BG visão */
+  --business: #229c36; /* Icon negócio */
+  --bg-business: #eefbf0; /* BG negócio */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Fonts */
+  --fonte-principal: "Poppins", sans-serif;
+
+  /* Font size */
+  --font-sm: 12px;
+  --font-md: 16px;
+  --font-lg: 20px;
+  --font-xl: 24px;
+  --font-2xl: 28px;
+
+  /* Padding and width from Navbar */
+  --nav-w: min(90%, var(--size-max));
+  --nav-pad-x: 12px; /* padding horizontal do .navbar */
+  --nav-top: 12px; /* distância do topo do viewport */
+  --gap-y: 8px; /* respiro entre nav e menu */
+  --nav-h: 0px; /* preenchida via JS abaixo */
+  --size-max: 1440px; /* container-itens */
+
+  /* Box shadow */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.24), 0 6px 12px rgba(0, 0, 0, 0.2);
+
+  /* Border radius */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-xl: 20px;
+  --radius-full: 50px;
+
+  /* Border color */
+  --border: rgba(0, 0, 0, 0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: var(--bg-primary);
+  color: var(--font-color-primary);
+  font-family: var(--fonte-principal), system-ui, -apple-system, Segoe UI,
+    Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 1920px;
+  height: auto;
+  margin-inline: auto;
+  box-shadow: 0px 0px 26px 0px rgba(133, 133, 133, 1);
+  -webkit-box-shadow: 0px 0px 26px 0px rgba(133, 133, 133, 1);
+  -moz-box-shadow: 0px 0px 26px 0px rgba(133, 133, 133, 1);
+}

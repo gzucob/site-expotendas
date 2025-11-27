@@ -1,45 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Indexação:
+       - Produção: index, follow
+       - Staging:  noindex, nofollow -->
+	<meta name="robots" content="noindex, nofollow">
+
 	<title>Expo Tendas</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-	<link rel="website icon" type="svg" href="assets/logo-expotendas.svg"> <!-- Trocar por logo-expotendas-white -->
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+
+	<!-- SEO básico -->
+	<meta name="description"
+		content="Locação de tendas, galpões, tablados e palcos na Serra Gaúcha. Estruturas certificadas, montagem ágil e segurança para eventos.">
+	<meta name="author" content="Expotendas">
+	<meta name="theme-color" content="#0b2343">
+
+	<!-- URL canônica (produção) -->
+	<link rel="canonical" href="https://www.expotendas.com.br/">
+
+	<!-- Open Graph (social / compartilhamento) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Expo Tendas - Estruturas para eventos na Serra Gaúcha">
+	<meta property="og:description" content="Tendas, galpões e tablados com montagem rápida e segura.">
+	<meta property="og:url" content="https://www.expotendas.com.br/">
+	<meta property="og:image" content="https://www.expotendas.com.br/assets/og-cover.jpg">
+	<meta property="og:site_name" content="Expo Tendas">
+	<meta property="og:locale" content="pt_BR">
+
+	<!-- Fonte Poppins -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico">
+</head>
+
 
 <body>
-	<!-- Menu -->
-    <header id="header" class="header">
-        <nav class="navbar">
+	<!-- Navbar -->
+	<header id="header" class="header">
+		<nav class="navbar">
 			<div class="navbar-logo">
-				<a href="#" onclick="location.reload(true); return false;">
-					<img src="assets/logo-expotendas.svg" alt="Logo Expo Tendas">
-				</a>
+				<img src="assets/logos/logo-expotendas.svg" alt="Logo Expotendas" />
 			</div>
-            <div class="navbar-toggle" id="navbarToggle" onclick="toggleMenu()">
-                <i class="bi bi-list"></i>
-            </div>
-            <div class="navbar-links-social" id="navbarLinksSocial">
-                <div class="navbar-links" id="navbarLinks">
-                    <a href="#home" onclick="closeMenu()">Home</a>
-                    <a href="#quem-somos" onclick="closeMenu()">Quem Somos</a>
-                    <a href="#produtos" onclick="closeMenu()">Produtos</a>
-                    <a href="#contato" onclick="closeMenu()">Contato</a>
-                    <div class="navbar-social">
-                        <a href="https://www.facebook.com/expotendas" target="_blank" class="bi bi-facebook"></a>
-                        <a href="https://www.instagram.com/expotendas/" target="_blank" class="bi bi-instagram"></a>
-                        <a href="https://www.youtube.com/@expotendascaxiasdosul8127" target="_blank" class="bi bi-youtube"></a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <div class="overlay" id="overlay" onclick="closeMenu()"></div>
-    </header>
+
+			<ul class="navbar-links-desktop" id="navbarLinksDesktop">
+				<li><a href="/home" data-route onclick="closeMenu()">Home</a></li>
+				<li><a href="/sobre-nos" data-route onclick="closeMenu()">Sobre Nós</a></li>
+				<li><a href="/produtos" data-route onclick="closeMenu()">Produtos</a></li>
+				<li><a href="/fale-conosco" data-route onclick="closeMenu()">Fale Conosco</a></li>
+			</ul>
+
+			<ul class="icons">
+				<li>
+					<a href="https://www.facebook.com/expotendas" target="_blank" rel="noopener" aria-label="Facebook"
+						class="bi bi-facebook"></a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/expotendas/" target="_blank" rel="noopener"
+						aria-label="Instagram" class="bi bi-instagram"></a>
+				</li>
+				<li>
+					<a href="https://wa.me/555430281133" target="_blank" rel="noopener" aria-label="WhatsApp"
+						class="bi bi-whatsapp"></a>
+				</li>
+			</ul>
+
+			<button class="navbar-toggle" id="navbarToggle" aria-label="Abrir menu" aria-expanded="false"
+				aria-controls="navbarLinksMobile">
+				<i class="bi bi-list" aria-hidden="true"></i>
+			</button>
+		</nav>
+
+		<ul class="navbar-links-mobile" id="navbarLinksMobile">
+			<li><a href="/home" data-route onclick="closeMenu()">Home</a></li>
+			<li><a href="/sobre-nos" data-route onclick="closeMenu()">Sobre Nós</a></li>
+			<li><a href="/produtos" data-route onclick="closeMenu()">Produtos</a></li>
+			<li><a href="/fale-conosco" data-route onclick="closeMenu()">Fale Conosco</a></li>
+		</ul>
+	</header>
 
 	<main>
 		<!-- Home -->
@@ -49,210 +90,558 @@
 			</div>
 		</section>
 
-		<!-- Quem Somos -->
-		<section id="quem-somos" class="quem-somos">
-			<h2 class="quem-somos-titulo">Quem somos</h2>
-			<div class="quem-somos-apresentacao">
-				<div class="base-estrategica-horizontal">
-					<img class="img-base-estrategica-horizontal" src="assets/base-estrategica-horizonal.jpg" loading="lazy" alt="">
-				</div>
+		<!-- Sobre Nós -->
+		<section id="sobre-nos" class="sobre-nos container" aria-labelledby="titulo-sobre-nos">
 
-				<p class="quem-somos-texto">Expo Tendas, com mais de 15 anos de experiência e mais de 5.000 clientes em
-					seu
-					portfólio, é referência na Serra Gaúcha em locação de coberturas (tendas e galpões industriais),
-					pisos,
-					palcos, tablados, estandes, passarelas, camarotes e outros. Pela vasta experiência no mercado,
-					consegue
-					entregar
-					serviços personalizados e customizados aos mais exigentes clientes.<br><br>As estruturas da
-					EXPOTENDAS,
-					desenvolvidas com materiais de avançada tecnologia e alta qualidade, foram especialmente desenhadas
-					para as
-					severas condições climáticas da
-					região Sul, com maior resistência a ventos, temporais e rígidas trocas de temperaturas.<br><br>Esse
-					desenho
-					e tecnologia tem registro no INPI - CERTIFICADO DE REGISTRO DE DESENHO INDUSTRIAL - DI7101268-0. As
-					coberturas
-					de lonas têm tecnologia antichama e nossas obras sempre recebem aprovação do PPCI do Corpo de
-					Bombeiros.<br><br>A Expo Tendas é registrada no CREA-RS sob número 198108, com engenheiro
-					responsável no
-					quadro de funcionários.
-					Todos os serviços prestados são garantidos com fornecimento de ART e Laudo Técnico. Além disso, a
-					empresa
-					utiliza mão de obra altamente especializada e treinada, observando toda a legislação trabalhista e
-					fiscal,
-					especialmente no que diz respeito a trabalho de menores.
+			<div class="qs-header">
+				<img class="qs-logo" src="/assets/logos/logo-expotendas.svg" alt="Expotendas" />
+				<h2 class="qs-title">Sobre Nós</h2>
+				<p class="qs-lede">
+					<strong>Expo Tendas</strong> atua há mais de 15 anos oferecendo soluções completas em infraestrutura
+					para eventos.
+					Referência na Serra Gaúcha em locação de tendas, galpões, pisos e palcos, com estruturas
+					certificadas e registradas
+					no CREA-RS. Nossas coberturas utilizam materiais de alta tecnologia, resistentes às condições
+					climáticas do Sul, seguindo
+					normas de segurança e qualidade.
 				</p>
 
-				<div class="base-estrategica-vertical">
-					<img class="img-base-estrategica-vertical" src="assets/base-estrategica-vertical.jpg" loading="lazy" alt="">
+				<div class="qs-badges" aria-label="Credenciais">
+					<span class="qs-badge"><i class="bi bi-award"></i> 15+ anos</span>
+					<span class="qs-badge"><i class="bi bi-shield-check"></i> CREA-RS</span>
+					<span class="qs-badge"><i class="bi bi-lightning-charge"></i> Montagem ágil</span>
 				</div>
 			</div>
 
-			<div class="mobile-portfolio"></div>
-			<div class="slider-portfolio">
-				<div class="slide-track"></div>
-			</div>
-		</section>
+			<div class="cards-container">
+				<article class="card-base card-missao">
+					<div class="icone-base icone-missao"><i class="bi bi-rocket-takeoff-fill"></i></div>
+					<div>
+						<h3>Missão</h3>
+						<p>Ser solução e qualidade em locação de infraestrutura para eventos.</p>
+					</div>
+				</article>
 
-		<!-- Produtos -->
-		<section id="produtos" class="produtos">
-			<div class="produto">
-				<h2>Produtos</h2>
-				<p>A Expotendas disponibiliza tendas e galpões industriais com desenho industrial depositado no INPI
-					através
-					docódigo DI-7101268-0, tendo assim exclusividade no modelo adotado.<br>As lonas possuem proteção UV,
-					antichama, antimofo e blackout, para maior conforto e segurança. Oferecemos locação de tendas
-					brancas e
-					translúcidas com perfeito acabamento, com calhas e pés arredondados, deixando o ambiente ainda mais
-					elegante.
-					Disponibilizamos também pisos, palcos, tablados, passarelas, pistas de dança, túnel, móveis,
-					pirâmides,
-					camarotes, áreas VIP, bretes de isolamento e galpões.<br>Temos tendas nos seguintes tamanhos: 05x05,
-					05x10,
-					08x10 e 10x10.</p>
+				<article class="card-base card-visao">
+					<div class="icone-base icone-visao"><i class="bi bi-lightbulb-fill"></i></div>
+					<div>
+						<h3>Visão</h3>
+						<p>Ser referência em qualidade e inovação na infraestrutura de eventos.</p>
+					</div>
+				</article>
+
+				<article class="card-base card-negocio">
+					<div class="icone-base icone-negocio"><i class="bi bi-star-fill"></i></div>
+					<div>
+						<h3>Negócio</h3>
+						<p>Proporcionar eventos mais seguros, bonitos e agradáveis.</p>
+					</div>
+				</article>
 			</div>
 
-			<div class="galeria">
-				<button id="btnGaleria" class="btn-galeria" type="button" data-bs-toggle="collapse"
-					data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-					Abrir Galeria de Imagens
-				</button>
-				<div class="collapse collapse-img" id="collapseExample">
-					<div class="card-img">
-						<img class="galeria-img" src="assets/img-tendas-size01.jpg" alt="">
-						<img class="galeria-img" src="assets/img-tendas-size02.jpg" alt="">
-						<img class="galeria-img" src="assets/img-background.jpg" alt="">
-						<img class="galeria-img" src="assets/img-evento04.jpg" alt="">
-						<img class="galeria-img" src="assets/img-evento03.jpg" alt="">
-						<img class="galeria-img" src="assets/img-evento02.jpg" alt="">
-						<img class="galeria-img" src="assets/img-evento01.jpg" alt="">
-						<img class="galeria-img" src="assets/img-galpao01.jpg" alt="">
-						<img class="galeria-img" src="assets/img-pracadante01.jpg" alt="">
-						<img class="galeria-img" src="assets/img-pracadante02.jpg" alt="">
-						<img class="galeria-img" src="assets/img-noturna01.jpg" alt="">
-						<img class="galeria-img" src="assets/img-noturna02.jpg" alt="">
-						<img class="galeria-img" src="assets/img-fenamassa.jpg" alt="">
-						<img class="galeria-img" src="assets/img-feiralivrocxs01.jpg" alt="">
-						<img class="galeria-img" src="assets/img-feiralivrocxs02.jpg" alt="">
-						<img class="galeria-img" src="assets/img-feiralivrobento.jpg" alt="">
-						<img class="galeria-img" src="assets/img-unimed.jpg" alt="">
-						<img class="galeria-img" src="assets/img-pavilhoes01.jpg" alt="">
-						<img class="galeria-img" src="assets/img-pavilhoes02.jpg" alt="">
-						<img class="galeria-img" src="assets/img-interior01.jpg" alt="">
-						<img class="galeria-img" src="assets/img-interior02.jpg" alt="">
-						<img class="galeria-img" src="assets/img-interior03.jpg" alt="">
-						<img class="galeria-img" src="assets/img-interior04.jpg" alt="">
-						<img class="galeria-img" src="assets/img-interior05.jpg" alt="">
+			<div class="carousel-wrap">
+				<div class="swiper mySwiper carousel-swiper">
+					<div class="swiper-wrapper">
+						<!-- Coloque seus logos reais depois; usando placeholders por ora -->
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-caxias.svg"
+								alt="Prefeitura de Caxias do Sul" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-bento.svg"
+								alt="Prefeitura de Bento Gonçalves" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-fenamassa.svg"
+								alt="Fenamassa" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-festadauva.svg"
+								alt="Festa da Uva" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-garibaldi.svg"
+								alt="Prefeitura de Garibaldi" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-hyva.svg"
+								alt="Hyva do Brasil" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-marcopolo.svg"
+								alt="Marcopolo" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-mercopar.svg"
+								alt="Mercopar" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-weg.svg" alt="WEG"
+								loading="lazy" decoding="async"></div>
+
+						<!-- duplica para efeito contínuo -->
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-caxias.svg"
+								alt="Prefeitura de Caxias do Sul" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-bento.svg"
+								alt="Prefeitura de Bento Gonçalves" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-fenamassa.svg"
+								alt="Fenamassa" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-festadauva.svg"
+								alt="Festa da Uva" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-garibaldi.svg"
+								alt="Prefeitura de Garibaldi" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-hyva.svg"
+								alt="Hyva do Brasil" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-marcopolo.svg"
+								alt="Marcopolo" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-mercopar.svg"
+								alt="Mercopar" loading="lazy" decoding="async"></div>
+
+						<div class="swiper-slide"><img class="portfolio-logo" src="/assets/logos/logo-weg.svg" alt="WEG"
+								loading="lazy" decoding="async"></div>
 					</div>
 				</div>
 			</div>
-
-			<div id="overlay-galeria" class="overlay-galeria">
-				<span class="close-btn" onclick="closeOverlayGaleria()"><i class="bi bi-x"></i></span>
-				<img class="overlay-galeria-img" id="overlay-galeria-img">
-				<button class="prev-btn" onclick="showPrev()"><i class="bi bi-chevron-left"></i></button>
-				<button class="next-btn" onclick="showNext()"><i class="bi bi-chevron-right"></i></button>
-			</div>
-
-			<div class="orcamento">
-				<button id="btnOrcamento" class="btn-orcamento" type="button" >
-					<a href="https://wa.me/555430281133" target="_blank">Solicitar Orçamento</a>
-				</button>
-			</div>
 		</section>
+
+		<!-- Section Produtos -->
+		<section id="produtos" class="produtos container" aria-labelledby="titulo-produtos">
+			<header class="produtos-header">
+				<h2 id="titulo-produtos">
+					Tendas e tablados para eventos, com montagem rápida e segura
+				</h2>
+
+				<div class="meta">
+					<span class="badge inpi" title="Desenho industrial depositado no INPI">
+						INPI DI-7101268-0
+					</span>
+					<span class="divider" aria-hidden="true">•</span>
+					<span class="badge azul">Referência em aluguel de tendas na serra gaúcha</span>
+				</div>
+
+				<p class="lede">
+					Tendas piramidais, estruturadas e tensionadas, além de tablados
+					modulares.<br> Atendimento ágil, equipe própria e operação focada em
+					prazos.
+				</p>
+
+				<div class="actions">
+					<button class="btn btn-primaria" id="open-gallery" aria-haspopup="dialog"
+						aria-controls="galeria-modal">
+						Ver galeria
+					</button>
+
+					<a class="btn btn-contorno" id="cta-whats" href="https://wa.me/555430281133" target="_blank"
+						rel="noopener">
+						Solicitar Orçamento
+					</a>
+				</div>
+			</header>
+
+			<!-- Diferenciais -->
+			<ul class="benefits" aria-label="Diferenciais">
+				<li class="benefit">
+					<h3>Logística sem drama</h3>
+					<p>Entrega e montagem sincronizadas com o cronograma do evento.</p>
+				</li>
+				<li class="benefit">
+					<h3>Segurança e estabilidade</h3>
+					<p>Estruturas niveladas, ancoragem correta e inspeção no local.</p>
+				</li>
+				<li class="benefit">
+					<h3>Prazos cumpridos</h3>
+					<p>Janela de montagem combinada e cumprida. Sem susto no dia.</p>
+				</li>
+			</ul>
+
+			<!-- Cards de Produto -->
+			<div class="grid">
+				<article class="card">
+					<div class="card-media">
+						<img src="/assets/gallery/feira-livro-antonio-prado.svg" loading="lazy" decoding="async"
+							alt="Tendas para a feira do livro em Antonio Prado">
+						<span class="tag azul">Tendas</span>
+					</div>
+					<div class="card-content">
+						<h3>Tendas para eventos</h3>
+						<div class="badges">
+							<span class="chip">Piramidal</span>
+							<span class="chip">Estruturada</span>
+							<span class="chip">Tensionada</span>
+							<span class="chip">Laterais opcionais</span>
+						</div>
+						<ul class="bullets">
+							<li>Tamanhos: 05x05, 05x10, 08x10 e 10x10.</li>
+							<li>Montagem rápida e acabamento limpo.</li>
+							<li>Proteção UV e vedação com calhas.</li>
+						</ul>
+					</div>
+				</article>
+
+				<article class="card" role="listitem">
+					<div class="card-media">
+						<img src="assets/gallery/interior01.svg" loading="lazy" decoding="async"
+							alt="Tablado mais decoração no interior das tendas">
+						<span class="tag verde">Tablados</span>
+					</div>
+					<div class="card-content">
+						<h3>Tablados modulares</h3>
+						<div class="badges">
+							<span class="chip">Módulos niveláveis</span>
+							<span class="chip">Acabamento antiderrapante</span>
+							<span class="chip">Perímetro seguro</span>
+						</div>
+						<ul class="bullets">
+							<li>Palcos, passarelas, pistas e áreas técnicas.</li>
+							<li>Nível ajustado no local, mesmo em terreno irregular.</li>
+							<li>Integra com tendas para um conjunto sólido.</li>
+						</ul>
+					</div>
+				</article>
+			</div>
+
+			<!-- Texto institucional -->
+			<details class="copy">
+				<summary>Mais detalhes técnicos</summary>
+				<div class="copy-inner">
+					<p>
+						A Expotendas disponibiliza tendas e galpões industriais com desenho
+						industrial depositado no INPI através do código
+						<strong>DI-7101268-0</strong>, tendo assim exclusividade no modelo
+						adotado.<br />As lonas possuem proteção UV, antichama, antimofo e
+						blackout, para maior conforto e segurança. Oferecemos locação de
+						tendas brancas e translúcidas com perfeito acabamento, com calhas e
+						pés arredondados, deixando o ambiente ainda mais elegante.
+						Disponibilizamos também pisos, palcos, tablados, passarelas, pistas
+						de dança, túnel, móveis, pirâmides, camarotes, áreas VIP, bretes de
+						isolamento e galpões.
+					</p>
+				</div>
+			</details>
+		</section>
+
+		<!-- Modal da Galeria -->
+		<div class="modal" id="galeria-modal" aria-hidden="true" role="dialog" aria-modal="true"
+			aria-label="Galeria de imagens">
+			<div class="dialog">
+				<div class="dialog-header">
+					<div class="filters" role="group" aria-label="Filtros">
+						<button class="chip-outline" data-filter="all" aria-pressed="true">
+							Todos
+						</button>
+						<button class="chip-outline" data-filter="size">Comparar tamanhos</button>
+						<button class="chip-outline" data-filter="tendas">Tendas</button>
+						<button class="chip-outline" data-filter="tablados">
+							Tablados
+						</button>
+						<button class="chip-outline" data-filter="noturno">
+							Noturno
+						</button>
+					</div>
+
+					<button class="close" id="close-gallery" aria-label="Fechar galeria">
+						<i class="bi bi-x-lg"></i>
+					</button>
+				</div>
+
+				<div class="dialog-body">
+					<div class="swiper gallery-swiper" id="swiper-galeria">
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/evento01.svg" loading="lazy" decoding="async"
+										alt="Tenda montada em evento externo" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/maesa.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="noturno">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/evento-noturno01.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="noturno">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/evento-noturno02.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="noturno">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/evento-noturno03.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/feira-livro-cxs01.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/feira-livro-cxs02.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/feira-livro-antonio-prado.svg" loading="lazy"
+										decoding="async" alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tablados">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/interior01.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tablados">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/interior02.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tablados">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/interior03.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/fenamassa.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/festa-uva.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="tendas">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/parque-estacao-carlos-barbosa.svg" loading="lazy"
+										decoding="async" alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="size">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/tendas-size-cima.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+							<div class="swiper-slide" data-cat="size">
+								<div class="swiper-zoom-container">
+									<img src="/assets/gallery/tendas-size-pov.svg" loading="lazy" decoding="async"
+										alt="Tenda estruturada com laterais" />
+								</div>
+								<div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+							</div>
+
+						</div>
+						<div class="swiper-button-prev" aria-label="Imagem anterior"></div>
+						<div class="swiper-button-next" aria-label="Próxima imagem"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Contato -->
-		<section id="contato" class="contato">
+		<section id="fale-conosco" class="contato" aria-labelledby="titulo-contato">
+			<div class="contato-wrap">
+				<!-- Card do formulário -->
+				<div class="form-card">
+					<header class="form-header">
+						<h2 class="form-title">Fale Conosco</h2>
+						<p class="form-subtitle">
+							Orçamentos, dúvidas e agendamentos. Resposta rápida no horário
+							comercial.
+						</p>
+					</header>
 
-			<div class="formulario-contato">
-				<h3 class="formulario-titulo">Fale Conosco</h3>
-				<form id="form-contato" class="form-contato">
-					<div class="form-grupo">
-						<label for="nome">Seu nome:</label>
-						<input type="text" id="nome" name="nome" required>
-					</div>
-					<div class="form-grupo">
-						<label for="email">Seu e-mail:</label>
-						<input type="email" id="email" name="email" required>
-					</div>
-					<div class="form-grupo">
-						<label for="telefone">Telefone (opcional):</label>
-						<input type="tel" id="telefone" name="telefone">
-					</div>
-					<div class="form-grupo">
-						<label for="departamento">Selecione um departamento:</label>
-						<select id="departamento" name="departamento" required>
-							<option value="" disabled selected>Escolha um departamento</option>
-							<option value="comercial">Comercial</option>
-							<option value="financeiro">Financeiro</option>
-							<option value="operacional">Operacional</option>
-						</select>
-					</div>
-					<div class="form-grupo">
-						<label for="mensagem">Mensagem:</label>
-						<textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-					</div>
-					<div class="form-grupo">
-						<button type="submit" class="btn-enviar">Enviar Mensagem</button>
-					</div>
-					<div id="form-mensagem" class="form-mensagem"></div>
-				</form>
+					<form id="form-contato" class="form-contato" novalidate>
+						<div class="form-row">
+							<div class="form-grupo">
+								<i class="bi bi-person form-ico" aria-hidden="true"></i>
+								<input type="text" id="nome" name="nome" required placeholder="Seu nome"
+									autocomplete="name" />
+							</div>
+
+							<div class="form-grupo">
+								<i class="bi bi-envelope form-ico" aria-hidden="true"></i>
+								<input type="email" id="email" name="email" required placeholder="Seu e-mail"
+									autocomplete="email" />
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-grupo">
+								<i class="bi bi-telephone form-ico" aria-hidden="true"></i>
+								<input type="tel" id="telefone" name="telefone" placeholder="Seu telefone (opcional)"
+									autocomplete="tel" />
+							</div>
+
+							<div class="form-grupo">
+								<i class="bi bi-diagram-3 form-ico" aria-hidden="true"></i>
+								<select id="departamento" name="departamento" required>
+									<option value="" disabled selected>
+										Escolha um departamento
+									</option>
+									<option value="comercial">Comercial</option>
+									<option value="financeiro">Financeiro</option>
+									<option value="operacional">Operacional</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="form-grupo form-textarea">
+							<i class="bi bi-chat-text form-ico" aria-hidden="true"></i>
+							<textarea id="mensagem" name="mensagem" rows="5" required
+								placeholder="Digite aqui a sua mensagem!"></textarea>
+						</div>
+
+						<div class="form-actions">
+							<button type="submit" class="btn-enviar">
+								<i class="bi bi-send" aria-hidden="true"></i> Enviar mensagem
+							</button>
+						</div>
+
+						<div id="form-mensagem" class="form-mensagem" aria-live="polite"></div>
+					</form>
+
+					<ul class="fale-conosco-meta" aria-label="Informações de contato">
+						<li>
+							<i class="bi bi-geo-alt"></i> Rua Ludovico Cavinato, 177 - Caxias
+							do Sul — RS
+						</li>
+						<li>
+							<i class="bi bi-clock"></i> Seg a Sex: 08:30–12:00 • 13:30–18:00
+						</li>
+						<li>
+							<i class="bi bi-telephone" aria-hidden="true"></i>
+							<a href="tel:+555430281133">(54) 3028-1133</a>
+						</li>
+						<li>
+							<i class="bi bi-envelope" aria-hidden="true"></i>
+							<a href="mailto:atendimento@expotendas.com.br">atendimento@expotendas.com.br</a>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Card do mapa -->
+				<div class="map-aspect">
+					<iframe class="maps"
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.0913266652133!2d-51.20582188436369!3d-29.13249659642027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea2c0e6044b67%3A0x500f7d240248332!2sExpotendas%20-%20Lonas%2C%20Tendas%20e%20Pir%C3%A2mides%20para%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1678650743991!5m2!1spt-BR!2sbr"
+						style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+						aria-label="Mapa da Expotendas">
+					</iframe>
+				</div>
 			</div>
-
-			<iframe class="maps"
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3485.0913266652133!2d-51.20582188436369!3d-29.13249659642027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951ea2c0e6044b67%3A0x500f7d240248332!2sExpotendas%20-%20Lonas%2C%20Tendas%20e%20Pir%C3%A2mides%20para%20Eventos!5e0!3m2!1spt-BR!2sbr!4v1678650743991!5m2!1spt-BR!2sbr"
-				style="border:0;" allowfullscreen="" loading="lazy"
-				referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</section>
 
-		<!-- Rodape -->
+		<!-- Rodapé -->
 		<footer id="footer" class="footer">
-			<div class="midias">
-				<ul>
-					<li>
-						<a href="https://www.facebook.com/expotendas" target="_blank">
-							<i class="bi bi-facebook"></i>
-						</a>
-					</li>
+			<div class="footer-wrap">
+				<div class="footer-grid">
+					<div class="footer-brand">
+						<img class="footer-logo" src="assets/logos/logo-expotendas.svg" alt="Expotendas" />
+						<p class="footer-tagline">
+							Estruturas para eventos na Serra Gaúcha. Montagem ágil e segurança
+							em primeiro lugar.
+						</p>
 
-					<li>
-						<a href="https://www.instagram.com/expotendas/" target="_blank">
-							<i class="bi bi-instagram"></i>
-						</a>
-					</li>
+						<ul class="midias">
+							<li>
+								<a href="https://www.facebook.com/expotendas" target="_blank" rel="noopener"
+									aria-label="Facebook" class="bi bi-facebook"></a>
+							</li>
+							<li>
+								<a href="https://www.instagram.com/expotendas/" target="_blank" rel="noopener"
+									aria-label="Instagram" class="bi bi-instagram"></a>
+							</li>
+							<li>
+								<a href="https://wa.me/555430281133" target="_blank" rel="noopener"
+									aria-label="WhatsApp" class="bi bi-whatsapp"></a>
+							</li>
+						</ul>
+					</div>
 
-					<li>
-						<a href="https://www.youtube.com/@expotendascaxiasdosul8127" target="_blank">
-							<i class="bi bi-youtube"></i>
-						</a>
-					</li>
+					<div class="footer-info">
+						<h3>Atendimento</h3>
+						<p>Segunda a Sexta<br />08:30–12:00 • 13:30–18:00</p>
 
-					<li>
-						<a href="#linkedin" target="_blank">
-							<i class="bi bi-linkedin"></i>
-						</a>
-					</li>
-				</ul>
+						<h3>Contato</h3>
+						<ul class="footer-list">
+							<li>
+								<i class="bi bi-telephone" aria-hidden="true"></i>
+								<a href="tel:+555430281133">(54) 3028-1133</a>
+							</li>
+							<li>
+								<i class="bi bi-envelope" aria-hidden="true"></i>
+								<a href="mailto:atendimento@expotendas.com.br">atendimento@expotendas.com.br</a>
+							</li>
+							<li>
+								<i class="bi bi-geo-alt"></i> Rua Ludovico Cavinato, 177 - Caxias
+								do Sul — RS
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer-legal">
+					<p class="marca">
+						EXPOTENDAS é uma marca registrada de EXPOTENDAS LOCAÇÕES LTDA |
+						CNPJ 10.665.441/0001-66
+					</p>
+					<p class="copyright">
+						© Desenvolvido por
+						<a href="https://github.com/gzucob" target="_blank" rel="noopener">gzucob</a>
+					</p>
+				</div>
 			</div>
-
-			<p class="horario">Atendimento de segunda à sexta-feira<br>
-				08:30 - 12:00 | 13:30 - 18:00</p>
-
-			<p class="marca">EXPO TENDAS é uma marca registrada de EXPOTENDAS LOCACOES LTDA | CNPJ
-				10.665.441/0001-66</p>
-
-			<p class="copyright">&#169;Desenvolvido por <a href="https://github.com/gzucob" target="_blank">gzucob</a>
-			</p>
 		</footer>
 	</main>
 
-	<div class="whats">
-		<a href="https://wa.me/555430281133" target="_blank"><img src="assets/logo-whatsapp.svg" width="60" alt=""></a>
-	</div>
-
-	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-	<script defer src="main.js"></script>
+	<!-- JS principal (Vite) -->
+	<script type="module" src="/src/main.js"></script>
 </body>
 
 </html>
