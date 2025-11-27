@@ -10,3 +10,4 @@ import "./scripts/sandwich.js";
 import "./scripts/carousel.js";
 import "./scripts/gallery.js";
 import "./scripts/contact.js";
+import "./scripts/router.js";

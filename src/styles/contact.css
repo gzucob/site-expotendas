@@ -141,7 +141,7 @@
   color: var(--font-color-primary);
 }
 
-.contact-meta {
+.fale-conosco-meta {
   margin-top: 16px;
   display: grid;
   gap: 12px;
@@ -152,8 +152,8 @@
   width: 90%;
 }
 
-.contact-meta i, 
-.contact-meta a {
+.fale-conosco-meta i,
+.fale-conosco-meta a {
   color: var(--font-color-tertiary);
   margin-right: 4px;
 }
@@ -180,7 +180,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .contact-meta {
+  .fale-conosco-meta {
     font-size: var(--font-md);
   }
 }

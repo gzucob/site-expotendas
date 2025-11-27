@@ -1,4 +1,4 @@
-.quem-somos {
+.sobre-nos {
   display: flex;
   flex-direction: column;
   width: min(92%, var(--size-max));

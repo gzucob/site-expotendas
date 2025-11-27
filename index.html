@@ -10,7 +10,7 @@
        - Staging:  noindex, nofollow -->
 	<meta name="robots" content="noindex, nofollow">
 
-	<title>Expo Tendas - Tendas e estruturas para eventos na Serra Gaúcha</title>
+	<title>Expo Tendas</title>
 
 	<!-- SEO básico -->
 	<meta name="description"
@@ -47,10 +47,10 @@
 			</div>
 
 			<ul class="navbar-links-desktop" id="navbarLinksDesktop">
-				<li><a href="#home" onclick="closeMenu()">Home</a></li>
-				<li><a href="#about" onclick="closeMenu()">Sobre Nós</a></li>
-				<li><a href="#products" onclick="closeMenu()">Produtos</a></li>
-				<li><a href="#contact" onclick="closeMenu()">Fale Conosco</a></li>
+				<li><a href="/home" data-route onclick="closeMenu()">Home</a></li>
+				<li><a href="/sobre-nos" data-route onclick="closeMenu()">Sobre Nós</a></li>
+				<li><a href="/produtos" data-route onclick="closeMenu()">Produtos</a></li>
+				<li><a href="/fale-conosco" data-route onclick="closeMenu()">Fale Conosco</a></li>
 			</ul>
 
 			<ul class="icons">
@@ -75,10 +75,10 @@
 		</nav>
 
 		<ul class="navbar-links-mobile" id="navbarLinksMobile">
-			<li><a href="#home" onclick="closeMenu()">Home</a></li>
-			<li><a href="#about" onclick="closeMenu()">Sobre Nós</a></li>
-			<li><a href="#products" onclick="closeMenu()">Produtos</a></li>
-			<li><a href="#contact" onclick="closeMenu()">Fale Conosco</a></li>
+			<li><a href="/home" data-route onclick="closeMenu()">Home</a></li>
+			<li><a href="/sobre-nos" data-route onclick="closeMenu()">Sobre Nós</a></li>
+			<li><a href="/produtos" data-route onclick="closeMenu()">Produtos</a></li>
+			<li><a href="/fale-conosco" data-route onclick="closeMenu()">Fale Conosco</a></li>
 		</ul>
 	</header>
 
@@ -90,12 +90,12 @@
 			</div>
 		</section>
 
-		<!-- Quem Somos -->
-		<section id="about" class="quem-somos container" aria-labelledby="titulo-quem-somos">
+		<!-- Sobre Nós -->
+		<section id="sobre-nos" class="sobre-nos container" aria-labelledby="titulo-sobre-nos">
 
 			<div class="qs-header">
 				<img class="qs-logo" src="/assets/logos/logo-expotendas.svg" alt="Expotendas" />
-				<h2 class="qs-title">Quem somos</h2>
+				<h2 class="qs-title">Sobre Nós</h2>
 				<p class="qs-lede">
 					<strong>Expo Tendas</strong> atua há mais de 15 anos oferecendo soluções completas em infraestrutura
 					para eventos.
@@ -203,7 +203,7 @@
 		</section>
 
 		<!-- Section Produtos -->
-		<section id="products" class="produtos container" aria-labelledby="titulo-produtos">
+		<section id="produtos" class="produtos container" aria-labelledby="titulo-produtos">
 			<header class="produtos-header">
 				<h2 id="titulo-produtos">
 					Tendas e tablados para eventos, com montagem rápida e segura
@@ -485,7 +485,7 @@
 		</div>
 
 		<!-- Contato -->
-		<section id="contact" class="contato" aria-labelledby="titulo-contato">
+		<section id="fale-conosco" class="contato" aria-labelledby="titulo-contato">
 			<div class="contato-wrap">
 				<!-- Card do formulário -->
 				<div class="form-card">
@@ -547,7 +547,7 @@
 						<div id="form-mensagem" class="form-mensagem" aria-live="polite"></div>
 					</form>
 
-					<ul class="contact-meta" aria-label="Informações de contato">
+					<ul class="fale-conosco-meta" aria-label="Informações de contato">
 						<li>
 							<i class="bi bi-geo-alt"></i> Rua Ludovico Cavinato, 177 - Caxias
 							do Sul — RS
@@ -643,4 +643,5 @@
 	<!-- JS principal (Vite) -->
 	<script type="module" src="/src/main.js"></script>
 </body>
+
 </html>
