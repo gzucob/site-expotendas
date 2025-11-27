@@ -22,10 +22,6 @@ RUN npm run build
 FROM nginx:alpine
 RUN apk add --no-cache apache2-utils
 
-ARG USERNAME
-ARG PASSWORD
-RUN htpasswd -bc /etc/nginx/.htpasswd $USERNAME $PASSWORD
-
 # Remove arquivos default
 RUN rm -rf /usr/share/nginx/html/*
 
