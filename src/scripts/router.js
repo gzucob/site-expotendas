@@ -1,7 +1,7 @@
 // Mapa de paths -> id da section
 const routes = {
-  '/': 'home',          // raiz manda pra home
-  '/home': 'home',      // se quiser manter /home também
+  '/': 'home',          
+  '/home': 'home',      
   '/sobre-nos': 'sobre-nos',
   '/produtos': 'produtos',
   '/fale-conosco': 'fale-conosco',
@@ -9,9 +9,8 @@ const routes = {
 
 const ERROR_PAGE = '/error404.html';
 
-// Mapa de id da section -> path "bonito" que aparece na URL
 const sectionToPath = {
-  home: '/home',               // ou '/' se quiser que a URL da home seja só /
+  home: '/home',              
   'sobre-nos': '/sobre-nos',
   produtos: '/produtos',
   'fale-conosco': '/fale-conosco',
@@ -57,7 +56,6 @@ function handleRoute(options = { behavior: 'instant' }) {
   const canonicalPath = sectionToPath[sectionId] || path;
   updateActiveNav(canonicalPath);
 
-  // Na raiz, deixa como está (já começa no topo / home)
   if (sectionId === 'home' && path === '/') {
     return;
   }
@@ -95,7 +93,7 @@ window.addEventListener('popstate', () => {
 
 function initSectionObserver() {
   if (!('IntersectionObserver' in window)) {
-    return; // navegador da idade da pedra
+    return; 
   }
 
   const sectionIds = ['home', 'sobre-nos', 'produtos', 'fale-conosco'];
